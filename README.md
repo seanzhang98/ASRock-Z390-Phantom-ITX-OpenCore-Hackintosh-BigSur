@@ -9,6 +9,8 @@ Motherboard：ASRockz390 phantom gaming-itx/ac
 cpu：i9 9900k
 
 Graphics： AMD RX5700 itx 8GB
+ 
+RAM: Team Group 32GBx2 (64GB total)
 
 Wireless network card：BCM943602CS
 
@@ -30,7 +32,15 @@ Wireless network card：BCM943602CS
 * usb：No abnormality
 * TB3 ：hot-plug supported
 
-# Update log
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/thunderbolts.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
+
+# Known Issues
+
+
+# Update Logs
 
 0.6.2: First release
 
@@ -48,7 +58,7 @@ Advanced \ Chipset Configuration → Share Memory : 128MB
 Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
 
 
-# Reference
+# References
 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
 
 [macOS Catalina 10.15安装中常见的问题及解决方法](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
@@ -58,7 +68,7 @@ Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
 [OpenCore部件补丁](https://github.com/daliansky/OC-little)
 
 
-# Thank
+# Special Thanks
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
@@ -66,5 +76,7 @@ Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
 **[ZeRo° Xu](https://github.com/xzhih)(冰水加劲Q)**
 
 **[acidanthera](https://github.com/acidanthera/OpenCorePkg)**
+
+**[fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh)**
 
 **[Bat.bat](https://github.com/williambj1)**
