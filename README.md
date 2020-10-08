@@ -12,7 +12,7 @@ Graphics： AMD RX5700 itx 8GB
 
 Wireless network card：BCM943602CS
 
-![image](https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/raw/master/imgs/about.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
 
 ## Drive situation
