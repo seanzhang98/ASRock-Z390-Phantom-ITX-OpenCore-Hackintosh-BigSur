@@ -50,10 +50,12 @@ Wireless network card：BCM943602CS
 
 ## Known Issues
 * The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC
+  
   Solution: disable the TB3 Function or boot Windows with BIOS interface.
   
 * The current model of "iMac (2019, 5K)" is not support Apple TV + because of the DRM. But Apple Music (tested), Amazon Prime (tested) and Netflix should work by  
   using Chrome (not working with Safari).
+  
   Solution: change the model into iMac Pro, however, you will lose the SideCar function.
 
 ## Update Logs
