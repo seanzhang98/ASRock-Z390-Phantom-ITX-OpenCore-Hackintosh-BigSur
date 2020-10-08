@@ -10,7 +10,7 @@ CPU：Intel 9th Gen i9-9900k
 
 显卡： AMD RX5700 itx 8GB
  
-内存: Team Group 32GBx2 (64GB total)
+内存: Team Group 32GBx2 (共64GB)
 
 无线网卡：BCM943602CS
 
