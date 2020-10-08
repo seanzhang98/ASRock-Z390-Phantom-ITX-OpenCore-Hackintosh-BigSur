@@ -12,32 +12,23 @@ Graphics： AMD RX5700 itx 8GB
 
 Wireless network card：BCM943602CS
 
-![](http://github.fangf.cc/mweb/15934410276957.jpg)
+![](https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/raw/master/imgs/about.png)
 
 
 ## Drive situation
 
-* System stability：No system crashes，System has been update10.15.1 Beta2(19B77a)
-
-* Graphics：RX5500 driver is normal，UHD630 working frequency 1.2Ghz
-* Sound card：Normal drive
-* wifi、Bluetooth、Handoff、Sidecar Normal use
-* Sleep &wake：work well
-* location：work well
-* nvram：work well
-
-      
-![QQ20191013-112532](http://github.fangf.cc/mweb/QQ20191013-112532.png)
+* System stability：System has been tested in 11.0 Beta9(20A5384c) with no system crash.
+* Graphics：RX5700 driver is normal, boosted with a patch to Radeon Pro W5700X 8 GB for better performance.  
+* Sound card：Normal
+* WiFi: Working
+* Bluetooth: Working
+* Handoff: Working
+* Sidecar: Working
+* Sleep &wake：Working
+* location：Working
+* nvram：Working
 * usb：No abnormality
-
-![QQ20191013-112335](http://github.fangf.cc/mweb/QQ20191013-112335.png)
-
-* ~~type-c：Plug in the device before booting, hotplug~~
-* TB3 ：hot-plug
-
-
-
-
+* TB3 ：hot-plug supported
 
 # Update log
 
