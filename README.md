@@ -48,6 +48,18 @@ Wireless network card：BCM943602CS
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
 
+## BIOS Setting
+
+Advanced \ Chipset Configuration → Vt-d : Disabled
+
+Advanced \ Super IO Configuration → Serial Port: Disabled
+
+Advanced \ USB Configuration → XHCI Hand-off : Enabled
+
+Advanced \ Chipset Configuration → Share Memory : 128MB
+
+Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
+
 ## Known Issues
 * The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC
   
@@ -60,19 +72,6 @@ Wireless network card：BCM943602CS
 ## Update Logs
 
 0.6.2: First release
-
-
-## BIOS Setting
-
-Advanced \ Chipset Configuration → Vt-d : Disabled
-
-Advanced \ Super IO Configuration → Serial Port: Disabled
-
-Advanced \ USB Configuration → XHCI Hand-off : Enabled
-
-Advanced \ Chipset Configuration → Share Memory : 128MB
-
-Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
 
 
 ## References
