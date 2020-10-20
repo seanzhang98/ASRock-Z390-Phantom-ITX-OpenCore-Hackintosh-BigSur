@@ -4,7 +4,7 @@
 
 ## Configuration
 
-Motherboard：ASRockz390 phantom gaming-itx/ac
+Motherboard：ASRock Z390 phantom gaming-itx/ac
 
 CPU：Intel 9th Gen i9-9900k
 

@@ -4,7 +4,7 @@
 
 ## 硬件配置
 
-主板：ASRockz390 phantom gaming-itx/ac
+主板：ASRock Z390 phantom gaming-itx/ac
 
 CPU：Intel 9th Gen i9-9900k
 
