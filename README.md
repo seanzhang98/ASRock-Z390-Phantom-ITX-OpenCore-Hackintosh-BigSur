@@ -1,6 +1,6 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh
 
-### [English Documentation](README.md)
+### [English Documentation](README_en.md)
 
 ## <font color=red>***警告: 请暂时不要将你的系统升级至 BIG SUR BETA 10, 否则系统也许将无法正常启动。请等待下一个版本的发布。***</font>
 
