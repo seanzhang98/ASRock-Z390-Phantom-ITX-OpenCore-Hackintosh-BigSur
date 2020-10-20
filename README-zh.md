@@ -47,7 +47,9 @@ CPU：Intel 9th Gen i9-9900k
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/thunderbolts.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
-
+## 雷霹3驱动
+本教程参考了房大叔的教程，刷了华擎的4.40c BIOS。
+具体参考：[华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
 ## BIOS 设定
 
 Advanced \ Chipset Configuration → Vt-d : Disabled
