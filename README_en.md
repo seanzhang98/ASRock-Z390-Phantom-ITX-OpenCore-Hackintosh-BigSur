@@ -1,56 +1,60 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh
 
-### [English Documentation](README.md)
+### [中文版文档](README-zh.md)
 
-## 硬件配置
+## <font color=red>***Warning: DO NOT UPGRADE TO BIG SUR BETA 10, THE SYSTEM MIGHT NOT BOOT OR BOOT WITH BROKEN SYSTEM. WAIT FOR THE NEXT RELESE OF MAC OS***</font>
 
-主板：ASRock Z390 phantom gaming-itx/ac
+## Configuration
+
+Motherboard：ASRock Z390 phantom gaming-itx/ac
 
 CPU：Intel 9th Gen i9-9900k
 
-显卡： AMD RX5700 itx 8GB
+Graphics： AMD RX5700 itx 8GB
  
-内存: Team Group 32GBx2 (共64GB)
+RAM: Team Group 32GBx2 (64GB total)
 
-无线网卡：BCM943602CS
+Wireless network card：BCM943602CS
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
 
-## 驱动情况
+## Drive situation
 
-* 系统稳定性：在 macOS 11.0 Beta9(20A5384c) 中没有系统崩溃。
+* System stability：System has been tested in 11.0 Beta9(20A5384c) with no system crash.
 
-* 显卡：RX5700 驱动正常, 使用补丁伪装成 Radeon Pro W5700X 8 GB 以获得更好的性能。  
+* Graphics：RX5700 driver is normal, boosted with a patch to Radeon Pro W5700X 8 GB for better performance.  
 
-* 声卡：正常。
+* Sound card：Normal.
 
-* WiFi: 正常。
+* WiFi: Working.
 
-* 蓝牙: 正常。
+* Bluetooth: Working.
 
-* Handoff: 正常。
+* Handoff: Working.
 
-* 随航: 正常。
+* Sidecar: Working.
 
-* 睡眠和唤醒：正常。
+* Sleep &wake：Working.
 
-* 定位服务：正常。
+* Location service：Working.
 
-* nvram：正常。
+* nvram：Working.
 
-* USB：正常。
+* USB：No abnormality.
 
-* 雷霹 3 ：支持热插拔, USB 功能正常 (本人没有 TB3 设备无法测试具体速度和功能，理论上应该能正常工作)。
- 
+* ThunderBolt 3 ：hot-plug supported, USB function is normal (I do not own a TB3 device to test the speed and functionality, but should be working).
+
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/thunderbolts.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
-## 雷霹3驱动
-本教程参考了房大叔的教程，刷了华擎的4.40c BIOS。
-具体参考：[华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
-## BIOS 设定
+
+## Thunderbolt 3 
+This configuration was flashed Asrock special BIOS 4.40c to support TB3 function.
+Tutorial By fangf2018 (Chinese Only)：[华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
+
+## BIOS Setting
 
 Advanced \ Chipset Configuration → Vt-d : Disabled
 
@@ -62,25 +66,25 @@ Advanced \ Chipset Configuration → Share Memory : 128MB
 
 Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
 
-## 已知问题
-* 本人在升级 Beta 10 遇见暂时无法解决的 Bug，暂时退回 B9 等待下一个 Beta 版本。
+## Known Issues
+* Beta 10 could cause booting problem, please wait for the next beta.
 
-* 补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。
+* The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC
   
-  解决方案: 禁用该补丁或者用 bios 来引导 Windows。
+  Solution: disable the TB3 Function or boot Windows with BIOS interface.
   
-* 引导默认的 "iMac (2019, 5K)" 型号因为 DRM 问题不支持 Apple TV + 播放。 但是 Apple Music (已测试), Amazon Prime (已测试) 和 Netflix 在 Chrome 中可以正常播放 (Safari 不支持播放).
+* The current model of "iMac (2019, 5K)" is not support Apple TV + because of the DRM. But Apple Music (tested), Amazon Prime (tested) and Netflix should work by   using Chrome (not working with Safari).
   
-  解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用。
+  Solution: change the model into iMac Pro, however, you will lose the SideCar function.
 
-## 更新日志
+## Update Logs
 
-0.6.3: 更新 OC 版本
+0.6.3: update Opencore to 0.6.3
 
 0.6.2: First release
 
 
-## 参考
+## References
 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
 
 [macOS Catalina 10.15安装中常见的问题及解决方法](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
@@ -90,7 +94,7 @@ Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
 [OpenCore部件补丁](https://github.com/daliansky/OC-little)
 
 
-## 特别感谢
+## Special Thanks
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
