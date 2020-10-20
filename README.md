@@ -1,6 +1,6 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh
 
-### [English](README.md) | [中文](README-zh.md)
+### [中文版文稿](README-zh.md)
 
 ## Configuration
 
@@ -61,6 +61,8 @@ Advanced \ Chipset Configuration → Share Memory : 128MB
 Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
 
 ## Known Issues
+* Beta 10 could cause booting problem, please wait for the next beta.
+
 * The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC
   
   Solution: disable the TB3 Function or boot Windows with BIOS interface.
@@ -70,6 +72,8 @@ Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
   Solution: change the model into iMac Pro, however, you will lose the SideCar function.
 
 ## Update Logs
+
+0.6.3: update Opencore to 0.6.3
 
 0.6.2: First release
 

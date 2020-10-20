@@ -1,6 +1,6 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh
 
-### [English](README.md) | [中文](README-zh.md)
+### [English Documentation](README.md)
 
 ## 硬件配置
 
@@ -61,6 +61,8 @@ Advanced \ Chipset Configuration → Share Memory : 128MB
 Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
 
 ## 已知问题
+* 本人在升级 Beta 10 遇见暂时无法解决的 Bug，暂时退回 B9 等待下一个 Beta 版本。
+
 * 补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。
   
   解决方案: 禁用该补丁或者用 bios 来引导 Windows。
@@ -70,6 +72,8 @@ Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
   解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用。
 
 ## 更新日志
+
+0.6.3: 更新 OC 版本
 
 0.6.2: First release
 
