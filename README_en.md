@@ -2,8 +2,6 @@
 
 ### [中文版文档](README.md)
 
-## <font color=red>***Warning: DO NOT UPGRADE TO BIG SUR BETA 10, THE SYSTEM MIGHT NOT BOOT OR BOOT WITH BROKEN SYSTEM. WAIT FOR THE NEXT RELESE OF MAC OS***</font>
-
 ## Configuration
 
 Motherboard：ASRock Z390 phantom gaming-itx/ac
@@ -95,7 +93,6 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 ## Known Issues
-* Beta 10 could cause booting problem, please wait for the next beta.
 
 * The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC
   

@@ -2,8 +2,6 @@
 
 ### [English Documentation](README_en.md)
 
-## <font color=red>***警告: 请暂时不要将你的系统升级至 BIG SUR BETA 10, 否则系统也许将无法正常启动。请等待下一个版本的发布。***</font>
-
 ## 硬件配置
 
 主板：ASRock Z390 phantom gaming-itx/ac
@@ -93,7 +91,6 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 ## 已知问题
-* 本人在升级 Beta 10 遇见暂时无法解决的 Bug，暂时退回 B9 等待下一个 Beta 版本。
 
 * 补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。
   
