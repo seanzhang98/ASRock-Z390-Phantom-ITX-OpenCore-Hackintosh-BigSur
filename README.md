@@ -49,6 +49,12 @@ CPU：Intel 9th Gen i9-9900k
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/thunderbolts.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
+
+## 传感器支持
+本 EFI 支持在 Big Sur 中显示主板相关传感器, RX5700 的 GPU 核心温度也能正常显示。
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
+
 ## 雷霹3驱动
 本教程参考了房大叔的教程，刷了华擎的4.40c BIOS。
 具体参考：[华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
@@ -63,6 +69,12 @@ Advanced \ USB Configuration → XHCI Hand-off : Enabled
 Advanced \ Chipset Configuration → Share Memory : 128MB
 
 Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
+
+Advanced \ Intel (R) Thunderbolt → Thunderbolt (TM) Support : Enabled
+
+Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
+
+Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 ## 已知问题
 * 本人在升级 Beta 10 遇见暂时无法解决的 Bug，暂时退回 B9 等待下一个 Beta 版本。

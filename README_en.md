@@ -50,6 +50,11 @@ Wireless network card：BCM943602CS
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
 
+## Sensors support
+This EFI added sensors support in Big Sur, RX5700's GPU Die temperature is correctly displayed.
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
+ 
 ## Thunderbolt 3 
 This configuration was flashed Asrock special BIOS 4.40c to support TB3 function.
 Tutorial By fangf2018 (Chinese Only)：[华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
@@ -65,6 +70,12 @@ Advanced \ USB Configuration → XHCI Hand-off : Enabled
 Advanced \ Chipset Configuration → Share Memory : 128MB
 
 Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
+
+Advanced \ Intel (R) Thunderbolt → Thunderbolt (TM) Support : Enabled
+
+Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
+
+Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 ## Known Issues
 * Beta 10 could cause booting problem, please wait for the next beta.
