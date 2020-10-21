@@ -19,16 +19,16 @@ Wireless network card：BCM94360CS
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
 ## Benchmark
-###Geekbench 5 CPU:
+### Geekbench 5 CPU:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_benchmark.png)
 
-###Cinebench R20：
+### Cinebench R20：
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_cine.png)
 
-###Geekbench 5 GPU OpenGL:
+### Geekbench 5 GPU OpenGL:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_open.png)
 
-###Geekbench 5 GPU Metal:
+### Geekbench 5 GPU Metal:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
 
 ## Wi-Fi & Bluetooth module replacement
