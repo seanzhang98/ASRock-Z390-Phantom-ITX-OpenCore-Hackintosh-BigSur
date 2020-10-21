@@ -114,6 +114,8 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
 
+**[icyleaf](https://icyleaf.com/2019/03/asrock-z390-gaming-itx-install-hackintosh-tutorial/)**
+
 **[ZeRo° Xu](https://github.com/xzhih)(冰水加劲Q)**
 
 **[acidanthera](https://github.com/acidanthera/OpenCorePkg)**
