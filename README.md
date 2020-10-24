@@ -4,9 +4,14 @@
 
 ## 硬件配置
 
+<style>
+table {
+margin: auto;
+border: 1px solid red
+}
+</style>
 | 部件名称 | 型号                                           | 备注                |
 |------|----------------------------------------------|-------------------|
-:-: | :-: | :-:
 | 主板   | ASRock Z390 phantom gaming-itx/ac            |                   |
 | CPU  | Intel 第九代 i9-9900k                           |                   |
 | 无线网卡 |  BCM94360CS                                            |                   |
