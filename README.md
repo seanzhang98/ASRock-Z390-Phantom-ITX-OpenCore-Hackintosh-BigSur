@@ -4,7 +4,18 @@
 
 ## 硬件配置
 
-主板：ASRock Z390 phantom gaming-itx/ac
+[](
+| 部件名称 | 型号                                           | 备注                |
+|------|----------------------------------------------|-------------------|
+| 主板   | ASRock Z390 phantom gaming-itx/ac            |                   |
+| CPU  | Intel 第九代 i9-9900k                           |                   |
+| 无线网卡 |  BCM94360CS                                            |                   |
+| 散热器  |                                              |                   |
+| 内存   | TEAM DDR4 3200Mhz PC4-25600 32GBx2枚（64GBkit） | Elite Plus 系列     |
+| 机箱   |                                              |                   |
+| 电源   |                                              |                   |
+| 显卡   | AMD RX5700 itx 8GB                           | PowerColor 日本市场特供 |
+)主板：ASRock Z390 phantom gaming-itx/ac
 
 CPU：Intel 9th Gen i9-9900k
 
