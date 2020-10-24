@@ -15,15 +15,6 @@
 | 机箱   |                                              |                   |
 | 电源   |                                              |                   |
 | 显卡   | AMD RX5700 itx 8GB                           | PowerColor 日本市场特供 |
-)主板：ASRock Z390 phantom gaming-itx/ac
-
-CPU：Intel 9th Gen i9-9900k
-
-显卡： AMD RX5700 itx 8GB
- 
-内存: Team Group 32GBx2 (共64GB)
-
-无线网卡：BCM94360CS
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
