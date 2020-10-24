@@ -4,16 +4,15 @@
 
 ## 硬件配置
 
-[](
 | 部件名称 | 型号                                           | 备注                |
 |------|----------------------------------------------|-------------------|
 | 主板   | ASRock Z390 phantom gaming-itx/ac            |                   |
 | CPU  | Intel 第九代 i9-9900k                           |                   |
 | 无线网卡 |  BCM94360CS                                            |                   |
-| 散热器  |                                              |                   |
+| 散热器  | 利民 AXP90                         |  猫头鹰 A9x14 风扇    |
 | 内存   | TEAM DDR4 3200Mhz PC4-25600 32GBx2枚（64GBkit） | Elite Plus 系列     |
-| 机箱   |                                              |                   |
-| 电源   |                                              |                   |
+| 机箱   |  Loli 1s mini itx 机箱                                    |                   |
+| 电源   | 益恒7660b                                             |                   |
 | 显卡   | AMD RX5700 itx 8GB                           | PowerColor 日本市场特供 |
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
