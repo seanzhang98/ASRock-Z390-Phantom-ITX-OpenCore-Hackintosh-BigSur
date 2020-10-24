@@ -38,7 +38,7 @@ The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and
 
 * System stability：System has been tested in 11.0 Beta9(20A5384c) with no system crash.
 
-* Graphics：RX5700 driver is normal, boosted with a patch to Radeon Pro W5700X 8 GB for better performance.  
+* Graphics：RX5700 driver is normal~~, boosted with a patch to Radeon Pro W5700X 8 GB for better performance~~.  
 
 * Sound card：Normal.
 
@@ -103,6 +103,8 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
   Solution: change the model into iMac Pro, however, you will lose the SideCar function.
 
 ## Update Logs
+
+0.6.3.1: Fix mirror errors.
 
 0.6.3: update Opencore to 0.6.3
 

@@ -37,7 +37,7 @@ CPU：Intel 9th Gen i9-9900k
 
 * 系统稳定性：在 macOS 11.0 Beta9(20A5384c) 中没有系统崩溃。
 
-* 显卡：RX5700 驱动正常, 使用补丁伪装成 Radeon Pro W5700X 8 GB 以获得更好的性能。  
+* 显卡：RX5700 驱动正常~~, 使用补丁伪装成 Radeon Pro W5700X 8 GB 以获得更好的性能~~。  
 
 * 声卡：正常。
 
@@ -101,6 +101,8 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
   解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用。
 
 ## 更新日志
+
+0.6.3.1: 修复部分问题
 
 0.6.3: 更新 OC 版本
 
