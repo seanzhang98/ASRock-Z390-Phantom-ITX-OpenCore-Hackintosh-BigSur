@@ -4,15 +4,16 @@
 
 ## Configuration
 
-Motherboard：ASRock Z390 phantom gaming-itx/ac
-
-CPU：Intel 9th Gen i9-9900k
-
-Graphics： AMD RX5700 itx 8GB
- 
-RAM: Team Group 32GBx2 (64GB total)
-
-Wireless network card：BCM94360CS
+| Parts | Model                                           | Notes                |
+|:------:|:----------------------------------------------:|:-------------------:|
+| Motherboard   | ASRock Z390 phantom gaming-itx/ac            |                   |
+| CPU  | Intel 9th Gen i9-9900k                           |                   |
+| Wireless Network Card |  BCM94360CS                                            |                   |
+| Cooler  | Thermalright AXP90                         |  Noctua A9x14 Fan    |
+| RAM   | TEAM DDR4 3200Mhz PC4-25600 32GBx2（64GBkit） | Elite Plus Series     |
+| Case  |  Loli 1s mini itx                                    |                   |
+| Power Source  | Enhance 7660b                                             |    600W 1U Power     |
+| GPU   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor Only for Japan market |
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
