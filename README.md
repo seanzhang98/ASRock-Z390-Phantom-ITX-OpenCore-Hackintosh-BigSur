@@ -7,13 +7,16 @@
 | 部件名称 | 型号                                           | 备注                |
 |:------:|:----------------------------------------------:|:-------------------:|
 | 主板   | ASRock Z390 phantom gaming-itx/ac            |                   |
-| CPU  | Intel 第九代 i9-9900k                           |                   |
-| 无线网卡 |  BCM94360CS                                            |                   |
+| CPU  | Intel 第九代 i9-9900k                           | 设置主频至4.5Ghz，满载温度稳定在90度左右 |
+| 无线网卡 |  BCM94360CS                                            | 需要 NGFF M.2 转接卡 |
 | 散热器  | 利民 AXP90                         |  猫头鹰 A9x14 风扇    |
 | 内存   | TEAM DDR4 3200Mhz PC4-25600 32GBx2枚（64GBkit） | Elite Plus 系列     |
 | 机箱   |  Loli 1s mini itx 机箱                                    |                   |
 | 电源   | 益恒 7660b                                             |    600W 1U 电源     |
 | 显卡   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor 日本市场特供 |
+| 主 M.2 散热 | 猫头鹰 A4x10 风扇x2 | 移除原装散热马甲 |
+
+
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
@@ -59,7 +62,7 @@
 * USB：正常。
 
 * 雷霹 3 ：支持热插拔, USB 功能正常 (本人没有 TB3 设备无法测试具体速度和功能，理论上应该能正常工作)。
- 
+
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/thunderbolts.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)

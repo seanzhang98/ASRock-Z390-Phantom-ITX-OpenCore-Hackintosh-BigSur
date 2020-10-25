@@ -7,13 +7,16 @@
 | Parts | Model                                           | Notes                |
 |:------:|:----------------------------------------------:|:-------------------:|
 | Motherboard   | ASRock Z390 phantom gaming-itx/ac            |                   |
-| CPU  | Intel 9th Gen i9-9900k                           |                   |
-| Wireless Network Card |  BCM94360CS                                            |                   |
+| CPU  | Intel 9th Gen i9-9900k                           | Set the frequency of all core to 4.5Ghz, full load temperature is around 90 degrees. |
+| Wireless Network Card |  BCM94360CS                                            | NGFF to M.2 adapter required |
 | Cooler  | Thermalright AXP90                         |  Noctua A9x14 Fan    |
 | RAM   | TEAM DDR4 3200Mhz PC4-25600 32GBx2（64GBkit） | Elite Plus Series     |
 | Case  |  Loli 1s mini itx                                    |                   |
 | Power Source  | Enhance 7660b                                             |    600W 1U Power     |
 | GPU   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor Only for Japan market |
+| Main M.2 Cooler | Noctua A4x10 Fan x 2 | Required to remove the offical M.2 armor |
+
+
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
@@ -70,7 +73,7 @@ The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and
 This EFI added sensors support in Big Sur, RX5700's GPU Die temperature is correctly displayed.
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
- 
+
 ## Thunderbolt 3 
 This configuration was flashed Asrock special BIOS 4.40c to support TB3 function.
 Tutorial By fangf2018 (Chinese Only)：[华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
