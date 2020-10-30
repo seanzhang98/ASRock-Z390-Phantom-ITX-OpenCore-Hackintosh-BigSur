@@ -45,7 +45,7 @@ The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and
 
 * System stability：System has been tested in 11.0 Beta9(20A5384c) with no system crash.
 
-* Graphics：RX5700 driver is normal~~, boosted with a patch to Radeon Pro W5700X 8 GB for better performance~~.  
+* Graphics：RX5700 driver is normal.  
 
 * Sound card：Normal.
 
@@ -71,11 +71,6 @@ The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/thunderbolts.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
-
-## Sensors support
-This EFI added sensors support in Big Sur, RX5700's GPU Die temperature is correctly displayed.
-
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
 
 ## Thunderbolt 3 
 This configuration was flashed Asrock special BIOS 4.40c to support TB3 function.
@@ -110,6 +105,8 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
   Solution: change the model into iMac Pro, however, you will lose the SideCar function.
 
 ## Update Logs
+
+0.6.3.2: re-builded the EFI, removed FakeSMC (tested in 11.0.1 Beta(20B5012d)).
 
 0.6.3.1: Fix mirror errors.
 

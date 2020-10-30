@@ -44,7 +44,7 @@
 
 * 系统稳定性：在 macOS 11.0 Beta9(20A5384c) 中没有系统崩溃。
 
-* 显卡：RX5700 驱动正常~~, 使用补丁伪装成 Radeon Pro W5700X 8 GB 以获得更好的性能~~。  
+* 显卡：RX5700 驱动正常。
 
 * 声卡：正常。
 
@@ -70,11 +70,6 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/thunderbolts.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
-
-## 传感器支持
-本 EFI 支持在 Big Sur 中显示主板相关传感器, RX5700 的 GPU 核心温度也能正常显示。
-
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
 
 ## 雷霹3驱动
 本教程参考了房大叔的教程，刷了华擎的4.40c BIOS。
@@ -112,6 +107,8 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
   解决方案：清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除kernel panic 文件。
 
 ## 更新日志
+
+0.6.3.2: 重构 EFI，移除 FakeSMC。（已在 11.0.1 Beta版(20B5012d) 测试）
 
 0.6.3.1: 修复部分问题
 
