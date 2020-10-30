@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>17G8030</string>
+	<string>18E226</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>FakeSMC</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.netkas.FakeSMC</string>
+	<string>org.netkas.driver.FakeSMC</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.5.2</string>
+	<string>6.26.1465</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,83 +25,69 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3.5.2</string>
+	<string>1465</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>10B61</string>
+	<string>10E125</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>15E60</string>
+	<string>18E219</string>
 	<key>DTSDKName</key>
-	<string>macosx10.11</string>
+	<string>macosx10.14</string>
 	<key>DTXcode</key>
-	<string>1010</string>
+	<string>1020</string>
 	<key>DTXcodeBuild</key>
-	<string>10B61</string>
+	<string>10E125</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>SMC Device Emulator</key>
+		<key>FakeSMC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.netkas.FakeSMC</string>
+			<string>org.netkas.driver.FakeSMC</string>
 			<key>Configuration</key>
 			<dict>
-				<key>Keys</key>
+				<key>Clover</key>
 				<dict>
-					<key>$Num</key>
+					<key>BEMB</key>
 					<array>
-						<string>ui8 </string>
-						<data>
-						AQ==
-						</data>
-					</array>
-					<key>ACID</key>
-					<array>
-						<string>ch8*</string>
-						<data>
-						ur48RcADEEM=
-						</data>
-					</array>
-					<key>ALI0</key>
-					<array>
-						<string>{ali</string>
-						<data>
-						BgECAA==
-						</data>
-					</array>
-					<key>ALRV</key>
-					<array>
-						<string>ui16</string>
-						<data>
-						AAE=
-						</data>
-					</array>
-					<key>ALV0</key>
-					<array>
-						<string>{alv</string>
-						<data>
-						AQEDtwCjABVq9A==
-						</data>
-					</array>
-					<key>CLKH</key>
-					<array>
-						<string>{clh</string>
-						<data>
-						AABwgAABGUA=
-						</data>
-					</array>
-					<key>CLKT</key>
-					<array>
-						<string>ui32</string>
-						<data>
-						AAByGw==
-						</data>
+						<string>BEMB</string>
+						<string>flag</string>
 					</array>
 					<key>EPCI</key>
 					<array>
-						<string>flag</string>
+						<string>EPCI</string>
+						<string>ui32</string>
+					</array>
+					<key>RBr</key>
+					<array>
+						<string>RBr</string>
+						<string>ch8*</string>
+					</array>
+					<key>REV</key>
+					<array>
+						<string>REV</string>
+						<string>{rev</string>
+					</array>
+					<key>RPlt</key>
+					<array>
+						<string>RPlt</string>
+						<string>ch8*</string>
+					</array>
+				</dict>
+				<key>Keys</key>
+				<dict>
+					<key>$Adr</key>
+					<array>
+						<string>ui32</string>
+						<data>
+						AAADAA==
+						</data>
+					</array>
+					<key>$Num</key>
+					<array>
+						<string>ui8</string>
 						<data>
 						AQ==
 						</data>
@@ -111,20 +97,6 @@
 						<string>ui8</string>
 						<data>
 						AA==
-						</data>
-					</array>
-					<key>LSOF</key>
-					<array>
-						<string>flag</string>
-						<data>
-						AQ==
-						</data>
-					</array>
-					<key>LSSB</key>
-					<array>
-						<string>{lso</string>
-						<data>
-						AQE=
 						</data>
 					</array>
 					<key>LsNM</key>
@@ -141,54 +113,21 @@
 						AQQKAAY=
 						</data>
 					</array>
-					<key>MOST</key>
-					<array>
-						<string>ui16</string>
-						<data>
-						gAM=
-						</data>
-					</array>
-					<key>MSDW</key>
-					<array>
-						<string>ui8</string>
-						<data>
-						AQ==
-						</data>
-					</array>
-					<key>MSPS</key>
-					<array>
-						<string>{msp</string>
-						<data>
-						AA==
-						</data>
-					</array>
 					<key>MSSD</key>
 					<array>
 						<string>si8</string>
 						<data>
-						Aw==
+						BQ==
+						</data>
+					</array>
+					<key>MSSP</key>
+					<array>
+						<string>si8</string>
+						<data>
+						BQ==
 						</data>
 					</array>
 					<key>NATJ</key>
-					<array>
-						<string>ui8</string>
-						<data>
-						AA==
-						</data>
-					</array>
-					<key>NATi</key>
-					<array>
-						<string>ui16</string>
-						<string>0000</string>
-					</array>
-					<key>NTOK</key>
-					<array>
-						<string>ui8</string>
-						<data>
-						AQ==
-						</data>
-					</array>
-					<key>NVPR</key>
 					<array>
 						<string>ui8</string>
 						<data>
@@ -218,55 +157,96 @@
 						ATAPAAAD
 						</data>
 					</array>
-					<key>RGEN</key>
+					<key>RVBF</key>
 					<array>
-						<string>ui8</string>
+						<string>{rev</string>
 						<data>
-						Ag==
+						ATAPAAAD
 						</data>
 					</array>
-					<key>RMde</key>
+					<key>RVUF</key>
 					<array>
-						<string>char</string>
+						<string>{rev</string>
 						<data>
-						QQ==
+						ATAPAAAD
 						</data>
 					</array>
+				</dict>
+				<key>Types</key>
+				<dict>
+					<key>BEMB</key>
+					<string>flag</string>
+					<key>CLKC</key>
+					<string>{clc</string>
+					<key>CLKH</key>
+					<string>{clh</string>
+					<key>CLKT</key>
+					<string>ui32</string>
+					<key>CLWK</key>
+					<string>ui32</string>
+					<key>EPCI</key>
+					<string>flag</string>
+					<key>LSSS</key>
+					<string>{lso</string>
+					<key>MSDS</key>
+					<string>ui8</string>
+					<key>MSDW</key>
+					<string>flag</string>
+					<key>MSPS</key>
+					<string>{msp</string>
 					<key>RPlt</key>
-					<array>
-						<string>ch8*</string>
-						<string>m82</string>
-					</array>
+					<string>ch8*</string>
 				</dict>
 				<key>debug</key>
 				<false/>
 				<key>smc-compatible</key>
 				<string>smc-napa</string>
+				<key>trace</key>
+				<false/>
 			</dict>
 			<key>IOClass</key>
 			<string>FakeSMC</string>
 			<key>IOMatchCategory</key>
-			<string>IOACPIPlatformDevice</string>
+			<string>FakeSMC</string>
 			<key>IOProviderClass</key>
 			<string>AppleACPIPlatformExpert</string>
 			<key>IOResourceMatch</key>
-			<string>ACPI</string>
+			<string>FakeSMCKeyStore</string>
+		</dict>
+		<key>FakeSMCKeyStore</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.netkas.driver.FakeSMC</string>
+			<key>IOClass</key>
+			<string>FakeSMCKeyStore</string>
+			<key>IOMatchCategory</key>
+			<string>FakeSMCKeyStore</string>
+			<key>IOProviderClass</key>
+			<string>IOResources</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
+			<key>IOUserClientClass</key>
+			<string>FakeSMCKeyStoreUserClient</string>
 		</dict>
 	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2017 netkas. All rights reserved.</string>
 	<key>OSBundleCompatibleVersion</key>
-	<string>3.3.0</string>
+	<string>1429</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.iokit.IOACPIFamily</key>
 		<string>1.0.0d1</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>10.6</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>9.0.0</string>
+		<string>10.6</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>9.0.0</string>
+		<string>10.6</string>
 		<key>com.apple.kpi.mach</key>
-		<string>9.0.0</string>
+		<string>10.6</string>
 		<key>com.apple.kpi.unsupported</key>
-		<string>9.0.0</string>
+		<string>10.6</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Root</string>
