@@ -7,9 +7,9 @@
 - <font size=4>[2. Configuration](#config)</font>
 - <font size=4>[3. Functionalities checklist](#driver)</font>
 - <font size=4>[4. Getting Ready](#ready)</font>
- - <font size=4>[4.1 Wi-Fi & Bluetooth module replacement](#wirecard)</font>
- - <font size=4>[4.2. Flashing Special BIOS](#tb3)</font>
- - <font size=4>[4.3. BIOS Setting](#bios)</font>
+     - <font size=4>[4.1 Wi-Fi & Bluetooth module replacement](#wirecard)</font>
+     - <font size=4>[4.2. Flashing Special BIOS](#tb3)</font>
+     - <font size=4>[4.3. BIOS Setting](#bios)</font>
 - <font size=4>[5. Known Issues](#iss)</font>
 - <font size=4>[6. Update Logs](#logs)</font>
 - <font size=4>[7. Benchmark](#bench)</font>
@@ -91,8 +91,10 @@ Steps of how to flash BIOS can be found on Asrock Official site 📖[ASRock BIOS
 
 This is for enabling Thunderbolt 3 on MacOS.（Do I have to flash this BIOS? I tried and no good with TB 3 while using BIOS 4.40😂.）
 If you do not use Thunderbolt 3 port, you can skip this step. You can flash back to 4.40 anytime you want.
-
-<font color=red>⚠️Warming：There are risks while flashing BIOS, this instruction dose not responsible for any hardware damage.</font>
+```diff
+- ⚠️Warming：There are risks while flashing BIOS, 
+- ⚠️This instruction dose not responsible for any hardware damage.
+```
 
 ### <span id="bios">4.3. BIOS Setting (4.40c)</span>
 
