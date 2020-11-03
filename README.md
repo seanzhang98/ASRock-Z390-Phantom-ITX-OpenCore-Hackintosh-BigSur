@@ -10,6 +10,7 @@
      - <font size=4>[4.1. 网卡替换](#wirecard)</font>
      - <font size=4>[4.2. 刷写定制版 BIOS](#tb3)</font>
      - <font size=4>[4.3. BIOS 设定](#bios)</font>
+     - <font size=4>[4.4. 清理模拟 NVRAM（可选）](#nvram)</font>
 - <font size=4>[5. 已知问题](#iss)</font>
 - <font size=4>[6. 更新日志](#logs)</font>
 - <font size=4>[7. 性能跑分](#bench)</font>
@@ -116,6 +117,61 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset.BMP)
+
+### <span id="nvram">4.4. 清理模拟 NVRAM（可选）<span>
+如果你之前曾经使用过模拟 NVRAM，需要清理残留以正常使用原生 NVRAM。如果你之前没有使用过，或将进行全新安装，可略过此部分。
+#### 4.4.1. 清理 LogoutHook
+**步骤一：**
+
+在终端执行
+```diff
+sudo defaults read com.apple.loginwindow LogoutHook
+```
+如果输出为
+```diff
+The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
+```
+代表没有 LogoutHook 残留。
+
+**步骤二：** 
+
+移除 ```LogoutHook.command``` 文件，终端执行
+```diff
+sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
+```
+
+**步骤三：** 
+
+清空 ```LogoutHook``` 触发设置 ，终端执行
+```diff
+sudo defaults delete com.apple.loginwindow LogoutHook
+```
+
+#### 4.4.2. 删除文件（如果存在删除即可，没有可忽略）
+```EFI``` 分区中的 ```nvram.plist```
+
+```/EFI/OC/Drivers``` 目录中的 ```VariableRuntimeDxe.efi``` 与 ```EmuVariableRuntimeDxe.efi```
+
+#### 4.4.3. 验证 NVRAM 是否正常工作
+在终端逐次执行
+```diff
+sudo -s
+```
+```diff
+sudo nvram -c 
+```
+```diff
+sudo nvram myvar=test
+```
+```diff
+exit
+```
+重启设备，然后在终端执行
+```diff
+vram -p | grep -i myvar
+```
+如果返回包含```myvar test```，则 NVRAM 工作正常。
+
 ## <span id="iss">5. 已知问题<span>
 
 * **补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。**

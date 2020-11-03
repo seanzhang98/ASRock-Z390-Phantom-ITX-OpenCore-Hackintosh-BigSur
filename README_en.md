@@ -10,6 +10,7 @@
      - <font size=4>[4.1 Wi-Fi & Bluetooth module replacement](#wirecard)</font>
      - <font size=4>[4.2. Flashing Special BIOS](#tb3)</font>
      - <font size=4>[4.3. BIOS Setting](#bios)</font>
+     - <font size=4>[4.4. Clean up emulated NVRAM（Optional）](#nvram)</font>
 - <font size=4>[5. Known Issues](#iss)</font>
 - <font size=4>[6. Update Logs](#logs)</font>
 - <font size=4>[7. Benchmark](#bench)</font>
@@ -115,6 +116,61 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset_eng.BMP)
+
+### <span id="nvram">4.4. Clean up emulated NVRAM（Optional）<span>
+If you used emulated NVRAM before, you need to clean up the emulated NVRAM to get the native NVRAM works. If you never used emulated NVRAM or you are doing a fresh install, you can skip this part.
+#### 4.4.1. Clean up LogoutHook
+**Step 1：**
+
+Execute in terminal
+```diff
+sudo defaults read com.apple.loginwindow LogoutHook
+```
+If the output is
+```diff
+The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
+```
+Means no LogoutHook left.
+
+**Step 2：** 
+
+Remove ```LogoutHook.command``` file，execute in terminal
+```diff
+sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
+```
+
+**Step 3：** 
+
+Clean up ```LogoutHook``` trigger setting, execute in terminal
+```diff
+sudo defaults delete com.apple.loginwindow LogoutHook
+```
+
+#### 4.4.2. Remove Files（If there are any）
+```nvram.plist``` in ```EFI```  prartition.
+
+```VariableRuntimeDxe.efi``` and ```EmuVariableRuntimeDxe.efi``` in ```/EFI/OC/Drivers```
+
+#### 4.4.3. Examination NVRAM function
+Execute in terminal each line at a time,
+```diff
+sudo -s
+```
+```diff
+sudo nvram -c 
+```
+```diff
+sudo nvram myvar=test
+```
+```diff
+exit
+```
+Reboot your device, then execute in terminal
+```diff
+vram -p | grep -i myvar
+```
+If ```myvar test``` is included in your return line, then the NVRAM is working properly.
+
 ## <span id="iss">5. Known Issues</span>
 
 * **The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC**
