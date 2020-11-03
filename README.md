@@ -1,36 +1,37 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur
 
-### [Switch to English Version](README_en.md)
+### 👉 [Switch to English Version](README_en.md)
 
 ## 目录
-- <font size=4>[注意事项](#warm)</font>
-- <font size=4>[硬件配置](#config)</font>
-- <font size=4>[驱动情况](#driver)</font>
-- <font size=4>[网卡替换](#wirecard)</font>
-- <font size=4>[雷霹 3 驱动](#tb3)</font>
-- <font size=4>[BIOS 设定](#bios)</font>
-- <font size=4>[已知问题](#iss)</font>
-- <font size=4>[更新日志](#logs)</font>
-- <font size=4>[性能跑分](#bench)</font>
-- <font size=4>[参考](#ref)</font>
-- <font size=4>[特别感谢](#thanks)</font>
+- <font size=4>[1. 注意事项](#warm)</font>
+- <font size=4>[2. 硬件配置](#config)</font>
+- <font size=4>[3. 驱动情况](#driver)</font>
+- <font size=4>[4. 准备工作](#ready)</font>
+ - <font size=4>[4.1. 网卡替换](#wirecard)</font>
+ - <font size=4>[4.2. 刷写定制版 BIOS](#tb3)</font>
+ - <font size=4>[4.3. BIOS 设定](#bios)</font>
+- <font size=4>[5. 已知问题](#iss)</font>
+- <font size=4>[6. 更新日志](#logs)</font>
+- <font size=4>[7. 性能跑分](#bench)</font>
+- <font size=4>[8. 参考](#ref)</font>
+- <font size=4>[9. 特别感谢](#thanks)</font>
 
-## <span id="warm">注意事项</span>
-## 注意一⚠️：建议在使用本 EFI 之前完整阅读 OC 官方配置指南，使用本 EFI 并不意味着你的系统也能正常启动，即使配置完全相同。 
+## <span id="warm">1. 注意事项</span>
+## 1.1. 注意一⚠️：建议在使用本 EFI 之前完整阅读 OC 官方配置指南，使用本 EFI 并不意味着你的系统也能正常启动，即使配置完全相同。 
 
 ### **📖 [OpenCore 官方指南（英文版）](https://dortania.github.io/OpenCore-Install-Guide)**
 
 ### **📖 [OpenCore 配置项非官方中文翻译](https://oc.skk.moe)**
 
-## 注意二⚠️：本配置是 OpenCore 引导，如果你现在正在使用 Clover 引导，请参考以下文档以免出现错误。
+## 1.2. 注意二⚠️：本配置是 OpenCore 引导，如果你现在正在使用 Clover 引导，请参考以下文档以免出现错误。
 
 ### **📖 [Clover 转 OpenCore 指南（英文版）](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
 
-## 注意三⚠️：请生成你自己的三码，本 EFI 不包含任何三码信息。你可以用使用 OpenCore Configurator 来生成相关数据。
+## 1.3. 注意三⚠️：请生成你自己的三码，本 EFI 不包含任何三码信息。你可以用使用 OpenCore Configurator 来生成相关数据。
 
 ### **📖 [OpenCore Configurator 官网（英文版）](https://mackie100projects.altervista.org)**
 
-## <span id="config">硬件配置</span>
+## <span id="config">2. 硬件配置</span>
 
 | 部件名称 | 型号                                           | 备注                |
 |:------:|:----------------------------------------------:|:-------------------:|
@@ -47,7 +48,7 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
-## <span id="driver">驱动情况</span>
+## <span id="driver">3. 驱动情况</span>
 
 | 功能名称     | 是否正常 | 备注  |
 |:--------:|:----:|:---:|
@@ -76,19 +77,24 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
 
-
-## <span id="wirecard">网卡替换</span>
+## <span id="ready">4. 准备工作</span>
+### <span id="wirecard">4.1. 网卡替换</span>
 该主板自带的为 Intel® Wireless-AC 9560 模块，支持无线 802.11ac 方案并提供蓝牙 5.0 和 2x2 802.11ac 2.4/5Ghz Wi-Fi。需要拆下该模块并替换为白果拆机模块BCM94360CS2，该模块需要 BCM94360CS2 NGFF M.2 转接卡。操作步骤如图（icyleaf大佬的图）：
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.jpg)
 
 Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 
-## <span id="tb3">雷霹 3 驱动</span>
-本教程参考了房大叔的教程，刷了华擎的4.40c BIOS。
-具体参考：[华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
+###<span id="tb3">4.2. 刷写定制版 BIOS</span>
+下载好 bios 文件夹中的 [Z39PGIX4.40C](bios/Z39PGIX4.40C), 放入 U 盘 并在 BIOS 中执行 Instant Flash。
+具体步骤可参考华擎官网 📖[BIOS 刷新程序](http://www.asrockchina.com.cn/support/BIOSIG.cn.asp?cat=BIOS9)。
 
-## <span id="bios">BIOS 设定 (4.40c)<span>
+此操作是为了在 MacOS 中驱动雷霹 3。（是否可以不刷？我试过不刷就识别不到雷霹了😂）
+如果不使用雷霹 3 端口可以不刷，此 BIOS 支持刷回版本 4.40。
+
+<font color=red>⚠️警告：刷 BIOS 有风险，本教程不对任何硬件损伤承担任何责任！</font>
+
+### <span id="bios">4.3. BIOS 设定 (4.40c)<span>
 
 Advanced \ Chipset Configuration → Vt-d : Disabled
 
@@ -106,7 +112,8 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 
 Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
-## <span id="iss">已知问题<span>
+
+## <span id="iss">5. 已知问题<span>
 
 * **补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。**
   
@@ -120,7 +127,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
   解决方案： 清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除kernel panic 文件。
 
-## <span id="logs">更新日志</span>
+## <span id="logs">6. 更新日志</span>
 
 **0.6.3.2:** 重构 EFI，移除 FakeSMC。（已在 11.0.1 Beta版(20B5012d) 测试）
 
@@ -130,7 +137,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 **0.6.2:** First release
 
-## <span id="bench">性能跑分</span>
+## <span id="bench">7. 性能跑分</span>
 ### Geekbench 5 CPU:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_benchmark.png)
 
@@ -146,7 +153,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 
 
-## <span id="ref">参考</span>
+## <span id="ref">8. 参考</span>
 📖 [OpenCore 官方指南](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -161,7 +168,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 
 
-## <span id="thanks">特别感谢</span>
+## <span id="thanks">9. 特别感谢</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**

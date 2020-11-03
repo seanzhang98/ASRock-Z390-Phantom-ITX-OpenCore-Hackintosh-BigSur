@@ -1,21 +1,22 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur
 
-### [中文版文档](README.md)
+### 👉 [切换到中文版文档](README.md)
 
 ## Table of contents 
-- <font size=4>[Warning](#warm)</font>
-- <font size=4>[Configuration](#config)</font>
-- <font size=4>[Functionalities checklist](#driver)</font>
-- <font size=4>[Wi-Fi & Bluetooth module replacement](#wirecard)</font>
-- <font size=4>[Thunderbolt 3](#tb3)</font>
-- <font size=4>[BIOS Setting](#bios)</font>
-- <font size=4>[Known Issues](#iss)</font>
-- <font size=4>[Update Logs](#logs)</font>
-- <font size=4>[Benchmark](#bench)</font>
-- <font size=4>[References](#ref)</font>
-- <font size=4>[Special Thanks](#thanks)</font>
+- <font size=4>[1. Warning](#warm)</font>
+- <font size=4>[2. Configuration](#config)</font>
+- <font size=4>[3. Functionalities checklist](#driver)</font>
+- <font size=4>[4. Getting Ready](#ready)</font>
+ - <font size=4>[4.1 Wi-Fi & Bluetooth module replacement](#wirecard)</font>
+ - <font size=4>[4.2. Flashing Special BIOS](#tb3)</font>
+ - <font size=4>[4.3. BIOS Setting](#bios)</font>
+- <font size=4>[5. Known Issues](#iss)</font>
+- <font size=4>[6. Update Logs](#logs)</font>
+- <font size=4>[7. Benchmark](#bench)</font>
+- <font size=4>[8. References](#ref)</font>
+- <font size=4>[9. Special Thanks](#thanks)</font>
 
-## <span id="warm">Warning</span>
+## <span id="warm">1. Warning</span>
 ## Warning A⚠️： I strongly recommend you to read the OpenCore Install Guide before using this EFI, directly using this EFI does not mean your system can boot normally, even though the configuration is identical. 
 
 ### **📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)**
@@ -27,7 +28,7 @@
 ## Warning C⚠️：This EFI does not contain any platform information (SN, UUID etc.). You can generate these information by using OpenCore Configurator.
 ### **📖 [OpenCore Configurator official site](https://mackie100projects.altervista.org)**
 
-## <span id="config">Configuration</span></span></span></span></span>
+## <span id="config">2. Configuration</span></span></span></span></span>
 
 | Parts | Model                                           | Notes                |
 |:------:|:----------------------------------------------:|:-------------------:|
@@ -44,7 +45,7 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_eng.png)
 
-## <span id="driver">Functionalities checklist</span>
+## <span id="driver">3. Functionalities checklist</span>
 
 | Function Name     | Normal or not | Notes  |
 |:--------:|:----:|:---:|
@@ -75,8 +76,8 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot_eng.png)
 
-
-## <span id="wirecard">Wi-Fi & Bluetooth module replacement
+## <span id="ready">4. Getting Ready</span>
+### <span id="wirecard">4.1. Wi-Fi & Bluetooth module replacement
 The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and Bluetooth 5.0 with 2x2 802.11ac 2.4/5Ghz Wi-Fi. We need to remove this module and replace it with BCM94360CS2 module，BCM94360CS2 module required an NGFF to M.2 adapter. Steps shown below（By icyleaf）：
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.jpg)
@@ -84,11 +85,16 @@ The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and
 In Windows 10 you might need to install drivers manually in order to use Wi-Fi and Bluetooth.
 
 
-## <span id="tb3">Thunderbolt 3</span>
-This configuration was flashed Asrock special BIOS 4.40c to support TB3 function.
-Tutorial By fangf2018 (Chinese Only)：📖 [华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
+### <span id="tb3">4.2. Flashing Special BIOS</span>
+Download [Z39PGIX4.40C](bios/Z39PGIX4.40C), store in a thumb drive and flash the BIOS by executing Instant Flash.
+Steps of how to flash BIOS can be found on Asrock Official site 📖[ASRock BIOS Upgrade Instruction](http://www.asrock.com/support/BIOSIG.asp?cat=BIOS9).
 
-## <span id="bios">BIOS Setting (4.40c)</span>
+This is for enabling Thunderbolt 3 on MacOS.（Do I have to flash this BIOS? I tried and no good with TB 3 while using BIOS 4.40😂.）
+If you do not use Thunderbolt 3 port, you can skip this step. You can flash back to 4.40 anytime you want.
+
+<font color=red>⚠️Warming：There are risks while flashing BIOS, this instruction dose not responsible for any hardware damage.</font>
+
+### <span id="bios">4.3. BIOS Setting (4.40c)</span>
 
 Advanced \ Chipset Configuration → Vt-d : Disabled
 
@@ -106,7 +112,7 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 
 Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
-## <span id="iss">Known Issues</span>
+## <span id="iss">5. Known Issues</span>
 
 * **The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC**
   
@@ -116,7 +122,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
   
   Solution: change the model into iMac Pro, however, you will lose the SideCar function.
 
-## <span id="logs">Update Logs</span>
+## <span id="logs">6. Update Logs</span>
 
 **0.6.3.2:** Re-builded the EFI, removed FakeSMC (tested in 11.0.1 Beta(20B5012d)).
 
@@ -126,7 +132,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 **0.6.2:** First release
 
-## <span id="bench">Benchmark</span>
+## <span id="bench">7. Benchmark</span>
 ### Geekbench 5 CPU:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_benchmark.png)
 
@@ -141,7 +147,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 
 
-## <span id="ref">References</span>
+## <span id="ref">8. References</span>
 📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -155,7 +161,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 📖 [华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
 
 
-## <span id="thanks">Special Thanks</span>
+## <span id="thanks">9. Special Thanks</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
