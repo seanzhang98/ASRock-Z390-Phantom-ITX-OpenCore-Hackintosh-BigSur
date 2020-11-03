@@ -17,16 +17,16 @@
 - <font size=4>[9. Special Thanks](#thanks)</font>
 
 ## <span id="warm">1. Warning</span>
-## Warning A⚠️： I strongly recommend you to read the OpenCore Install Guide before using this EFI, directly using this EFI does not mean your system can boot normally, even though the configuration is identical. 
+### ⚠️Warning A⚠️： I strongly recommend you to read the OpenCore Install Guide before using this EFI, directly using this EFI does not mean your system can boot normally, even though the configuration is identical. 
 
-### **📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)**
+#### **📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)**
 
-## Warning B⚠️： This EFI is based on OpenCore, if you currently are using Clover, please read following document to avoid unpredictable error.
+### ⚠️Warning B⚠️： This EFI is based on OpenCore, if you currently are using Clover, please read following document to avoid unpredictable error.
 
-### **📖 [Converting from Clover to OpenCore Guide](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
+#### **📖 [Converting from Clover to OpenCore Guide](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
 
-## Warning C⚠️：This EFI does not contain any platform information (SN, UUID etc.). You can generate these information by using OpenCore Configurator.
-### **📖 [OpenCore Configurator official site](https://mackie100projects.altervista.org)**
+### ⚠️Warning C⚠️：This EFI does not contain any platform information (SN, UUID etc.). You can generate these information by using OpenCore Configurator.
+#### **📖 [OpenCore Configurator official site](https://mackie100projects.altervista.org)**
 
 ## <span id="config">2. Configuration</span></span></span></span></span>
 
