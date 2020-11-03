@@ -13,23 +13,23 @@
 - <font size=4>[5. 已知问题](#iss)</font>
 - <font size=4>[6. 更新日志](#logs)</font>
 - <font size=4>[7. 性能跑分](#bench)</font>
-- <font size=4>[8. 参考](#ref)</font>
+- <font size=4>[8. 参考文档](#ref)</font>
 - <font size=4>[9. 特别感谢](#thanks)</font>
 
 ## <span id="warm">1. 注意事项</span>
-## 1.1. 注意一⚠️：建议在使用本 EFI 之前完整阅读 OC 官方配置指南，使用本 EFI 并不意味着你的系统也能正常启动，即使配置完全相同。 
+### 1.1. ⚠️注意一⚠️：建议在使用本 EFI 之前完整阅读 OC 官方配置指南，使用本 EFI 并不意味着你的系统也能正常启动，即使配置完全相同。 
 
-### **📖 [OpenCore 官方指南（英文版）](https://dortania.github.io/OpenCore-Install-Guide)**
+#### **📖 [OpenCore 官方指南（英文版）](https://dortania.github.io/OpenCore-Install-Guide)**
 
-### **📖 [OpenCore 配置项非官方中文翻译](https://oc.skk.moe)**
+#### **📖 [OpenCore 配置项非官方中文翻译](https://oc.skk.moe)**
 
-## 1.2. 注意二⚠️：本配置是 OpenCore 引导，如果你现在正在使用 Clover 引导，请参考以下文档以免出现错误。
+### 1.2. ⚠️注意二⚠️：本配置是 OpenCore 引导，如果你现在正在使用 Clover 引导，请参考以下文档以免出现错误。
 
-### **📖 [Clover 转 OpenCore 指南（英文版）](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
+#### **📖 [Clover 转 OpenCore 指南（英文版）](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
 
-## 1.3. 注意三⚠️：请生成你自己的三码，本 EFI 不包含任何三码信息。你可以用使用 OpenCore Configurator 来生成相关数据。
+### 1.3. ⚠️注意三⚠️：请生成你自己的三码，本 EFI 不包含任何三码信息。你可以用使用 OpenCore Configurator 来生成相关数据。
 
-### **📖 [OpenCore Configurator 官网（英文版）](https://mackie100projects.altervista.org)**
+#### **📖 [OpenCore Configurator 官网（英文版）](https://mackie100projects.altervista.org)**
 
 ## <span id="config">2. 硬件配置</span>
 
@@ -156,7 +156,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 
 
-## <span id="ref">8. 参考</span>
+## <span id="ref">8. 参考文档</span>
 📖 [OpenCore 官方指南](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
