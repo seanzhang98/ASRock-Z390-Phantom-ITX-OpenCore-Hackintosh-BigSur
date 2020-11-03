@@ -1,6 +1,12 @@
-# ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh
+# ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur
 
 ### [中文版文档](README.md)
+
+##Warning A⚠️： I strongly recommend you to read the OpenCore Install Guide before using this EFI, directly using this EFI does not mean your system can boot normally, even though the configuration is identical. 
+###**[OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)**
+
+##Warning B⚠️： This EFI is based on OpenCore, if you currently are using Clover, please read following document to avoid unpredictable error.
+###**[Converting from Clover to OpenCore Guide](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
 
 ## Configuration
 
@@ -8,7 +14,7 @@
 |:------:|:----------------------------------------------:|:-------------------:|
 | Motherboard   | ASRock Z390 phantom gaming-itx/ac            |                   |
 | CPU  | Intel 9th Gen i9-9900k                           | Set the frequency of all core to 4.5Ghz, full load temperature is around 90 degrees. |
-| Wireless Network Card |  BCM94360CS                                            | NGFF to M.2 adapter required |
+| Wireless Network Card |  BCM94360CS2                                            | NGFF to M.2 adapter required |
 | Cooler  | Thermalright AXP90                         |  Noctua A9x14 Fan    |
 | RAM   | TEAM DDR4 3200Mhz PC4-25600 32GBx2（64GBkit） | Elite Plus Series     |
 | Case  |  Loli 1s mini itx                                    |                   |
@@ -16,12 +22,7 @@
 | GPU   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor Only for Japan market |
 | Main M.2 Cooler | Noctua A4x10 Fan x 2 | Required to remove the offical M.2 armor |
 
-
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/case01.jpeg)
-
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/case02.jpeg)
-
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_eng.png)
 
 ## Benchmark
 ### Geekbench 5 CPU:
@@ -37,9 +38,11 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
 
 ## Wi-Fi & Bluetooth module replacement
-The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and Bluetooth 5.0 with 2x2 802.11ac 2.4/5Ghz Wi-Fi. We need to remove this module and replace it with BCM94360CS module，BCM94360CS module required an NGFF to M.2 adapter. Steps shown below（By icyleaf）：
+The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and Bluetooth 5.0 with 2x2 802.11ac 2.4/5Ghz Wi-Fi. We need to remove this module and replace it with BCM94360CS2 module，BCM94360CS2 module required an NGFF to M.2 adapter. Steps shown below（By icyleaf）：
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.jpg)
+
+In Windows 10 you might need to install drivers manually in order to use Wi-Fi and Bluetooth.
 
 ## Drive situation
 
@@ -67,10 +70,10 @@ The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and
 
 * ThunderBolt 3 ：hot-plug supported, USB function is normal (I do not own a TB3 device to test the speed and functionality, but should be working).
 
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar.png)
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/thunderbolts.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar_eng.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/thunderbolts_eng.png)
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot_eng.png)
 
 ## Thunderbolt 3 
 This configuration was flashed Asrock special BIOS 4.40c to support TB3 function.
@@ -106,16 +109,18 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 ## Update Logs
 
-0.6.3.2: re-builded the EFI, removed FakeSMC (tested in 11.0.1 Beta(20B5012d)).
+**0.6.3.2:** re-builded the EFI, removed FakeSMC (tested in 11.0.1 Beta(20B5012d)).
 
-0.6.3.1: Fix mirror errors.
+**0.6.3.1:** Fix mirror errors.
 
-0.6.3: update Opencore to 0.6.3
+**0.6.3:** update Opencore to 0.6.3
 
-0.6.2: First release
+**0.6.2:** First release
 
 
 ## References
+[OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)
+
 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
 
 [macOS Catalina 10.15安装中常见的问题及解决方法](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
@@ -123,6 +128,8 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 [使用HIDPI解决睡眠唤醒黑屏、花屏及连接外部显示器的正确姿势](https://blog.daliansky.net/Use-HIDPI-to-solve-sleep-wake-up-black-screen,-Huaping-and-connect-the-external-monitor-the-correct-posture.html)
 
 [OpenCore部件补丁](https://github.com/daliansky/OC-little)
+
+[华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
 
 
 ## Special Thanks
