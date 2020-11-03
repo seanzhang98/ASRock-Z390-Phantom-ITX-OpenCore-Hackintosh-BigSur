@@ -7,9 +7,9 @@
 - <font size=4>[2. 硬件配置](#config)</font>
 - <font size=4>[3. 驱动情况](#driver)</font>
 - <font size=4>[4. 准备工作](#ready)</font>
- - <font size=4>[4.1. 网卡替换](#wirecard)</font>
- - <font size=4>[4.2. 刷写定制版 BIOS](#tb3)</font>
- - <font size=4>[4.3. BIOS 设定](#bios)</font>
+     - <font size=4>[4.1. 网卡替换](#wirecard)</font>
+     - <font size=4>[4.2. 刷写定制版 BIOS](#tb3)</font>
+     - <font size=4>[4.3. BIOS 设定](#bios)</font>
 - <font size=4>[5. 已知问题](#iss)</font>
 - <font size=4>[6. 更新日志](#logs)</font>
 - <font size=4>[7. 性能跑分](#bench)</font>
@@ -85,7 +85,7 @@
 
 Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 
-###<span id="tb3">4.2. 刷写定制版 BIOS</span>
+### <span id="tb3">4.2. 刷写定制版 BIOS</span>
 下载好 bios 文件夹中的 [Z39PGIX4.40C](bios/Z39PGIX4.40C), 放入 U 盘 并在 BIOS 中执行 Instant Flash。
 具体步骤可参考华擎官网 📖[BIOS 刷新程序](http://www.asrockchina.com.cn/support/BIOSIG.cn.asp?cat=BIOS9)。
 
