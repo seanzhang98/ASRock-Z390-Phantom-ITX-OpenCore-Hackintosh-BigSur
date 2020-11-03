@@ -2,12 +2,15 @@
 
 ### [English Documentation](README_en.md)
 
-##注意一⚠️：建议在使用本 EFI 之前完整阅读 OC 官方配置指南，使用本 EFI 并不意味着你的系统也能正常启动，即使配置完全相同。 
-###**[OpenCore 官方指南（英文版）](https://dortania.github.io/OpenCore-Install-Guide)**
-###**[OpenCore 配置项非官方中文翻译](https://oc.skk.moe)**
+## 注意一⚠️：建议在使用本 EFI 之前完整阅读 OC 官方配置指南，使用本 EFI 并不意味着你的系统也能正常启动，即使配置完全相同。 
 
-##注意二⚠️：本配置是 OpenCore 引导，如果你现在正在使用 Clover 引导，请参考以下文档以免出现错误。
-###**[Clover 转 OpenCore 指南（英文版）](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
+### **[OpenCore 官方指南（英文版）](https://dortania.github.io/OpenCore-Install-Guide)**
+
+### **[OpenCore 配置项非官方中文翻译](https://oc.skk.moe)**
+
+## 注意二⚠️：本配置是 OpenCore 引导，如果你现在正在使用 Clover 引导，请参考以下文档以免出现错误。
+
+### **[Clover 转 OpenCore 指南（英文版）](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
 
 ## 硬件配置
 
