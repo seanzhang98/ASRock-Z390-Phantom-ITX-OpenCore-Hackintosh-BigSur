@@ -2,6 +2,20 @@
 
 ### [中文版文档](README.md)
 
+## Table of contents 
+- <font size=4>[Warning](#warm)</font>
+- <font size=4>[Configuration](#config)</font>
+- <font size=4>[Functionalities checklist](#driver)</font>
+- <font size=4>[Wi-Fi & Bluetooth module replacement](#wirecard)</font>
+- <font size=4>[Thunderbolt 3](#tb3)</font>
+- <font size=4>[BIOS Setting](#bios)</font>
+- <font size=4>[Known Issues](#iss)</font>
+- <font size=4>[Update Logs](#logs)</font>
+- <font size=4>[Benchmark](#bench)</font>
+- <font size=4>[References](#ref)</font>
+- <font size=4>[Special Thanks](#thanks)</font>
+
+## <span id="warm">Warning</span>
 ## Warning A⚠️： I strongly recommend you to read the OpenCore Install Guide before using this EFI, directly using this EFI does not mean your system can boot normally, even though the configuration is identical. 
 
 ### **📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)**
@@ -13,7 +27,7 @@
 ## Warning C⚠️：This EFI does not contain any platform information (SN, UUID etc.). You can generate these information by using OpenCore Configurator.
 ### **📖 [OpenCore Configurator official site](https://mackie100projects.altervista.org)**
 
-## Configuration
+## <span id="config">Configuration</span></span></span></span></span>
 
 | Parts | Model                                           | Notes                |
 |:------:|:----------------------------------------------:|:-------------------:|
@@ -30,7 +44,7 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_eng.png)
 
-## Functionalities checklist
+## <span id="driver">Functionalities checklist</span>
 
 | Function Name     | Normal or not | Notes  |
 |:--------:|:----:|:---:|
@@ -62,20 +76,7 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot_eng.png)
 
 
-## Benchmark
-### Geekbench 5 CPU:
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_benchmark.png)
-
-### Cinebench R20:
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_cine.png)
-
-### Geekbench 5 GPU OpenGL:
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_open.png)
-
-### Geekbench 5 GPU Metal:
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
-
-## Wi-Fi & Bluetooth module replacement
+## <span id="wirecard">Wi-Fi & Bluetooth module replacement
 The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and Bluetooth 5.0 with 2x2 802.11ac 2.4/5Ghz Wi-Fi. We need to remove this module and replace it with BCM94360CS2 module，BCM94360CS2 module required an NGFF to M.2 adapter. Steps shown below（By icyleaf）：
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.jpg)
@@ -87,7 +88,7 @@ In Windows 10 you might need to install drivers manually in order to use Wi-Fi a
 This configuration was flashed Asrock special BIOS 4.40c to support TB3 function.
 Tutorial By fangf2018 (Chinese Only)：📖 [华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
 
-## BIOS Setting (4.40c)
+## <span id="bios">BIOS Setting (4.40c)</span>
 
 Advanced \ Chipset Configuration → Vt-d : Disabled
 
@@ -105,7 +106,7 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 
 Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
-## Known Issues
+## <span id="iss">Known Issues</span>
 
 * **The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC**
   
@@ -115,7 +116,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
   
   Solution: change the model into iMac Pro, however, you will lose the SideCar function.
 
-## Update Logs
+## <span id="logs">Update Logs</span>
 
 **0.6.3.2:** Re-builded the EFI, removed FakeSMC (tested in 11.0.1 Beta(20B5012d)).
 
@@ -125,8 +126,22 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
 **0.6.2:** First release
 
+## <span id="bench">Benchmark</span>
+### Geekbench 5 CPU:
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_benchmark.png)
 
-## References
+### Cinebench R20:
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_cine.png)
+
+### Geekbench 5 GPU OpenGL:
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_open.png)
+
+### Geekbench 5 GPU Metal:
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
+
+
+
+## <span id="ref">References</span>
 📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -140,7 +155,7 @@ Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 📖 [华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
 
 
-## Special Thanks
+## <span id="thanks">Special Thanks</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
