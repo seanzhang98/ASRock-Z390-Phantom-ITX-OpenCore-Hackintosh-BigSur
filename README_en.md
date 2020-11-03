@@ -27,6 +27,7 @@
 | GPU   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor Only for Japan market |
 | Main M.2 Cooler | Noctua A4x10 Fan x 2 | Required to remove the offical M.2 armor |
 <br/>
+
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_eng.png)
 
 ## Functionalities checklist

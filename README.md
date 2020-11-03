@@ -30,6 +30,7 @@
 | 显卡   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor 日本市场特供 |
 | 主 M.2 散热 | 猫头鹰 A4x10 风扇x2 | 移除原装散热马甲 |
 <br/>
+
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
 ## 驱动情况
