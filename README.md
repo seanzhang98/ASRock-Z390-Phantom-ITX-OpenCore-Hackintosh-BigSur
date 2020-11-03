@@ -92,8 +92,11 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 此操作是为了在 MacOS 中驱动雷霹 3。（是否可以不刷？我试过不刷就识别不到雷霹了😂）
 如果不使用雷霹 3 端口可以不刷，此 BIOS 支持刷回版本 4.40。
 
-<font color=red>⚠️警告：刷 BIOS 有风险，本教程不对任何硬件损伤承担任何责任！</font>
-
+```diff
+-⚠️警告：刷 BIOS 有风险
+-⚠️本教程不对任何硬件损伤承担任何责任！
+```
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios.BMP)
 ### <span id="bios">4.3. BIOS 设定 (4.40c)<span>
 
 Advanced \ Chipset Configuration → Vt-d : Disabled
@@ -112,7 +115,7 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 
 Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
-
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset.BMP)
 ## <span id="iss">5. 已知问题<span>
 
 * **补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。**

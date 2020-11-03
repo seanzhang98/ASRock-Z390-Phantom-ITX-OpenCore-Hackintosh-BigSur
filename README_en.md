@@ -95,7 +95,7 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
 - ⚠️Warming：There are risks while flashing BIOS, 
 - ⚠️This instruction dose not responsible for any hardware damage.
 ```
-
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios_eng.BMP)
 ### <span id="bios">4.3. BIOS Setting (4.40c)</span>
 
 Advanced \ Chipset Configuration → Vt-d : Disabled
@@ -114,6 +114,7 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 
 Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
 
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset_eng.BMP)
 ## <span id="iss">5. Known Issues</span>
 
 * **The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC**
