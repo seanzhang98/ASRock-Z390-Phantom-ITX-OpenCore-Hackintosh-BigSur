@@ -102,21 +102,21 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios.BMP)
 ### <span id="bios">4.3. BIOS 设定 (4.40c)<span>
 
-Advanced \ Chipset Configuration → Vt-d : Disabled
+Advanced \ Chipset Configuration → Vt-d : 关闭
 
 Advanced \ Chipset Configuration → Share Memory : 128MB
 
-Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
+Advanced \ Chipset Configuration → IGPU Multi-Monitor : 开启
 
-Advanced \ Super IO Configuration → Serial Port: Disabled
+Advanced \ Super IO Configuration → Serial Port: 关闭
 
-Advanced \ USB Configuration → XHCI Hand-off : Enabled
+Advanced \ USB Configuration → XHCI Hand-off : 开启
 
-Advanced \ Intel (R) Thunderbolt → Thunderbolt (TM) Support : Enabled
+Advanced \ Intel (R) Thunderbolt → Thunderbolt (TM) Support : 开启
 
-Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
+Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : 开启
 
-Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
+Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : 开启
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset.BMP)
 
