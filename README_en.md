@@ -197,11 +197,13 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 
 ## <span id="logs">6. Update Logs</span>
 
+**0.6.4:** Update OpenCore to 0.6.4
+
 **0.6.3.2:** Re-builded the EFI, removed FakeSMC (tested in 11.0.1 Beta(20B5012d)).
 
 **0.6.3.1:** Fix mirror errors.
 
-**0.6.3:** Update Opencore to 0.6.3
+**0.6.3:** Update OpenCore to 0.6.3
 
 **0.6.2:** First release
 
