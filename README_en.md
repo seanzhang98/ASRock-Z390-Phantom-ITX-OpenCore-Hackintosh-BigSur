@@ -1,11 +1,11 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur
-
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/repository-open-graph-z390.png)
 ### 👉 [切换到中文版文档](README.md)
 
 ## Table of contents 
 - <font size=4>[1. Warning](#warm)</font>
-- <font size=4>[2. Configuration](#config)</font>
-- <font size=4>[3. Functionalities checklist](#driver)</font>
+- <font size=4>[2. Component List](#config)</font>
+- <font size=4>[3. Functionalities Checklist](#driver)</font>
 - <font size=4>[4. Getting Ready](#ready)</font>
      - <font size=4>[4.1 Wi-Fi & Bluetooth module replacement](#wirecard)</font>
      - <font size=4>[4.2. Flashing Special BIOS](#tb3)</font>
@@ -29,7 +29,7 @@
 ### ⚠️Warning C⚠️：This EFI does not contain any platform information (SN, UUID etc.). You can generate these information by using OpenCore Configurator.
 #### **📖 [OpenCore Configurator official site](https://mackie100projects.altervista.org)**
 
-## <span id="config">2. Configuration</span></span></span></span></span>
+## <span id="config">2. Component List</span></span></span></span></span>
 
 | Parts | Model                                           | Notes                |
 |:------:|:----------------------------------------------:|:-------------------:|
@@ -38,32 +38,32 @@
 | Wireless Network Card |  BCM94360CS2                                            | NGFF to M.2 adapter required |
 | Cooler  | Thermalright AXP90                         |  Noctua A9x14 Fan    |
 | RAM   | TEAM DDR4 3200Mhz PC4-25600 32GBx2（64GBkit） | Elite Plus Series     |
-| Case  |  Loli 1s mini itx                                    |                   |
+| Case  |  Loli 1s mini itx                                    | You can get this case from [ChinaHao.com](https://www.chinahao.com/Product/546595980226/spot_speed__mini-itx_unique_mini_chassis_loli1_chassis_a4_chassis_secondk39_chassis)                  |
 | Power Source  | Enhance 7660b                                             |    600W 1U Power     |
-| GPU   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor Only for Japan market |
+| GPU   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor Only for Japan market, you can get it from [Amazon.co.jp](https://www.amazon.co.jp/RX5700搭載ショート基板ITXグラフィックボード-AXRX-5700-ITX-8GBD6-2DH/dp/B082W236T1/ref=sr_1_1?__mk_ja_JP=カタカナ&dchild=1&keywords=5700+itx&qid=1604464670&sr=8-1) |
 | Main M.2 Cooler | Noctua A4x10 Fan x 2 | Required to remove the offical M.2 armor |
 <br/>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_eng.png)
 
-## <span id="driver">3. Functionalities checklist</span>
+## <span id="driver">3. Functionalities Checklist</span>
 
 | Function Name     | Normal or not | Notes  |
 |:--------:|:----:|:---:|
-| CPU      | ☑️   | Able to adjust frequency based on different tasks|
+| CPU      | ☑️   | CPU frequency scaling is working |
 | GPU       | ☑️   | |
 | Sound card       | ☑️   |The green audio port on the rear of motherboard is the “internal speaker”, support adjust in volume by pressing the function shortcuts in MacOS|
 | LAN port     | ☑️   |     |
 | Wi-Fi    | ☑️   |     |
 | Bluetooth       | ☑️   |     |
 | Hand-off       | ☑️   |     |
-| SideCar       | ☑️   |This EFI using model  “iMac 19,1” supports SideCar|
+| Sidecar       | ☑️   |This EFI using model  “iMac 19,1” supports Sidecar|
 | Sleep and wake    | ☑️   |     |
 | Location Service     | ☑️   |     |
 | NVRAM | ☑️   |     |
 | USB      | ☑️   |     |
 | Thunderbolt 3     | ☑️   |[Thunderbolt 3](#tb3)|
-| DRM      | Partially working   |This EFI using the model “iMac 19,1”, with DRM support while using Chrome to play video on Amazon Prime and Netflix. However, Apple TV + is not supported[*](#drm)<br/>You can play music in “Music.app” with Apple Muisc. |
+| DRM      | Partially working   |This EFI using the model “iMac 19,1”, with DRM support while using Chrome to play video on Amazon Prime and Netflix. However, Apple TV + is not supported<br/>[Unperfect Solution](#drm)<br/>You can play music in “Music.app” with Apple Muisc. |
 <br/>
 * <font size=4>Above was tested on macOS 11.0.1 Beta 11 (20B5012d) with no crashes.</font>
 
@@ -179,7 +179,20 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
   
 * **<span id="drm">The current model of "iMac (2019, 5K)" is not support Apple TV + because of the DRM. But Apple Music (tested), Amazon Prime (tested) and Netflix should work by   using Chrome (not working with Safari).</span>**
   
-  Solution: change the model into iMac Pro, however, you will lose the SideCar function.
+  Solution: change the model into iMac Pro, however, you will lose the Sidecar function.
+  
+  
+| System definition              | iMacPro1,1                                                              | iMac19,1                        |
+|:------------------------------:|:-----------------------------------------------------------------------:|:-------------------------------:|
+| iGPU (and QuickSync)           | Cannot be configured because these originally ship with Xeon processors | Compatible                      |
+| Sidecar                        | not possible without iGPU                                               | Compatible with (headless) iGPU |
+| DRM support in Safari          | Yes, OOB                                                                | No                              |
+| DRM support in Apple TV/iTunes | Yes, OOB                                                                | Yes, through WEG                |
+| Performance                    | Better with GPU                                                         | Better with iGPU                |
+| Vega/Polaris Support           | Compatible (through WEG)                                                | Compatible (OOB)                |
+| Coffeelake Power Management    | Yes, through Extensions                                                 | Yes, OOB                        |
+| CPU frequency scaling          | Yes, through CPUFriend and iMac19,1 board.plist                         | Yes, OOB                        |
+
 
 ## <span id="logs">6. Update Logs</span>
 
@@ -220,6 +233,8 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 📖 [华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
 
 📖 [OpenCore（OC）引导模拟NVRAM](https://imacos.top/2020/04/18/nvram/)
+
+📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 
 
 ## <span id="thanks">9. Special Thanks</span>

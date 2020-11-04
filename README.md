@@ -1,5 +1,5 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur
-
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/repository-open-graph-z390.png)
 ### 👉 [Switch to English Version](README_en.md)
 
 ## 目录
@@ -41,9 +41,9 @@
 | 无线网卡 |  BCM94360CS2                                            | 需要 NGFF M.2 转接卡 |
 | 散热器  | 利民 AXP90                         |  猫头鹰 A9x14 风扇    |
 | 内存   | TEAM DDR4 3200Mhz PC4-25600 32GBx2枚（64GBkit） | Elite Plus 系列     |
-| 机箱   |  Loli 1s mini itx 机箱                                    |                   |
+| 机箱   |  Loli 1s mini itx 机箱                                    |                   淘宝有售|
 | 电源   | 益恒 7660b                                             |    600W 1U 电源     |
-| 显卡   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor 日本市场特供 |
+| 显卡   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor 日本市场特供，你可以通过 [Amazon.co.jp](https://www.amazon.co.jp/RX5700搭載ショート基板ITXグラフィックボード-AXRX-5700-ITX-8GBD6-2DH/dp/B082W236T1/ref=sr_1_1?__mk_ja_JP=カタカナ&dchild=1&keywords=5700+itx&qid=1604464670&sr=8-1) 购买 |
 | 主 M.2 散热 | 猫头鹰 A4x10 风扇x2 | 移除原装散热马甲 |
 <br/>
 
@@ -66,7 +66,7 @@
 | 原生 NVRAM | ☑️   |     |
 | USB      | ☑️   |     |
 | 雷霹 3     | ☑️   |[雷霹 3 驱动教程](#tb3)|
-| DRM      | 部分正常   |本 EFI 默认机型 “iMac 19,1” 只支持 Chrome 中 Amazon Prime 和 Netflix 的 DRM，Apple TV + 无法正常播放[*](#drm)<br/>“音乐.app”中，Apple Muisc 可以正常播放音乐|
+| DRM      | 部分正常   |本 EFI 默认机型 “iMac 19,1” 只支持 Chrome 中 Amazon Prime 和 Netflix 的 DRM，Apple TV + 无法通过“视频.app”正常播放<br/>[不完美解决方案](#drm)<br/>“音乐.app”中，Apple Muisc 可以正常播放音乐|
 <br/>
 * <font size=4>以上内容在 macOS 11.0.1 Beta 11 (20B5012d) 中测试没有系统崩溃。</font>
 
@@ -182,6 +182,17 @@ vram -p | grep -i myvar
   
   解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用。
   
+  | 系统定义              | iMacPro1,1                                                              | iMac19,1                        |
+|:------------------------------:|:-----------------------------------------------------------------------:|:-------------------------------:|
+| 核显 (与 QuickSync)           | 因为白苹果设备使用志强处理器，所以无法使用 | 兼容                      |
+| 随航                        | 不支持，需要核显                                               | 有核显的情况下支持 |
+|Safari 中使用 DRM          | 原生支持                                                                | 不支持                              |
+| Apple TV 或 iTunes 中使用 DRM | 原生支持                                                                |通过 WEG 支持 <br/>（本人尝试并不能正常工作）                |
+| 性能表现                    | 有独显性能更佳                                                         | 有核显性能更佳                |
+| Vega 以及 Polaris 支持           | 通过 WEG 支持                                                | 原生支持                |
+| Coffeelake 电源管理    | 通过插件支持                                                 | 原生支持                        |
+| CPU 变频          | 通过 CPUFriend 和 iMac19,1 的 board.plist 支持                         | 原生支持                  |
+  
 * **部分电脑关机后开机可能会提示 “电脑关机是因为发生了问题”。**
 
   解决方案： 清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除kernel panic 文件。
@@ -226,6 +237,8 @@ vram -p | grep -i myvar
 📖 [华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
 
 📖 [OpenCore（OC）引导模拟NVRAM](https://imacos.top/2020/04/18/nvram/)
+
+📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 
 ## <span id="thanks">9. 特别感谢</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
