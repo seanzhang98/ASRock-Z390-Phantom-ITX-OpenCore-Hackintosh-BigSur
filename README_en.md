@@ -1,7 +1,7 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/repository-open-graph-z390.png)
 ### 👉 [切换到中文版文档](README.md)
-###👉 [日本語版を表示する](README_ja.md)
+### 👉 [日本語版を表示する](README_ja.md)
 
 ## Table of contents 
 - <font size=4>[1. Warning](#warm)</font>
