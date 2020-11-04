@@ -48,24 +48,24 @@
 
 ## <span id="driver">3. Functionalities Checklist</span>
 
-| Function Name     | Normal or not | Notes  |
-|:--------:|:----:|:---:|
-| CPU      | ☑️   | CPU frequency scaling is working |
-| GPU       | ☑️   | |
-| Sound card       | ☑️   |The green audio port on the rear of motherboard is the “internal speaker”, support adjust in volume by pressing the function shortcuts in MacOS|
-| LAN port     | ☑️   |     |
-| Wi-Fi    | ☑️   |     |
-| Bluetooth       | ☑️   |     |
-| Hand-off       | ☑️   |     |
-| Sidecar       | ☑️   |This EFI using model  “iMac 19,1” supports Sidecar|
-| Sleep and wake    | ☑️   |     |
-| Location Service     | ☑️   |     |
-| NVRAM | ☑️   |     |
-| USB      | ☑️   |     |
-| Thunderbolt 3     | ☑️   |[Thunderbolt 3](#tb3)|
-| DRM      | Partially working   |This EFI using the model “iMac 19,1”, with DRM support while using Chrome to play video on Amazon Prime and Netflix. However, Apple TV + is not supported<br/>[Unperfect Solution](#drm)<br/>You can play music in “Music.app” with Apple Muisc. |
-<br/>
-* <font size=4>Above was tested on macOS 11.0.1 Beta 11 (20B5012d) with no crashes.</font>
+|                                                     | Function Name        | Normal or not     | Notes                                                                                                                                                                                |
+|-----------------------------------------------------|:--------------------:|:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|                                                     | CPU                  | ☑️                | CPU frequency scaling is working                                                                                                                                                     |
+|                                                     | GPU                  | ☑️                |                                                                                                                                                                                      |
+|                                                     | Sound card           | ☑️                | The green audio port on the rear of motherboard is the “internal speaker”, support adjust in volume by pressing the function shortcuts in MacOS                                      |
+|                                                     | LAN port             | ☑️                |                                                                                                                                                                                      |
+|                                                     | Wi-Fi                | ☑️                |                                                                                                                                                                                      |
+|                                                     | Bluetooth            | ☑️                |                                                                                                                                                                                      |
+|                                                     | Hand-off             | ☑️                |                                                                                                                                                                                      |
+|                                                     | Sidecar              | ☑️                | This EFI using model “iMac 19,1” supports Sidecar                                                                                                                                    |
+|                                                     | Sleep and wake       | ☑️                |                                                                                                                                                                                      |
+|                                                     | Location Service     | ☑️                |                                                                                                                                                                                      |
+|                                                     | NVRAM                | ☑️                |                                                                                                                                                                                      |
+|                                                     | USB                  | ☑️                |                                                                                                                                                                                      |
+|                                                     | Thunderbolt 3        | ☑️                | [Thunderbolt 3](#tb3)                                                                                                                                                                |
+|                                                     | DRM                  | Partially working | This EFI using the model “iMac 19,1”, with DRM support while using Chrome to play video on Amazon Prime and Netflix. However, Apple TV + is not supported [Unperfect Solution](#drm) |
+| You can play music in “Music.app” with Apple Muisc. |                      |                   |                                                                                                                                                                                      |
+|                                                     | Hardware celebration | ☑️                | Support H264 and HEVC                                                                                                                                                                |
 
 <br/>
 
