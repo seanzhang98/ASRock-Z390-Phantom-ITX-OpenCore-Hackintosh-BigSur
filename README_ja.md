@@ -116,7 +116,7 @@ Advanced \ Intel (R) Thunderbolt → Thunderbolt (TM) Support : Enabled
 
 Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
 
-Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enable
+Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enabled
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset_eng.BMP)
 
