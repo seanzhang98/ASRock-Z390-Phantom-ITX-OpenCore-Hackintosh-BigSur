@@ -1,6 +1,7 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/repository-open-graph-z390.png)
 ### 👉 [切换到中文版文档](README.md)
+###👉 [日本語版を表示する](README_ja.md)
 
 ## Table of contents 
 - <font size=4>[1. Warning](#warm)</font>
@@ -94,7 +95,7 @@ Steps of how to flash BIOS can be found on Asrock Official site 📖[ASRock BIOS
 This is for enabling Thunderbolt 3 on MacOS.（Do I have to flash this BIOS? I tried and no good with TB 3 while using BIOS 4.40😂.）
 If you do not use Thunderbolt 3 port, you can skip this step. You can flash back to 4.40 anytime you want.
 ```diff
-- ⚠️Warming：There are risks while flashing BIOS, 
+- ⚠️Warning：There are risks while flashing BIOS, 
 - ⚠️This instruction dose not responsible for any hardware damage.
 ```
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios_eng.BMP)
