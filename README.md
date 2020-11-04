@@ -51,24 +51,23 @@
 
 ## <span id="driver">3. 驱动情况</span>
 
-|                                | 功能名称     | 是否正常 | 备注                                                                                                           |
-|--------------------------------|:--------:|:----:|:------------------------------------------------------------------------------------------------------------:|
-|                                | CPU      | ☑️   | 支持变频                                                                                                         |
-|                                | 显卡       | ☑️   | 能够正确识别并且性能正常                                                                                                 |
-|                                | 声卡       | ☑️   | 主板绿色接口为 “内置扬声器” ，支持原生功能键调节音量                                                                                 |
-|                                | 有线网卡     | ☑️   |                                                                                                              |
-|                                | Wi-Fi    | ☑️   |                                                                                                              |
-|                                | 蓝牙       | ☑️   |                                                                                                              |
-|                                | 接力       | ☑️   |                                                                                                              |
-|                                | 随航       | ☑️   | 本 EFI 默认机型 “iMac 19,1” 支持随航                                                                                  |
-|                                | 睡眠与唤醒    | ☑️   |                                                                                                              |
-|                                | 定位服务     | ☑️   |                                                                                                              |
-|                                | 原生 NVRAM | ☑️   |                                                                                                              |
-|                                | USB      | ☑️   |                                                                                                              |
-|                                | 雷霹 3     | ☑️   | [雷霹 3 驱动教程](#tb3)                                                                                            |
-|                                | DRM      | 部分正常 | 本 EFI 默认机型 “iMac 19,1” 只支持 Chrome 中 Amazon Prime 和 Netflix 的 DRM，Apple TV + 无法通过“视频.app”正常播放 [不完美解决方案](#drm) |
-| “音乐.app”中，Apple Muisc 可以正常播放音乐 |          |      |                                                                                                              |
-|                                | 硬件加速     | ☑️   | 支持 H264 以及 HEVC 硬件加速                                                                                         |
+| 功能名称     | 是否正常 | 备注                                                                                                                                          |
+|:--------:|:----:|:-------------------------------------------------------------------------------------------------------------------------------------------:|
+| CPU      | ☑️   | 支持变频                                                                                                                                        |
+| 显卡       | ☑️   | 能够正确识别并且性能正常                                                                                                                                |
+| 声卡       | ☑️   | 主板绿色接口为 “内置扬声器” ，支持原生功能键调节音量                                                                                                                |
+| 有线网卡     | ☑️   |                                                                                                                                             |
+| Wi-Fi    | ☑️   |                                                                                                                                             |
+| 蓝牙       | ☑️   |                                                                                                                                             |
+| 接力       | ☑️   |                                                                                                                                             |
+| 随航       | ☑️   | 本 EFI 默认机型 “iMac 19,1” 支持随航                                                                                                                 |
+| 睡眠与唤醒    | ☑️   |                                                                                                                                             |
+| 定位服务     | ☑️   |                                                                                                                                             |
+| 原生 NVRAM | ☑️   |                                                                                                                                             |
+| USB      | ☑️   |                                                                                                                                             |
+| 雷霹 3     | ☑️   | [雷霹 3 驱动教程](#tb3)                                                                                                                           |
+| DRM      | 部分正常 | 本 EFI 默认机型 “iMac 19,1” 只支持 Chrome 中 Amazon Prime 和 Netflix 的 DRM，Apple TV + 无法通过“视频.app”正常播放 <br/>“音乐.app”中，Apple Muisc 可以正常播放音乐 <br/> [不完美解决方案](#drm)|
+| 硬件加速     | ☑️   | 支持 H264 以及 HEVC 硬件加速                                                                                                                        |
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar.png)
 
@@ -77,6 +76,8 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot.png)
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha.png)
 
 ## <span id="ready">4. 准备工作</span>
 ### <span id="wirecard">4.1. 网卡替换</span>
