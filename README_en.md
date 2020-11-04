@@ -219,6 +219,8 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 
 📖 [华擎ASRock Z390 Phantom Gaming ITX/ac 雷电3 完美驱动 热插拔](http://blog.fangf.cc/2020/05/19/TB3/)
 
+📖 [OpenCore（OC）引导模拟NVRAM](https://imacos.top/2020/04/18/nvram/)
+
 
 ## <span id="thanks">9. Special Thanks</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
