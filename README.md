@@ -201,11 +201,11 @@ vram -p | grep -i myvar
 
 * **补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。**
   
-  解决方案: 禁用该补丁或者用 bios 来引导 Windows。
+  - 解决方案: 禁用该补丁或者用 bios 来引导 Windows。
   
 * <span id="drm">**引导默认的 "iMac (2019, 5K)" 型号因为 DRM 问题不支持 Apple TV + 播放。 但是 Apple Music (已测试), Amazon Prime (已测试) 和 Netflix 在 Chrome 中可以正常播放 (Safari 不支持播放).**</span>
   
-  解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用。
+  - 解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用。
   
 | 系统定义              | iMacPro1,1                                                              | iMac19,1                        |
 |:------------------------------:|:-----------------------------------------------------------------------:|:-------------------------------:|
@@ -220,7 +220,14 @@ vram -p | grep -i myvar
   
 * **部分电脑关机后开机可能会提示 “电脑关机是因为发生了问题”。**
 
-  解决方案： 清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除kernel panic 文件。
+  - 解决方案： 清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除kernel panic 文件。
+ 
+* **Windows 10 时间与 macOS 不同步 。** 
+
+  - 解决方案：Windows 10 下 CMD 执行：</br>
+```
+Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+```
 
 ## <span id="logs">6. 更新日志</span>
 
