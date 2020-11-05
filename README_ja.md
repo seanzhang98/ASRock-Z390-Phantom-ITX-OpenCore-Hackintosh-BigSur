@@ -1,5 +1,5 @@
 
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/repository-open-graph-z390.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/intro.png)
 
 <p align="center">
      <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
@@ -35,8 +35,9 @@
 - <font size=4>[5. 既知の問題](#iss)</font>
 - <font size=4>[6. 更新ログ](#logs)</font>
 - <font size=4>[7. ベンチマーク](#bench)</font>
-- <font size=4>[8. 参考文献](#ref)</font>
-- <font size=4>[9. 感謝](#thanks)</font>
+- <font size=4>[8. メンテナ](#main)</font>
+- <font size=4>[9. 参考文献](#ref)</font>
+- <font size=4>[10. 感謝](#thanks)</font>
 
 ## <span id="warm">1. 警告</span>
 ### ⚠️警告１⚠️： このEFIを使用する前に、OpenCoreインストールガイドを読むことを強くお勧めします。このEFIを直接使用しても、構成が同じであっても、システムが正常に起動できるとは限りません。
@@ -241,9 +242,11 @@ vram -p | grep -i myvar
 ### Geekbench 5 GPU Metal:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
 
+## <span id="main">8. メンテナ</span>
 
+[@seanzhang98](https://github.com/seanzhang98)
 
-## <span id="ref">8. 参考文献</span>
+## <span id="ref">9. 参考文献</span>
 📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -261,7 +264,7 @@ vram -p | grep -i myvar
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 
 
-## <span id="thanks">9. 感謝</span>
+## <span id="thanks">10. 感謝</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
