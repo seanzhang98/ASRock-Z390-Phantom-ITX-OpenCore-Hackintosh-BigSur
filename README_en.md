@@ -1,5 +1,9 @@
 # ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/repository-open-graph-z390.png)
+
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?include_prereleases) ![GitHub Release Date](https://img.shields.io/github/release-date/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?)
+
+## 语言 / Languages / 言語
 ### 👉 [切换到中文版文档](README.md)
 ### 👉 [日本語版を表示する](README_ja.md)
 
