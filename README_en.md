@@ -1,13 +1,29 @@
-# ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur
+
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/repository-open-graph-z390.png)
 
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?include_prereleases) ![GitHub Release Date](https://img.shields.io/github/release-date/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?)
+<p align="center">
+     <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
+      <img alt="GitHub release" src="https://img.shields.io/github/v/release/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?include_prereleases" />
+    </a>
+    <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
+      <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur" />
+    </a>
+    </br>
+    <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
+      <img alt="GitHub Release Date" src="https://img.shields.io/badge/Supported OS-macOS%20Big%20Sur-blueviolet" />
+      <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
+      <img alt="GitHub Release Date" src="https://img.shields.io/badge/version-11.0.1 Beta (20B5012d)-ff69b4" />
+      </br>
+    </p>
+<p align="center">
+    <a href="README.md">简体中文</a>
+    ·
+    <a href="README_en.md">English</a>
+    ·
+    <a href="README_ja.md">日本語</a>
+</p>
 
-## 语言 / Languages / 言語
-### 👉 [切换到中文版文档](README.md)
-### 👉 [日本語版を表示する](README_ja.md)
-
-## Table of contents 
+1. ## Table of contents 
 - <font size=4>[1. Warning](#warm)</font>
 - <font size=4>[2. Component List](#config)</font>
 - <font size=4>[3. Functionalities Checklist](#driver)</font>
