@@ -15,11 +15,11 @@
       </br>
     </p>
 <p align="center">
-    <a href="/main/README.md">简体中文</a>
+    <a href="README.md">简体中文</a>
     ·
-    <a href="/main/README_en.md">English</a>
+    <a href="README_en.md">English</a>
     ·
-    <a href="/main/README_ja.md">日本語</a>
+    <a href="README_ja.md">日本語</a>
 </p>
    
 ## 目录
