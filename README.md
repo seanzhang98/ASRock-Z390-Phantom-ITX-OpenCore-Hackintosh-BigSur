@@ -35,8 +35,9 @@
 - <font size=4>[5. 已知问题](#iss)</font>
 - <font size=4>[6. 更新日志](#logs)</font>
 - <font size=4>[7. 性能跑分](#bench)</font>
-- <font size=4>[8. 参考文档](#ref)</font>
-- <font size=4>[9. 特别感谢](#thanks)</font>
+- <font size=4>[9. 维护者](#main)</font>
+- <font size=4>[9. 参考文档](#ref)</font>
+- <font size=4>[10. 特别感谢](#thanks)</font>
 
 ## <span id="warm">1. 注意事项</span>
 ### 1.1. ⚠️注意一⚠️：建议在使用本 EFI 之前完整阅读 OC 官方配置指南，使用本 EFI 并不意味着你的系统也能正常启动，即使配置完全相同。 
@@ -221,25 +222,25 @@ vram -p | grep -i myvar
 
 ## <span id="logs">6. 更新日志</span>
 
-**0.6.4 (2020年10月4日):** 
+**0.6.4 (2020年11月4日):** 
 
 - 更新 OC 版本至 0.6.4
 
-**0.6.3.2:** 
+**0.6.3.2 (2020年10月29日):** 
 
 - 重构 EFI
 - 移除 FakeSMC 
 - 已在 11.0.1 Beta版(20B5012d) 测试正常
 
-**0.6.3.1:** 
+**0.6.3.1 (2020年10月22日):** 
 
 - 修复部分问题
 
-**0.6.3:** 
+**0.6.3 (2020年10月18日):** 
 
 - 更新 OC 版本
 
-**0.6.2:** 
+**0.6.2 (2020年10月6日):** 
 
 - First release
 
@@ -257,9 +258,10 @@ vram -p | grep -i myvar
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
 
 
+## 8. <span id="main">维护者</span>
+[@seanzhang98](https://github.com/seanzhang98)
 
-
-## <span id="ref">8. 参考文档</span>
+## <span id="ref">9. 参考文档</span>
 📖 [OpenCore 官方指南](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -276,7 +278,7 @@ vram -p | grep -i myvar
 
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 
-## <span id="thanks">9. 特别感谢</span>
+## <span id="thanks">10. 特别感谢</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
