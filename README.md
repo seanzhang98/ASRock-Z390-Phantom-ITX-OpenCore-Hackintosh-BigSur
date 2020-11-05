@@ -203,6 +203,7 @@ vram -p | grep -i myvar
   
   - 解决方案: 禁用该补丁或者用 bios 来引导 Windows。
   </dr>
+  
 * <span id="drm">**引导默认的 "iMac (2019, 5K)" 型号因为 DRM 问题不支持 Apple TV + 播放。 但是 Apple Music (已测试), Amazon Prime (已测试) 和 Netflix 在 Chrome 中可以正常播放 (Safari 不支持播放).**</span>
   
   - 解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用。
@@ -218,10 +219,12 @@ vram -p | grep -i myvar
 | Coffeelake 电源管理    | 通过插件支持                                                 | 原生支持                        |
 | CPU 变频          | 通过 CPUFriend 和 iMac19,1 的 board.plist 支持                         | 原生支持                  |
   </dr>
+  
 * **部分电脑关机后开机可能会提示 “电脑关机是因为发生了问题”。**
 
   - 解决方案： 清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除kernel panic 文件。
  </dr>
+ 
 * **Windows 10 时间与 macOS 不同步 。** 
 
   - 解决方案：Windows 10 下 CMD 执行：</br>
