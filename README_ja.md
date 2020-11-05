@@ -18,11 +18,11 @@
       </br>
     </p>
 <p align="center">
-    <a href="README.md">简体中文</a>
-    ·
-    <a href="README_en.md">English</a>
-    ·
-    <a href="README_ja.md">日本語</a>
+    <a href="README.md"><font size=4><b>简体中文</b></font></a>
+    <font size=4><b>·</b></font>
+    <a href="README_en.md"><font size=4><b>English</b></font></a>
+    <font size=4><b>·</b></font>
+    <a href="README_ja.md"><font size=4><b>日本語</b></font></a>
 </p>
 
 ## 目録 
