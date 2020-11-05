@@ -1,4 +1,4 @@
-# ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur 
+
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/repository-open-graph-z390.png)
 
 <p align="center">
@@ -10,7 +10,8 @@
     </a>
     </br>
     <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
-      <img alt="GitHub Release Date" src="https://img.shields.io/badge/支持版本-macOS%20Big%20Sur-blueviolet" /><a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
+      <img alt="GitHub Release Date" src="https://img.shields.io/badge/支持版本-macOS%20Big%20Sur-blueviolet" />
+      <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
       <img alt="GitHub Release Date" src="https://img.shields.io/badge/版本号-11.0.1 Beta (20B5012d)-ff69b4" />
       </br>
     </p>
