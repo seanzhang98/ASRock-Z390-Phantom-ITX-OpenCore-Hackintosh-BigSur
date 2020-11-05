@@ -3,7 +3,7 @@
 
 <p align="center">
      <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
-      <img alt="GitHub release" src="https://img.shields.io/github/v/release/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?include_prereleases&label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC" />
+      <img alt="GitHub release" src="https://img.shields.io/github/v/release/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?include_prereleases&label=EFI 版本" />
     </a>
     <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
       <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?label=%E5%8F%91%E5%B8%83%E6%97%A5%E6%9C%9F" />
@@ -13,6 +13,8 @@
       <img alt="GitHub Release Date" src="https://img.shields.io/badge/支持版本-macOS%20Big%20Sur-blueviolet" />
       <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
       <img alt="GitHub Release Date" src="https://img.shields.io/badge/版本号-11.0.1 Beta (20B5012d)-ff69b4" />
+      <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
+      <img alt="GitHub Release Date" src="https://img.shields.io/badge/OpenCore 版本-0.6.4%20(2020--11--04)-191970" />
       </br>
     </p>
 <p align="center">
