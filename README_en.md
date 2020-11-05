@@ -1,5 +1,5 @@
 
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/repository-open-graph-z390.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/intro.png)
 
 <p align="center">
      <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
@@ -23,7 +23,7 @@
     <a href="README_ja.md">日本語</a>
 </p>
 
-1. ## Table of contents 
+## Table of contents 
 - <font size=4>[1. Warning](#warm)</font>
 - <font size=4>[2. Component List](#config)</font>
 - <font size=4>[3. Functionalities Checklist](#driver)</font>
@@ -35,8 +35,9 @@
 - <font size=4>[5. Known Issues](#iss)</font>
 - <font size=4>[6. Update Logs](#logs)</font>
 - <font size=4>[7. Benchmark](#bench)</font>
-- <font size=4>[8. References](#ref)</font>
-- <font size=4>[9. Special Thanks](#thanks)</font>
+- <font size=4>[9. Maintainer](#main)</font>
+- <font size=4>[9. References](#ref)</font>
+- <font size=4>[10. Special Thanks](#thanks)</font>
 
 ## <span id="warm">1. Warning</span>
 ### ⚠️Warning A⚠️： I strongly recommend you to read the OpenCore Install Guide before using this EFI, directly using this EFI does not mean your system can boot normally, even though the configuration is identical. 
@@ -241,9 +242,10 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 ### Geekbench 5 GPU Metal:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
 
+## <span id="main">8. Maintainer</span>
+[@seanzhang98](https://github.com/seanzhang98)
 
-
-## <span id="ref">8. References</span>
+## <span id="ref">9. References</span>
 📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -261,7 +263,7 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 
 
-## <span id="thanks">9. Special Thanks</span>
+## <span id="thanks">10. Special Thanks</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
