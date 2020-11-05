@@ -16,11 +16,11 @@
       </br>
     </p>
 <p align="center">
-    <a href="README.md">简体中文</a>
-    ·
-    <a href="README_en.md">English</a>
-    ·
-    <a href="README_ja.md">日本語</a>
+    <a href="README.md"><font size=4><b>简体中文</b></font></a>
+    <font size=4><b>·</b></font>
+    <a href="README_en.md"><font size=4><b>English</b></font></a>
+    <font size=4><b>·</b></font>
+    <a href="README_ja.md"><font size=4><b>日本語</b></font></a>
 </p>
    
 ## 目录
@@ -221,15 +221,27 @@ vram -p | grep -i myvar
 
 ## <span id="logs">6. 更新日志</span>
 
-**0.6.4:** 更新 OC 版本至 0.6.4
+**0.6.4 (2020年10月4日):** 
 
-**0.6.3.2:** 重构 EFI，移除 FakeSMC。（已在 11.0.1 Beta版(20B5012d) 测试）
+- 更新 OC 版本至 0.6.4
 
-**0.6.3.1:** 修复部分问题
+**0.6.3.2:** 
 
-**0.6.3:** 更新 OC 版本
+- 重构 EFI
+- 移除 FakeSMC 
+- 已在 11.0.1 Beta版(20B5012d) 测试正常
 
-**0.6.2:** First release
+**0.6.3.1:** 
+
+- 修复部分问题
+
+**0.6.3:** 
+
+- 更新 OC 版本
+
+**0.6.2:** 
+
+- First release
 
 ## <span id="bench">7. 性能跑分</span>
 ### Geekbench 5 CPU:
