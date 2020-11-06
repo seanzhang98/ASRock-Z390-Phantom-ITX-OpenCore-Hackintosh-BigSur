@@ -44,7 +44,9 @@
 - <font size=4>[9. Special Thanks](#thanks)</font>
 
 ## <span id="warm">1. Warning</span>
-### ⚠️Warning A⚠️： I strongly recommend you to read the OpenCore Install Guide before using this EFI, directly using this EFI does not mean your system can boot normally, even though the configuration is identical. 
+### ⚠️Warning A⚠️： Before using the EFI, you should at least understand how do you install macOS and understand the file structure of OpenCore. 
+### If you don't, I strongly recommend you to read the OpenCore Install Guide before using this EFI. 
+### Directly using this EFI does not mean your system can boot normally, even though the configuration is identical, you would need these knowledge to solve problems in your case. 
 
 #### **📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)**
 
