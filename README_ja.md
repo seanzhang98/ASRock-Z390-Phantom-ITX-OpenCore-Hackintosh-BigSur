@@ -108,7 +108,7 @@
 ### <span id="wirecard">4.1. Wi-FiとBluetoothモジュールの交換
 マザーボードにはIntel®Wireless-AC9560モジュールが付属しており、802.11acおよびBluetooth5.0と2x2802.11ac 2.4 / 5GhzWi-Fiをサポートしています。 このモジュールを取り外してBCM94360CS2モジュールと交換する必要があります。BCM94360CS2モジュールにはNGFF-M.2アダプターが必要でした。 以下に示す手順（By icyleaf）：
 
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.jpg)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.png)
 
 Windows 10では、Wi-FiとBluetoothを使用するために、ドライバーを手動でインストールする必要がある場合があります。
 
