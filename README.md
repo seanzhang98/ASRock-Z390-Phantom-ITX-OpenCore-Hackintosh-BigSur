@@ -264,7 +264,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ### Cinebench R20：
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_cine.png)
 
-### Geekbench 5 GPU OpenGL:
+### Geekbench 5 GPU OpenCL:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_open.png)
 
 ### Geekbench 5 GPU Metal:
