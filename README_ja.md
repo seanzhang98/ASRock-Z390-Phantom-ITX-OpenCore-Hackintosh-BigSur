@@ -102,7 +102,7 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/boot_ja.png)
 
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha_eng.png)
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha_ja.png)
 
 ## <span id="ready">4. 準備</span>
 ### <span id="wirecard">4.1. Wi-FiとBluetoothモジュールの交換
