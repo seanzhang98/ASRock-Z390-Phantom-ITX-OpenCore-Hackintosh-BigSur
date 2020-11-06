@@ -223,6 +223,10 @@ vram -p | grep -i myvar
 
 ## <span id="logs">6. 更新ログ</span>
 
+**0.6.4.1 (2020-11-6):** 
+
+- Modified contents in config.plist
+
 **0.6.4 (2020-11-4):** 
 
 - Update OpenCore to 0.6.4

@@ -235,6 +235,10 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ## <span id="logs">6. 更新日志</span>
 
+**0.6.4.1 (2020年11月6日):** 
+
+- 修改 config.plist 部分内容
+
 **0.6.4 (2020年11月4日):** 
 
 - 更新 OC 版本至 0.6.4
