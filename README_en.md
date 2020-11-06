@@ -12,7 +12,7 @@
     <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
       <img alt="GitHub Release Date" src="https://img.shields.io/badge/Supported OS-macOS%20Big%20Sur-blueviolet" />
       <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
-      <img alt="GitHub Release Date" src="https://img.shields.io/badge/version-11.0.1 Beta (20B5012d)-ff69b4" />
+      <img alt="GitHub Release Date" src="https://img.shields.io/badge/version-11.0.1 Beta (20B5022a)-ff69b4" />
       <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
       <img alt="GitHub Release Date" src="https://img.shields.io/badge/OpenCore Ver.-0.6.4%20(2020--11--04)-191970" />
       </br>
