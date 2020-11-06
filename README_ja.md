@@ -261,6 +261,9 @@ vram -p | grep -i myvar
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
 
+### Cinebench R15 CPU & GPU
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/GPU_CPU_CINER15.png)
+
 ## <span id="ref">8. 参考文献</span>
 📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)
 
