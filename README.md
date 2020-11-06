@@ -8,6 +8,9 @@
     <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
       <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?label=%E5%8F%91%E5%B8%83%E6%97%A5%E6%9C%9F" />
     </a>
+    <a href="https://github.com/seanzhang98">
+      <img alt="维护者" src="https://img.shields.io/badge/%E7%BB%B4%E6%8A%A4%E8%80%85-%40seanzhang98-yellowgreen" />
+      </a>
     </br>
     <a href="https://www.apple.com.cn/macos/big-sur-preview/">
       <img alt="支持版本" src="https://img.shields.io/badge/支持版本-macOS%20Big%20Sur-blueviolet" />
@@ -24,6 +27,8 @@
     <font size=4><b>·</b></font>
     <a href="README_ja.md"><font size=4><b>日本語</b></font></a>
 </p>
+
+
    
 ## 目录
 - <font size=4>[1. 注意事项](#warm)</font>
@@ -37,9 +42,8 @@
 - <font size=4>[5. 已知问题](#iss)</font>
 - <font size=4>[6. 更新日志](#logs)</font>
 - <font size=4>[7. 性能跑分](#bench)</font>
-- <font size=4>[9. 维护者](#main)</font>
-- <font size=4>[9. 参考文档](#ref)</font>
-- <font size=4>[10. 特别感谢](#thanks)</font>
+- <font size=4>[8. 参考文档](#ref)</font>
+- <font size=4>[9. 特别感谢](#thanks)</font>
 
 ## <span id="warm">1. 注意事项</span>
 ### 1.1. ⚠️注意一⚠️：建议在使用本 EFI 之前完整阅读 OC 官方配置指南，使用本 EFI 并不意味着你的系统也能正常启动，即使配置完全相同。 
@@ -266,11 +270,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ### Geekbench 5 GPU Metal:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
 
-
-## 8. <span id="main">维护者</span>
-[@seanzhang98](https://github.com/seanzhang98)
-
-## <span id="ref">9. 参考文档</span>
+## <span id="ref">8. 参考文档</span>
 📖 [OpenCore 官方指南](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -287,7 +287,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 
-## <span id="thanks">10. 特别感谢</span>
+## <span id="thanks">9. 特别感谢</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
@@ -302,7 +302,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 **[Bat.bat](https://github.com/williambj1)**
 
-## 11. 阅读统计
+## 10. 阅读统计
 <p align="left">
 <a href="http://antzuhl.cn:4000/get/@
 ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.readme">
