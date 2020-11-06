@@ -18,14 +18,6 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-EC-USBX.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-XHC-USB.aml</string>
@@ -313,24 +305,6 @@ GPRW to XPRW</string>
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>FakeSMC.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/FakeSMC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>12.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>SMCProcessor.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -356,60 +330,6 @@ GPRW to XPRW</string>
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCSuperIO</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>12.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>MotherboardSensors.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/W836x</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>12.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>RadeonMonitor.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RadeonMonitor</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>12.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>IntelCPUMonitor.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/IntelCPUMonitor</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -590,7 +510,7 @@ GPRW to XPRW</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
-			<false/>
+			<true/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
@@ -903,12 +823,14 @@ GPRW to XPRW</string>
 	<dict>
 		<key>Automatic</key>
 		<true/>
+		<key>CustomMemory</key>
+		<false/>
 		<key>DataHub</key>
 		<dict>
 			<key>ARTFrequency</key>
 			<integer>0</integer>
 			<key>BoardProduct</key>
-			<string>YOUR OWN SN</string>
+			<string>YOUR OWN BOARD PRODUCT</string>
 			<key>BoardRevision</key>
 			<data>Bw==</data>
 			<key>DevicePathsSupported</key>
@@ -932,14 +854,14 @@ GPRW to XPRW</string>
 			<key>SystemSerialNumber</key>
 			<string>YOUR OWN SN</string>
 			<key>SystemUUID</key>
-			<string>YOUR OWN SN</string>
+			<string>YOUR OWN UUID</string>
 		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>YOUR OWN SN</string>
+			<string>YOUR OWN MLB</string>
 			<key>ProcessorType</key>
 			<integer>4105</integer>
 			<key>SystemMemoryStatus</key>
@@ -953,7 +875,7 @@ GPRW to XPRW</string>
 			<key>SystemSerialNumber</key>
 			<string>YOUR OWN SN</string>
 			<key>SystemUUID</key>
-			<string>8YOUR OWN SN</string>
+			<string>8YOUR OWN UUID</string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
@@ -964,7 +886,7 @@ GPRW to XPRW</string>
 			<key>FirmwareFeaturesMask</key>
 			<data>f//f/wAAAAA=</data>
 			<key>MLB</key>
-			<string>YOUR OWN SN</string>
+			<string>YOUR OWN MLB</string>
 			<key>ROM</key>
 			<data></data>
 		</dict>
@@ -1047,6 +969,8 @@ GPRW to XPRW</string>
 			<key>ConsoleMode</key>
 			<string>Max</string>
 			<key>DirectGopRendering</key>
+			<false/>
+			<key>ForceResolution</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
