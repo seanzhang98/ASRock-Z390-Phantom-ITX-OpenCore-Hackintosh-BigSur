@@ -204,9 +204,9 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
   
   Solution: disable the TB3 Function or boot Windows with BIOS interface.
   
-* **<span id="drm">The current model of "iMac (2019, 5K)" is not support Apple TV + because of the DRM. But Apple Music (tested), Amazon Prime (tested) and Netflix should work by   using Chrome (not working with Safari).</span>**
+* **<span id="drm">The current model of "iMac (2019, 5K)" is not support Apple TV + because of the DRM. But Apple Music (tested), Amazon Prime (tested) and Netflix should be working with Chrome (not working with Safari).</span>**
   
-  Solution: change the model into iMac Pro, however, you will lose the Sidecar function.
+  Solution: change the model into iMac Pro. However, you will lose the Sidecar function (lack of the T-series chip).
   
   
 | System definition              | iMacPro1,1                                                              | iMac19,1                        |
@@ -229,15 +229,27 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ## <span id="logs">6. Update Logs</span>
 
-**0.6.4:** Update OpenCore to 0.6.4
+**0.6.4 (2020-11-4):** 
 
-**0.6.3.2:** Re-builded the EFI, removed FakeSMC (tested in 11.0.1 Beta(20B5012d)).
+- Update OpenCore to 0.6.4
 
-**0.6.3.1:** Fix mirror errors.
+**0.6.3.2 (2020-10-29):** 
 
-**0.6.3:** Update OpenCore to 0.6.3
+- Re-builded the EFI
+- Removed FakeSMC 
+- Tested in 11.0.1 Beta(20B5012d)
 
-**0.6.2:** First release
+**0.6.3.1 (2020-10-22):** 
+
+- Fix mirror errors.
+
+**0.6.3 (2020-10-18):** 
+
+- Update OpenCore to 0.6.3
+
+**0.6.2 (2020-10-6):** 
+
+- First release
 
 ## <span id="bench">7. Benchmark</span>
 ### Geekbench 5 CPU:
