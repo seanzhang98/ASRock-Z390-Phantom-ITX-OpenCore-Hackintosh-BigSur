@@ -223,15 +223,27 @@ vram -p | grep -i myvar
 
 ## <span id="logs">6. 更新ログ</span>
 
-**0.6.4:** Update OpenCore to 0.6.4
+**0.6.4 (2020-11-4):** 
 
-**0.6.3.2:** Re-builded the EFI, removed FakeSMC (tested in 11.0.1 Beta(20B5012d)).
+- Update OpenCore to 0.6.4
 
-**0.6.3.1:** Fix mirror errors.
+**0.6.3.2 (2020-10-29):** 
 
-**0.6.3:** Update OpenCore to 0.6.3
+- Re-builded the EFI
+- Removed FakeSMC 
+- Tested in 11.0.1 Beta(20B5012d)
 
-**0.6.2:** First release
+**0.6.3.1 (2020-10-22):** 
+
+- Fix mirror errors.
+
+**0.6.3 (2020-10-18):** 
+
+- Update OpenCore to 0.6.3
+
+**0.6.2 (2020-10-6):** 
+
+- First release
 
 ## <span id="bench">7. ベンチマーク</span>
 ### Geekbench 5 CPU:
