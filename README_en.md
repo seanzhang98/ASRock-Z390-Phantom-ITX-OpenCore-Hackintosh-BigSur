@@ -279,3 +279,10 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 **[fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh)**
 
 **[Bat.bat](https://github.com/williambj1)**
+
+## 11. Traffic statistics
+<p align="left">
+<a href="http://antzuhl.cn:4000/get/@
+ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.readme_en">
+      <img alt="" src="http://antzuhl.cn:4000/get/@ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.readme_en" />
+</p>
