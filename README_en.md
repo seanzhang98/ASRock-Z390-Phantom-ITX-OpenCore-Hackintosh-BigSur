@@ -9,12 +9,12 @@
       <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur" />
     </a>
     </br>
-    <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
-      <img alt="GitHub Release Date" src="https://img.shields.io/badge/Supported OS-macOS%20Big%20Sur-blueviolet" />
-      <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
-      <img alt="GitHub Release Date" src="https://img.shields.io/badge/version-11.0.1 Beta (20B5022a)-ff69b4" />
-      <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
-      <img alt="GitHub Release Date" src="https://img.shields.io/badge/OpenCore Ver.-0.6.4%20(2020--11--04)-191970" />
+    <a href="https://www.apple.com/macos/big-sur-preview/">
+      <img alt="Supported OS" src="https://img.shields.io/badge/Supported OS-macOS%20Big%20Sur-blueviolet" />
+      <a href="https://developer.apple.com/documentation/macos-release-notes">
+      <img alt="OS version" src="https://img.shields.io/badge/version-11.0.1 Beta (20B5022a)-ff69b4" />
+      <a href="https://github.com/williambj1/OpenCore-Factory/releases">
+      <img alt="OC Ver" src="https://img.shields.io/badge/OpenCore Ver.-0.6.4%20(2020--11--04)-191970" />
       </br>
     </p>
 <p align="center">
