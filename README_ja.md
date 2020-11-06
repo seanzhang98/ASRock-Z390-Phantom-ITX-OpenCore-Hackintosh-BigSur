@@ -246,16 +246,15 @@ vram -p | grep -i myvar
 - First release
 
 ## <span id="bench">7. ベンチマーク</span>
-### Geekbench 5 CPU:
+### CPU:
+
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_benchmark.png)
 
-### Cinebench R20:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_cine.png)
 
-### Geekbench 5 GPU OpenCL:
+### GPU:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_open.png)
 
-### Geekbench 5 GPU Metal:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
 
 ## <span id="ref">8. 参考文献</span>
