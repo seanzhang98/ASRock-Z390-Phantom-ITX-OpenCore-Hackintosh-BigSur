@@ -6,7 +6,10 @@
       <img alt="GitHub release" src="https://img.shields.io/github/v/release/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?label=EFI%20Ver." />
     </a>
     <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
-      <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur" />
+      <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur" />    
+      </a>
+      <a href="https://github.com/seanzhang98">
+      <img alt="Maintainer" src="https://img.shields.io/badge/Maintainer-%40seanzhang98-yellowgreen" />
     </a>
     </br>
     <a href="https://www.apple.com/macos/big-sur-preview/">
@@ -37,9 +40,8 @@
 - <font size=4>[5. Known Issues](#iss)</font>
 - <font size=4>[6. Update Logs](#logs)</font>
 - <font size=4>[7. Benchmark](#bench)</font>
-- <font size=4>[9. Maintainer](#main)</font>
-- <font size=4>[9. References](#ref)</font>
-- <font size=4>[10. Special Thanks](#thanks)</font>
+- <font size=4>[8. References](#ref)</font>
+- <font size=4>[9. Special Thanks](#thanks)</font>
 
 ## <span id="warm">1. Warning</span>
 ### ⚠️Warning A⚠️： I strongly recommend you to read the OpenCore Install Guide before using this EFI, directly using this EFI does not mean your system can boot normally, even though the configuration is identical. 
@@ -218,6 +220,12 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 | Coffeelake Power Management    | Yes, through Extensions                                                 | Yes, OOB                        |
 | CPU frequency scaling          | Yes, through CPUFriend and iMac19,1 board.plist                         | Yes, OOB                        |
 
+* **Time do not sync between Windows 10 and macOS.** 
+
+  - Solution：In Windows 10, run following code in CMD </br>
+```
+Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+```
 
 ## <span id="logs">6. Update Logs</span>
 
@@ -244,10 +252,7 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 ### Geekbench 5 GPU Metal:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_metal.png)
 
-## <span id="main">8. Maintainer</span>
-[@seanzhang98](https://github.com/seanzhang98)
-
-## <span id="ref">9. References</span>
+## <span id="ref">8. References</span>
 📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -265,7 +270,7 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 
 
-## <span id="thanks">10. Special Thanks</span>
+## <span id="thanks">9. Special Thanks</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
@@ -280,7 +285,7 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 
 **[Bat.bat](https://github.com/williambj1)**
 
-## 11. Traffic statistics
+## 10. Traffic statistics
 <p align="left">
 <a href="http://antzuhl.cn:4000/get/@
 ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.readme_en">
