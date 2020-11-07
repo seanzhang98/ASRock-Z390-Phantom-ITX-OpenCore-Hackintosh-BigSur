@@ -140,21 +140,21 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 ### <span id="bios">4.3. BIOS 设定 (4.40c)<span>
 
 - **Advanced**
- - **Chipset Configuration** 
-        + Vt-d → 关闭
-        + Share Memory → 128MB
-        + IGPU Multi-Monitor → 开启
+    - **Chipset Configuration** 
+        - Vt-d → 关闭
+        - Share Memory → 128MB
+        - IGPU Multi-Monitor → 开启
 
- - **Super IO Configuration** 
-        + Serial Port → 关闭
+    - **Super IO Configuration** 
+        - Serial Port → 关闭
 
- - **USB Configuration** 
-        + XHCI Hand-off → 开启
+    - **USB Configuration** 
+        - XHCI Hand-off → 开启
 
- - **Intel (R) Thunderbolt**
-        + Thunderbolt (TM) Support → 开启
-        + Thunderbolt Usb Support → 开启
-        + GPIO3 Force Pwr → 开启
+    - **Intel (R) Thunderbolt**
+        - Thunderbolt (TM) Support → 开启
+        - Thunderbolt Usb Support → 开启
+        - GPIO3 Force Pwr → 开启
 </br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset.BMP)
