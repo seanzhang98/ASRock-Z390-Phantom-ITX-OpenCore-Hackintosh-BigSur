@@ -241,12 +241,14 @@ vram -p | grep -i myvar
 </br>
 如果返回包含```myvar test```，则 NVRAM 工作正常。
 </br>
+
 ## <span id="iss">5. 已知问题<span>
 
 * **补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。**
   
   - 解决方案: 禁用该补丁或者用 bios 来引导 Windows。
   </br>
+  
 * <span id="drm">**引导默认的 "iMac (2019, 5K)" 型号因为 DRM 问题不支持 Apple TV + 播放。 但是 Apple Music (已测试), Amazon Prime (已测试) 和 Netflix 在 Chrome 中可以正常播放 (Safari 不支持播放).**</span>
   
   - 解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用（2019年之后的 Mac 都需要苹果的 T 系列芯片来完成某些功能）。
@@ -262,10 +264,12 @@ vram -p | grep -i myvar
 | Coffeelake 电源管理    | 通过插件支持                                                 | 原生支持                        |
 | CPU 变频          | 通过 CPUFriend 和 iMac19,1 的 board.plist 支持                         | 原生支持                  |
   </br>
+  
 * **部分电脑关机后开机可能会提示 “电脑关机是因为发生了问题”。**
 
   - 解决方案： 清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除kernel panic 文件。
  </br>
+ 
 * **Windows 10 时间与 macOS 不同步 。** 
 
   - 解决方案：Windows 10 下 CMD 执行：</br>
@@ -273,6 +277,7 @@ vram -p | grep -i myvar
 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 ```
 </br>
+
 ## <span id="logs">6. 更新日志</span>
 
 **0.6.4.1 (2020年11月6日):** 
@@ -301,6 +306,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 - First release
 </br>
+
 ## <span id="bench">7. 性能跑分</span>
 ### CPU:
 
@@ -333,6 +339,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 </br>
+
 ## <span id="thanks">9. 特别感谢</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
@@ -347,6 +354,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 **[fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh)**
 
 **[Bat.bat](https://github.com/williambj1)**
+</br>
 
 ## 10. 阅读统计
 <p align="left">
