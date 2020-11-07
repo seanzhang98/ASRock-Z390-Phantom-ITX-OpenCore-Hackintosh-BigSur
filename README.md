@@ -54,14 +54,17 @@
 
 #### **📖 [OpenCore 配置项非官方中文翻译](https://oc.skk.moe)**
 </br>
+
 ### 1.2. ⚠️注意二⚠️：本配置是 OpenCore 引导，如果你现在正在使用 Clover 引导，请参考以下文档以免出现错误。
 
 #### **📖 [Clover 转 OpenCore 指南（英文版）](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
 </br>
+
 ### 1.3. ⚠️注意三⚠️：请生成你自己的三码，本 EFI 不包含任何三码信息。你可以用使用 OpenCore Configurator 来生成相关数据。
 
 #### **📖 [OpenCore Configurator 官网（英文版）](https://mackie100projects.altervista.org)**
 </br>
+
 ## <span id="config">2. 硬件配置</span>
 
 | 部件名称 | 型号                                           | 备注                |
@@ -79,6 +82,7 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 </br>
+
 ## <span id="driver">3. 驱动情况</span>
 
 | 功能名称     | 是否正常 | 备注                                                                                                                                          |
@@ -109,6 +113,7 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha.png)
 </br>
+
 ## <span id="ready">4. 准备工作</span>
 ### <span id="wirecard">4.1. 网卡替换</span>
 该主板自带的为 Intel® Wireless-AC 9560 模块，支持无线 802.11ac 方案并提供蓝牙 5.0 和 2x2 802.11ac 2.4/5Ghz Wi-Fi。需要拆下该模块并替换为白果拆机模块BCM94360CS2，该模块需要 BCM94360CS2 NGFF M.2 转接卡。操作步骤如图（icyleaf大佬的图）：
@@ -117,6 +122,7 @@
 
 Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 </br>
+
 ### <span id="tb3">4.2. 刷写定制版 BIOS</span>
 下载好 bios 文件夹中的 [Z39PGIX4.40C](bios/Z39PGIX4.40C), 放入 U 盘 并在 BIOS 中执行 Instant Flash。
 具体步骤可参考华擎官网 📖[BIOS 刷新程序](http://www.asrockchina.com.cn/support/BIOSIG.cn.asp?cat=BIOS9)。
@@ -130,6 +136,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 ```
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios.BMP)
 </br>
+
 ### <span id="bios">4.3. BIOS 设定 (4.40c)<span>
 
 - **Advanced**
@@ -152,17 +159,20 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset.BMP)
 </br>
+
 ### <span id="smbios">4.4. SMBIOS 补全（必做）<span>
 
 #### **方法一：OpenCore Configurator**
 **步骤一：**
 用对应版本的 OpenCore Configurator（⚠️重要：OCC 支持的版本需跟 OC 版本对应）打开 ```config.plist```。
 </br>
+
 **步骤二：**
 选择 ```PlatformInfo```，并选择 ```DataHub - Generic — PlatfromNVRAM```，点击页面下侧 ```Check Coverage``` 右边的上下箭头按钮。
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/occ_smbios.png)
 </br>
+
 **步骤三：**
 选择型号 ```iMac19,1```，检查序列号是否被使用过。没有问题保存即可。
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/model.png)
@@ -171,12 +181,15 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 **步骤一：**
 从 [MacInfoPkg 项目发布页](https://github.com/acidanthera/MacInfoPkg/releases) 下载对应平台的 MacInfoPkg。
 </br>
+
 **步骤二：**
 执行```macserial -m iMac19,1```，输出的格式选择```SerialNumber | BoardSerialNumber```。
 </br>
+
 **步骤三：**
 在 [Online UUID Generator](https://www.uuidgenerator.net/version4) 生成 ```SystemUUID```。
 </br>
+
 **步骤四：**
 编辑```config.plist```
 - 替换```PlatformInfo下Generic -> SystemSerialNumber```为步骤二中生成的```SerialNumber```。
@@ -200,6 +213,7 @@ The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
 ```
 代表没有 LogoutHook 残留。
 </br>
+
 **步骤二：** 
 
 移除 ```LogoutHook.command``` 文件，终端执行
@@ -207,6 +221,7 @@ The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
 sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
 ```
 </br>
+
 **步骤三：** 
 
 清空 ```LogoutHook``` 触发设置 ，终端执行
@@ -214,11 +229,13 @@ sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
 sudo defaults delete com.apple.loginwindow LogoutHook
 ```
 </br>
+
 #### 4.5.2. 删除文件（如果存在删除即可，没有可忽略）
 ```EFI``` 分区中的 ```nvram.plist```
 
 ```/EFI/OC/Drivers``` 目录中的 ```VariableRuntimeDxe.efi``` 与 ```EmuVariableRuntimeDxe.efi```
 </br>
+
 #### 4.5.3. 验证 NVRAM 是否正常工作
 在终端逐次执行
 ```diff
@@ -234,11 +251,13 @@ sudo nvram myvar=test
 exit
 ```
 </br>
+
 重启设备，然后在终端执行
 ```diff
 vram -p | grep -i myvar
 ```
 </br>
+
 如果返回包含```myvar test```，则 NVRAM 工作正常。
 </br>
 
@@ -284,24 +303,29 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 - 修改 config.plist 部分内容
 </br>
+
 **0.6.4 (2020年11月4日):** 
 
 - 更新 OC 版本至 0.6.4
 </br>
+
 **0.6.3.2 (2020年10月29日):** 
 
 - 重构 EFI
 - 移除 FakeSMC 
 - 已在 11.0.1 Beta版(20B5012d) 测试正常
 </br>
+
 **0.6.3.1 (2020年10月22日):** 
 
 - 修复部分问题
 </br>
+
 **0.6.3 (2020年10月18日):** 
 
 - 更新 OC 版本
 </br>
+
 **0.6.2 (2020年10月6日):** 
 
 - First release
