@@ -38,12 +38,14 @@
      - <font size=4>[4.1. 网卡替换](#wirecard)</font>
      - <font size=4>[4.2. 刷写定制版 BIOS](#tb3)</font>
      - <font size=4>[4.3. BIOS 设定](#bios)</font>
-     - <font size=4>[4.4. 清理模拟 NVRAM（可选）](#nvram)</font>
+     - <font size=4>[4.4. SMBIOS 补全（必做）](#smbios)</font>
+     - <font size=4>[4.5. 清理模拟 NVRAM（可选）](#nvram)</font>
 - <font size=4>[5. 已知问题](#iss)</font>
 - <font size=4>[6. 更新日志](#logs)</font>
 - <font size=4>[7. 性能跑分](#bench)</font>
 - <font size=4>[8. 参考文档](#ref)</font>
 - <font size=4>[9. 特别感谢](#thanks)</font>
+</br>
 
 ## <span id="warm">1. 注意事项</span>
 ### 1.1. ⚠️注意一⚠️：你应该在清楚如何安装系统的情况下使用本 EFI。你如果不知道如何安装系统、不清楚 OC 结构，那么我强烈建议你先完整阅读 OC 官方配置指南，因为使用本 EFI 并不意味着你的系统也能正常启动，即使配置完全相同，你很可能需要按照自己的情况进行引导（驱动）调整。 
@@ -51,15 +53,15 @@
 #### **📖 [OpenCore 官方指南（英文版）](https://dortania.github.io/OpenCore-Install-Guide)**
 
 #### **📖 [OpenCore 配置项非官方中文翻译](https://oc.skk.moe)**
-
+</br>
 ### 1.2. ⚠️注意二⚠️：本配置是 OpenCore 引导，如果你现在正在使用 Clover 引导，请参考以下文档以免出现错误。
 
 #### **📖 [Clover 转 OpenCore 指南（英文版）](https://github.com/dortania/OpenCore-Install-Guide/tree/master/clover-conversion)**
-
+</br>
 ### 1.3. ⚠️注意三⚠️：请生成你自己的三码，本 EFI 不包含任何三码信息。你可以用使用 OpenCore Configurator 来生成相关数据。
 
 #### **📖 [OpenCore Configurator 官网（英文版）](https://mackie100projects.altervista.org)**
-
+</br>
 ## <span id="config">2. 硬件配置</span>
 
 | 部件名称 | 型号                                           | 备注                |
@@ -76,7 +78,7 @@
 <br/>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
-
+</br>
 ## <span id="driver">3. 驱动情况</span>
 
 | 功能名称     | 是否正常 | 备注                                                                                                                                          |
@@ -106,7 +108,7 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha.png)
-
+</br>
 ## <span id="ready">4. 准备工作</span>
 ### <span id="wirecard">4.1. 网卡替换</span>
 该主板自带的为 Intel® Wireless-AC 9560 模块，支持无线 802.11ac 方案并提供蓝牙 5.0 和 2x2 802.11ac 2.4/5Ghz Wi-Fi。需要拆下该模块并替换为白果拆机模块BCM94360CS2，该模块需要 BCM94360CS2 NGFF M.2 转接卡。操作步骤如图（icyleaf大佬的图）：
@@ -114,7 +116,7 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.png)
 
 Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
-
+</br>
 ### <span id="tb3">4.2. 刷写定制版 BIOS</span>
 下载好 bios 文件夹中的 [Z39PGIX4.40C](bios/Z39PGIX4.40C), 放入 U 盘 并在 BIOS 中执行 Instant Flash。
 具体步骤可参考华擎官网 📖[BIOS 刷新程序](http://www.asrockchina.com.cn/support/BIOSIG.cn.asp?cat=BIOS9)。
@@ -127,29 +129,65 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 -⚠️本教程不对任何硬件损伤承担任何责任！
 ```
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios.BMP)
+</br>
 ### <span id="bios">4.3. BIOS 设定 (4.40c)<span>
 
-Advanced \ Chipset Configuration → Vt-d : 关闭
+- **Advanced**
+ - **Chipset Configuration** 
+        + Vt-d → 关闭
+        + Share Memory → 128MB
+        + IGPU Multi-Monitor → 开启
 
-Advanced \ Chipset Configuration → Share Memory : 128MB
+ - **Super IO Configuration** 
+        + Serial Port → 关闭
 
-Advanced \ Chipset Configuration → IGPU Multi-Monitor : 开启
+ - **USB Configuration** 
+        + XHCI Hand-off → 开启
 
-Advanced \ Super IO Configuration → Serial Port: 关闭
-
-Advanced \ USB Configuration → XHCI Hand-off : 开启
-
-Advanced \ Intel (R) Thunderbolt → Thunderbolt (TM) Support : 开启
-
-Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : 开启
-
-Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : 开启
+ - **Intel (R) Thunderbolt**
+        + Thunderbolt (TM) Support → 开启
+        + Thunderbolt Usb Support → 开启
+        + GPIO3 Force Pwr → 开启
+</br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset.BMP)
+</br>
+### <span id="smbios">4.4. SMBIOS 补全（必做）<span>
 
-### <span id="nvram">4.4. 清理模拟 NVRAM（可选）<span>
+#### **方法一：OpenCore Configurator**
+**步骤一：**
+用对应版本的 OpenCore Configurator（⚠️重要：OCC 支持的版本需跟 OC 版本对应）打开 ```config.plist```。
+</br>
+**步骤二：**
+选择 ```PlatformInfo```，并选择 ```DataHub - Generic — PlatfromNVRAM```，点击页面下侧 ```Check Coverage``` 右边的上下箭头按钮。
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/occ_smbios.png)
+</br>
+**步骤三：**
+选择型号 ```iMac19,1```，检查序列号是否被使用过。没有问题保存即可。
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/model.png)
+
+#### **方法二：MacInfoPkg**
+**步骤一：**
+从 [MacInfoPkg 项目发布页](https://github.com/acidanthera/MacInfoPkg/releases) 下载对应平台的 MacInfoPkg。
+</br>
+**步骤二：**
+执行```macserial -m iMac19,1```，输出的格式选择```SerialNumber | BoardSerialNumber```。
+</br>
+**步骤三：**
+在 [Online UUID Generator](https://www.uuidgenerator.net/version4) 生成 ```SystemUUID```。
+</br>
+**步骤四：**
+编辑```config.plist```
+- 替换```PlatformInfo下Generic -> SystemSerialNumber```为步骤二中生成的```SerialNumber```。
+- 替换```PlatformInfo```下```Generic -> MLB```为步骤二中生成的```BoardSerialNumber```。
+- 替换```PlatformInfo```下```Generic -> SystemUUID```为步骤三中生成的```SystemUUID```。
+保存。
+</br>
+
+### <span id="nvram">4.5. 清理模拟 NVRAM（可选）<span>
 如果你之前曾经使用过模拟 NVRAM，需要清理残留以正常使用原生 NVRAM。如果你之前没有使用过，或将进行全新安装，可略过此部分。
-#### 4.4.1. 清理 LogoutHook
+#### 4.5.1. 清理 LogoutHook
 **步骤一：**
 
 在终端执行
@@ -161,27 +199,27 @@ sudo defaults read com.apple.loginwindow LogoutHook
 The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
 ```
 代表没有 LogoutHook 残留。
-
+</br>
 **步骤二：** 
 
 移除 ```LogoutHook.command``` 文件，终端执行
 ```diff
 sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
 ```
-
+</br>
 **步骤三：** 
 
 清空 ```LogoutHook``` 触发设置 ，终端执行
 ```diff
 sudo defaults delete com.apple.loginwindow LogoutHook
 ```
-
-#### 4.4.2. 删除文件（如果存在删除即可，没有可忽略）
+</br>
+#### 4.5.2. 删除文件（如果存在删除即可，没有可忽略）
 ```EFI``` 分区中的 ```nvram.plist```
 
 ```/EFI/OC/Drivers``` 目录中的 ```VariableRuntimeDxe.efi``` 与 ```EmuVariableRuntimeDxe.efi```
-
-#### 4.4.3. 验证 NVRAM 是否正常工作
+</br>
+#### 4.5.3. 验证 NVRAM 是否正常工作
 在终端逐次执行
 ```diff
 sudo -s
@@ -195,18 +233,20 @@ sudo nvram myvar=test
 ```diff
 exit
 ```
+</br>
 重启设备，然后在终端执行
 ```diff
 vram -p | grep -i myvar
 ```
+</br>
 如果返回包含```myvar test```，则 NVRAM 工作正常。
-
+</br>
 ## <span id="iss">5. 已知问题<span>
 
 * **补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。**
   
   - 解决方案: 禁用该补丁或者用 bios 来引导 Windows。
-  
+  </br>
 * <span id="drm">**引导默认的 "iMac (2019, 5K)" 型号因为 DRM 问题不支持 Apple TV + 播放。 但是 Apple Music (已测试), Amazon Prime (已测试) 和 Netflix 在 Chrome 中可以正常播放 (Safari 不支持播放).**</span>
   
   - 解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用（2019年之后的 Mac 都需要苹果的 T 系列芯片来完成某些功能）。
@@ -221,46 +261,46 @@ vram -p | grep -i myvar
 | Vega 以及 Polaris 支持           | 通过 WEG 支持                                                | 原生支持                |
 | Coffeelake 电源管理    | 通过插件支持                                                 | 原生支持                        |
 | CPU 变频          | 通过 CPUFriend 和 iMac19,1 的 board.plist 支持                         | 原生支持                  |
-  
+  </br>
 * **部分电脑关机后开机可能会提示 “电脑关机是因为发生了问题”。**
 
   - 解决方案： 清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除kernel panic 文件。
- 
+ </br>
 * **Windows 10 时间与 macOS 不同步 。** 
 
   - 解决方案：Windows 10 下 CMD 执行：</br>
 ```
 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 ```
-
+</br>
 ## <span id="logs">6. 更新日志</span>
 
 **0.6.4.1 (2020年11月6日):** 
 
 - 修改 config.plist 部分内容
-
+</br>
 **0.6.4 (2020年11月4日):** 
 
 - 更新 OC 版本至 0.6.4
-
+</br>
 **0.6.3.2 (2020年10月29日):** 
 
 - 重构 EFI
 - 移除 FakeSMC 
 - 已在 11.0.1 Beta版(20B5012d) 测试正常
-
+</br>
 **0.6.3.1 (2020年10月22日):** 
 
 - 修复部分问题
-
+</br>
 **0.6.3 (2020年10月18日):** 
 
 - 更新 OC 版本
-
+</br>
 **0.6.2 (2020年10月6日):** 
 
 - First release
-
+</br>
 ## <span id="bench">7. 性能跑分</span>
 ### CPU:
 
@@ -292,7 +332,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 📖 [OpenCore（OC）引导模拟NVRAM](https://imacos.top/2020/04/18/nvram/)
 
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
-
+</br>
 ## <span id="thanks">9. 特别感谢</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
