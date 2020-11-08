@@ -295,28 +295,34 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 **0.6.4.1 (2020-11-6):** 
 
 - Modified contents in config.plist
+</br>
 
 **0.6.4 (2020-11-4):** 
 
 - Update OpenCore to 0.6.4
+</br>
 
 **0.6.3.2 (2020-10-29):** 
 
 - Re-builded the EFI
 - Removed FakeSMC 
 - Tested in 11.0.1 Beta(20B5012d)
+</br>
 
 **0.6.3.1 (2020-10-22):** 
 
 - Fix mirror errors.
+</br>
 
 **0.6.3 (2020-10-18):** 
 
 - Update OpenCore to 0.6.3
+</br>
 
 **0.6.2 (2020-10-6):** 
 
 - First release
+</br>
 
 ## <span id="bench">7. Benchmark</span>
 ### CPU:
