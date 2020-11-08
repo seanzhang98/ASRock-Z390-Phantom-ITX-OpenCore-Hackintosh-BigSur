@@ -358,7 +358,7 @@ vram -p | grep -i myvar
 **[fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh)**
 
 **[Bat.bat](https://github.com/williambj1)**
-</br>
+    </br>
 
 ## 10. 読者数
 <p align="left">
