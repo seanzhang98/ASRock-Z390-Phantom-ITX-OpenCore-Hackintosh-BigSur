@@ -203,14 +203,10 @@ If you used emulated NVRAM before, you need to clean up the emulated NVRAM to ge
     ```diff
     sudo defaults read com.apple.loginwindow LogoutHook
     ```
-</br>
-
     If the output is
     ```diff
     The domain/default pair of (com.apple.loginwindow, LogoutHook) does     not exist
     ```
-</br>
-
     Means no LogoutHook left.
 </br>
 
