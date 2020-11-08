@@ -36,12 +36,14 @@
      - <font size=4>[4.1 Wi-Fi & Bluetooth module replacement](#wirecard)</font>
      - <font size=4>[4.2. Flashing Special BIOS](#tb3)</font>
      - <font size=4>[4.3. BIOS Setting](#bios)</font>
-     - <font size=4>[4.4. Clean up emulated NVRAM（Optional）](#nvram)</font>
+     - <font size=4>[4.4. SMBIOS](#smbios)</font>
+     - <font size=4>[4.5. Clean up emulated NVRAM（Optional）](#nvram)</font>
 - <font size=4>[5. Known Issues](#iss)</font>
 - <font size=4>[6. Update Logs](#logs)</font>
 - <font size=4>[7. Benchmark](#bench)</font>
 - <font size=4>[8. References](#ref)</font>
 - <font size=4>[9. Special Thanks](#thanks)</font>
+</br>
 
 ## <span id="warm">1. Warning</span>
 ### ⚠️Warning A⚠️： Before using the EFI, you should at least understand how do you install macOS and understand the file structure of OpenCore. 
@@ -56,6 +58,7 @@
 
 ### ⚠️Warning C⚠️：This EFI does not contain any platform information (SN, UUID etc.). You can generate these information by using OpenCore Configurator.
 #### **📖 [OpenCore Configurator official site](https://mackie100projects.altervista.org)**
+</br>
 
 ## <span id="config">2. Component List</span></span></span></span></span>
 
@@ -73,6 +76,7 @@
 <br/>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_eng.png)
+</br>
 
 ## <span id="driver">3. Functionalities Checklist</span>
 
@@ -104,8 +108,8 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 
-
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha_eng.png)
+</br>
 
 ## <span id="ready">4. Getting Ready</span>
 ### <span id="wirecard">4.1. Wi-Fi & Bluetooth module replacement
@@ -114,7 +118,7 @@ The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.png)
 
 In Windows 10 you might need to install drivers manually in order to use Wi-Fi and Bluetooth.
-
+</br>
 
 ### <span id="tb3">4.2. Flashing Special BIOS</span>
 Download [Z39PGIX4.40C](bios/Z39PGIX4.40C), store in a thumb drive and flash the BIOS by executing Instant Flash.
@@ -127,40 +131,88 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
 - ⚠️This instruction dose not responsible for any hardware damage.
 ```
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios_eng.BMP)
+</br>
+
 ### <span id="bios">4.3. BIOS Setting (4.40c)</span>
 
-Advanced \ Chipset Configuration → Vt-d : Disabled
+- **Advanced**
+    - **Chipset Configuration** 
+        - Vt-d → Disable
+        - Share Memory → 128MB
+        - IGPU Multi-Monitor → Enable
 
-Advanced \ Chipset Configuration → Share Memory : 128MB
+    - **Super IO Configuration** 
+        - Serial Port → Disable
 
-Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
+    - **USB Configuration** 
+        - XHCI Hand-off → Enable
 
-Advanced \ Super IO Configuration → Serial Port: Disabled
-
-Advanced \ USB Configuration → XHCI Hand-off : Enabled
-
-Advanced \ Intel (R) Thunderbolt → Thunderbolt (TM) Support : Enabled
-
-Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
-
-Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enabled
+    - **Intel (R) Thunderbolt**
+        - Thunderbolt (TM) Support → Enable
+        - Thunderbolt Usb Support → Enable
+        - GPIO3 Force Pwr → Enable
+</br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset_eng.BMP)
+</br>
 
-### <span id="nvram">4.4. Clean up emulated NVRAM（Optional）<span>
+### <span id="smbios">4.4. SMBIOS <span>
+
+#### **Method A：OpenCore Configurator**
+**Step 1：**
+Use the latest OpenCore Configuratortor open ```config.plist```.
+</br>
+
+**Step 2：**
+Choose ```PlatformInfo``` then choose on the top ```DataHub - Generic — PlatfromNVRAM```, click the "up and down arrow" button on the right side on the ```Check Coverage``` button located at the bottom of the interface.
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/occ_smbios.png)
+</br>
+
+**Step 3：**
+Choose the model ```iMac19,1```.
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/model.png)
+
+#### **Method B：MacInfoPkg**
+**Step 1：**
+Download MacInfoPkg from [MacInfoPkg release page](https://github.com/acidanthera/MacInfoPkg/releases).
+</br>
+
+**Step 2：**
+Execute ```macserial -m iMac19,1``` and choose the output format as ```SerialNumber | BoardSerialNumber```.
+</br>
+
+**Step 3：**
+Generate ```SystemUUID``` by using [Online UUID Generator](https://www.uuidgenerator.net/version4).
+</br>
+
+**Step 4：**
+Edit ```config.plist```
+- Replace```PlatformInfo下Generic -> SystemSerialNumber``` with ```SerialNumber``` form step 2.
+- Replace```PlatformInfo```下```Generic -> MLB``` with ```BoardSerialNumber``` form step 2.
+- Replace```PlatformInfo``` under ```Generic -> SystemUUID``` with ```SystemUUID``` form step 3.
+Save the config file.
+</br>
+
+### <span id="nvram">4.5. Clean up emulated NVRAM（Optional）<span>
 If you used emulated NVRAM before, you need to clean up the emulated NVRAM to get the native NVRAM works. If you never used emulated NVRAM or you are doing a fresh install, you can skip this part.
-#### 4.4.1. Clean up LogoutHook
+#### 4.5.1. Clean up LogoutHook
 **Step 1：**
 
 Execute in terminal
 ```diff
 sudo defaults read com.apple.loginwindow LogoutHook
 ```
+</br>
+
 If the output is
 ```diff
 The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
 ```
+</br>
+
 Means no LogoutHook left.
+</br>
 
 **Step 2：** 
 
@@ -168,6 +220,7 @@ Remove ```LogoutHook.command``` file，execute in terminal
 ```diff
 sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
 ```
+</br>
 
 **Step 3：** 
 
@@ -175,13 +228,16 @@ Clean up ```LogoutHook``` trigger setting, execute in terminal
 ```diff
 sudo defaults delete com.apple.loginwindow LogoutHook
 ```
+</br>
 
-#### 4.4.2. Remove Files（If there are any）
+#### 4.5.2. Remove Files（If there are any）
 ```nvram.plist``` in ```EFI```  prartition.
+</br>
 
 ```VariableRuntimeDxe.efi``` and ```EmuVariableRuntimeDxe.efi``` in ```/EFI/OC/Drivers```
+</br>
 
-#### 4.4.3. Examination NVRAM function
+#### 4.5.3. Examination NVRAM function
 Execute in terminal each line at a time,
 ```diff
 sudo -s
@@ -195,17 +251,23 @@ sudo nvram myvar=test
 ```diff
 exit
 ```
+</br>
+
 Reboot your device, then execute in terminal
 ```diff
 vram -p | grep -i myvar
 ```
+</br>
+
 If ```myvar test``` is included in your return line, then the NVRAM is working properly.
+</br>
 
 ## <span id="iss">5. Known Issues</span>
 
 * **The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC**
   
   Solution: disable the TB3 Function or boot Windows with BIOS interface.
+  </br>
   
 * **<span id="drm">The current model of "iMac (2019, 5K)" is not support Apple TV + because of the DRM. But Apple Music (tested), Amazon Prime (tested) and Netflix should be working with Chrome (not working with Safari).</span>**
   
@@ -222,6 +284,7 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 | Vega/Polaris Support           | Compatible (through WEG)                                                | Compatible (OOB)                |
 | Coffeelake Power Management    | Yes, through Extensions                                                 | Yes, OOB                        |
 | CPU frequency scaling          | Yes, through CPUFriend and iMac19,1 board.plist                         | Yes, OOB                        |
+</br>
 
 * **Time do not sync between Windows 10 and macOS.** 
 
@@ -229,6 +292,7 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 ```
 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 ```
+</br>
 
 ## <span id="logs">6. Update Logs</span>
 
@@ -289,7 +353,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 📖 [OpenCore（OC）引导模拟NVRAM](https://imacos.top/2020/04/18/nvram/)
 
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
-
+</br>
 
 ## <span id="thanks">9. Special Thanks</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
@@ -305,6 +369,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 **[fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh)**
 
 **[Bat.bat](https://github.com/williambj1)**
+</br>
 
 ## 10. Traffic statistics
 <p align="left">
