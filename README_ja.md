@@ -36,12 +36,14 @@
      - <font size=4>[4.1 Wi-FiとBluetoothモジュールの交換](#wirecard)</font>
      - <font size=4>[4.2. 特別版BIOSを更新する](#tb3)</font>
      - <font size=4>[4.3. BIOS設定](#bios)</font>
-     - <font size=4>[4.4. エミュレートNVRAMをクリーンアップ（オプション）](#nvram)</font>
+     - <font size=4>[4.4. SMBIOS](#smbios)</font>
+     - <font size=4>[4.5. エミュレートNVRAMをクリーンアップ（オプション）](#nvram)</font>
 - <font size=4>[5. 既知の問題](#iss)</font>
 - <font size=4>[6. 更新ログ](#logs)</font>
 - <font size=4>[7. ベンチマーク](#bench)</font>
 - <font size=4>[8. 参考文献](#ref)</font>
 - <font size=4>[9. 感謝](#thanks)</font>
+</br>
 
 ## <span id="warm">1. 警告</span>
 ### ⚠️警告１⚠️： このEFIを使用する前に、OpenCoreインストールガイドを読むことを強くお勧めします。このEFIを直接使用しても、構成が同じであっても、システムが正常に起動できるとは限りません。
@@ -54,6 +56,7 @@
 
 ### ⚠️警告３⚠️：このEFIには、プラットフォーム情報（SN、UUIDなど）は含まれていません。 これらの情報は、OpenCoreConfiguratorを使用して生成できます。
 #### **📖 [OpenCore Configurator official site「英語」](https://mackie100projects.altervista.org)**
+</br>
 
 ## <span id="config">2. コンポーネントリスト</span></span></span></span></span>
 
@@ -71,6 +74,7 @@
 <br/>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_ja.png)
+</br>
 
 ## <span id="driver">3. 機能チェックリスト</span>
 
@@ -103,6 +107,7 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha_ja.png)
+</br>
 
 ## <span id="ready">4. 準備</span>
 ### <span id="wirecard">4.1. Wi-FiとBluetoothモジュールの交換
@@ -111,7 +116,7 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.png)
 
 Windows 10では、Wi-FiとBluetoothを使用するために、ドライバーを手動でインストールする必要がある場合があります。
-
+</br>
 
 ### <span id="tb3">4.2. 特別版BIOSを更新する</span>
  [Z39PGIX4.40C](bios/Z39PGIX4.40C)をダウンロードする, サムドライブに保存し、インスタントフラッシュを実行してBIOSをフラッシュします。
@@ -125,29 +130,72 @@ Thunderbolt 3ポートを使用しない場合は、この手順をスキップ�
 - ⚠️このガイドは、ハードウェアの損傷については責任を負いません。
 ```
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios_eng.BMP)
+</br>
+
 ### <span id="bios">4.3. BIOS設定 (4.40c)</span>
 
-Advanced \ Chipset Configuration → Vt-d : Disabled
+- **Advanced**
+    - **Chipset Configuration** 
+        - Vt-d → オフ
+        - Share Memory → 128MB
+        - IGPU Multi-Monitor → オン
 
-Advanced \ Chipset Configuration → Share Memory : 128MB
+    - **Super IO Configuration** 
+        - Serial Port → オフ
 
-Advanced \ Chipset Configuration → IGPU Multi-Monitor : Enabled
+    - **USB Configuration** 
+        - XHCI Hand-off → オン
 
-Advanced \ Super IO Configuration → Serial Port: Disabled
-
-Advanced \ USB Configuration → XHCI Hand-off : Enabled
-
-Advanced \ Intel (R) Thunderbolt → Thunderbolt (TM) Support : Enabled
-
-Advanced \ Intel (R) Thunderbolt → Thunderbolt Usb Support : Enabled
-
-Advanced \ Intel (R) Thunderbolt → GPIO3 Force Pwr : Enabled
+    - **Intel (R) Thunderbolt**
+        - Thunderbolt (TM) Support → オン
+        - Thunderbolt Usb Support → オン
+        - GPIO3 Force Pwr → オン
+</br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset_eng.BMP)
+</br>
 
-### <span id="nvram">4.4. エミュレートNVRAMをクリーンアップ（オプション）<span>
+### <span id="smbios">4.4. SMBIOS <span>
+
+#### **Method A：OpenCore Configurator**
+**Step 1：**
+Use the latest OpenCore Configuratortor open ```config.plist```.
+</br>
+
+**Step 2：**
+Choose ```PlatformInfo``` then choose on the top ```DataHub - Generic — PlatfromNVRAM```, click the "up and down arrow" button on the right side on the ```Check Coverage``` button located at the bottom of the interface.
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/occ_smbios.png)
+</br>
+
+**Step 3：**
+Choose the model ```iMac19,1```.
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/model.png)
+
+#### **Method B：MacInfoPkg**
+**Step 1：**
+Download MacInfoPkg from [MacInfoPkg release page](https://github.com/acidanthera/MacInfoPkg/releases).
+</br>
+
+**Step 2：**
+Execute ```macserial -m iMac19,1``` and choose the output format as ```SerialNumber | BoardSerialNumber```.
+</br>
+
+**Step 3：**
+Generate ```SystemUUID``` by using [Online UUID Generator](https://www.uuidgenerator.net/version4).
+</br>
+
+**Step 4：**
+Edit ```config.plist```
+- Replace```PlatformInfo下Generic -> SystemSerialNumber``` with ```SerialNumber``` form step 2.
+- Replace```PlatformInfo```下```Generic -> MLB``` with ```BoardSerialNumber``` form step 2.
+- Replace```PlatformInfo``` under ```Generic -> SystemUUID``` with ```SystemUUID``` form step 3.
+Save the config file.
+</br>
+
+### <span id="nvram">4.5. エミュレートNVRAMをクリーンアップ（オプション）<span>
 以前にエミュレートされたNVRAMを使用したことがある場合は、エミュレートされたNVRAMをクリーンアップして、ネイティブNVRAMを機能させる必要があります。 エミュレートされたNVRAMを使用したことがない場合、または新規インストールを実行している場合は、この部分をスキップできます。
-#### 4.4.1. LogoutHookをクリーンアップします
+#### 4.5.1. LogoutHookをクリーンアップします
 **ステップ 1：**
 
 ターミナルで実行
@@ -159,6 +207,7 @@ sudo defaults read com.apple.loginwindow LogoutHook
 The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
 ```
 LogoutHookが残っていないことを意味します。
+</br>
 
 **ステップ 2：** 
 
@@ -166,6 +215,7 @@ LogoutHookが残っていないことを意味します。
 ```diff
 sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
 ```
+</br>
 
 **ステップ 3：** 
 
@@ -173,13 +223,15 @@ sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
 ```diff
 sudo defaults delete com.apple.loginwindow LogoutHook
 ```
+</br>
 
-#### 4.4.2. ファイルの削除（ある場合）
+#### 4.5.2. ファイルの削除（ある場合）
 ```nvram.plist``` in ```EFI```  prartition.
 
 ```VariableRuntimeDxe.efi``` and ```EmuVariableRuntimeDxe.efi``` in ```/EFI/OC/Drivers```
+</br>
 
-#### 4.4.3. 検査NVRAM機能
+#### 4.5.3. 検査NVRAM機能
 ターミナルで一度に各行を実行し、
 ```diff
 sudo -s
@@ -193,16 +245,21 @@ sudo nvram myvar=test
 ```diff
 exit
 ```
+</br>
+
 デバイスを再起動してから、ターミナルで実行します
 ```diff
 vram -p | grep -i myvar
 ```
  ```myvar test``` がリターンラインに含まれている場合、NVRAMは正しく機能しています。
+ </br>
+ 
 ## <span id="iss">5. 既知の問題</span>
 
 * **パッチ変更_E2CをXE2Cに有効にすると、OCでWindowsを起動しているときにAPICエラーが発生します**
   
   解決策：TB3機能を無効にするか、BIOSインターフェイスを使用してWindowsを起動します。
+  </br>
   
 * **<span id="drm">「iMac（2019、5K）」のモデルは、DRMのため、Apple TV +をサポートしていません。 ただし、Apple Music（テスト済み）、Amazon Prime（テスト済み）、NetflixはChromeを使用して動作するはずです（Safariでは動作しません）。</span>**
   
@@ -219,7 +276,7 @@ vram -p | grep -i myvar
 | Vega/Polaris サポート           | 対応、WEGて                                            | 対応                |
 | Coffeelakeの電源管理    | 対応、エクステンションて                                                | 対応                        |
 | CPU周波数スケーリング          |対応、CPUFriendとiMac19,1て board.plist                         | 対応                        |
-
+</br>
 
 ## <span id="logs">6. 更新ログ</span>
 
@@ -248,6 +305,7 @@ vram -p | grep -i myvar
 **0.6.2 (2020-10-6):** 
 
 - First release
+</br>
 
 ## <span id="bench">7. ベンチマーク</span>
 ### CPU:
@@ -263,6 +321,7 @@ vram -p | grep -i myvar
 
 ### Cinebench R15 CPU & GPU
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/GPU_CPU_CINER15.png)
+</br>
 
 ## <span id="ref">8. 参考文献</span>
 📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)
@@ -280,7 +339,7 @@ vram -p | grep -i myvar
 📖 [OpenCore（OC）引导模拟NVRAM](https://imacos.top/2020/04/18/nvram/)
 
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
-
+</br>
 
 ## <span id="thanks">9. 感謝</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
@@ -296,6 +355,7 @@ vram -p | grep -i myvar
 **[fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh)**
 
 **[Bat.bat](https://github.com/williambj1)**
+</br>
 
 ## 10. 読者数
 <p align="left">
