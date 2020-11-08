@@ -158,71 +158,72 @@ Thunderbolt 3ポートを使用しない場合は、この手順をスキップ�
 ### <span id="smbios">4.4. SMBIOS <span>
 
 #### **Method A：OpenCore Configurator**
-**Step 1：**
-Use the latest OpenCore Configuratortor open ```config.plist```.
+- **Step 1：**
+    - Use the latest OpenCore Configuratortor open ```config.plist```.
 </br>
 
-**Step 2：**
-Choose ```PlatformInfo``` then choose on the top ```DataHub - Generic — PlatfromNVRAM```, click the "up and down arrow" button on the right side on the ```Check Coverage``` button located at the bottom of the interface.
+- **Step 2：**
+    - Choose ```PlatformInfo``` then choose on the top ```DataHub - Generic — PlatfromNVRAM```, click the "up and down arrow" button on the right side on the ```Check Coverage``` button located at the bottom of the interface.
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/occ_smbios.png)
 </br>
 
-**Step 3：**
-Choose the model ```iMac19,1```.
+- **Step 3：**
+    - Choose the model ```iMac19,1```.
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/model.png)
+</br>
 
 #### **Method B：MacInfoPkg**
-**Step 1：**
-Download MacInfoPkg from [MacInfoPkg release page](https://github.com/acidanthera/MacInfoPkg/releases).
+- **Step 1：**
+    - Download MacInfoPkg from [MacInfoPkg release page](https://github.com/acidanthera/MacInfoPkg/releases).
 </br>
 
-**Step 2：**
-Execute ```macserial -m iMac19,1``` and choose the output format as ```SerialNumber | BoardSerialNumber```.
+- **Step 2：**
+    - Execute ```macserial -m iMac19,1``` and choose the output format as ```SerialNumber | BoardSerialNumber```.
 </br>
 
-**Step 3：**
-Generate ```SystemUUID``` by using [Online UUID Generator](https://www.uuidgenerator.net/version4).
+- **Step 3：**
+    - Generate ```SystemUUID``` by using [Online UUID Generator](https://www.uuidgenerator.net/version4).
 </br>
 
-**Step 4：**
-Edit ```config.plist```
-- Replace```PlatformInfo``` under ```Generic -> SystemSerialNumber``` with ```SerialNumber``` form step 2.
-- Replace```PlatformInfo``` under ```Generic -> MLB``` with ```BoardSerialNumber``` form step 2.
-- Replace```PlatformInfo``` under ```Generic -> SystemUUID``` with ```SystemUUID``` form step 3.
-Save the config file.
+- **Step 4：**
+    - Edit ```config.plist```
+        - Replace```PlatformInfo``` under ```Generic -> SystemSerialNumber``` with ```SerialNumber``` form step 2.
+        - Replace```PlatformInfo``` under ```Generic -> MLB``` with ```BoardSerialNumber``` form step 2.
+        - Replace```PlatformInfo``` under ```Generic -> SystemUUID``` with ```SystemUUID``` form step 3.
+    - Save the config file.
 </br>
 
 ### <span id="nvram">4.5. エミュレートNVRAMをクリーンアップ（オプション）<span>
 以前にエミュレートされたNVRAMを使用したことがある場合は、エミュレートされたNVRAMをクリーンアップして、ネイティブNVRAMを機能させる必要があります。 エミュレートされたNVRAMを使用したことがない場合、または新規インストールを実行している場合は、この部分をスキップできます。
 #### 4.5.1. LogoutHookをクリーンアップします
-**ステップ 1：**
+- **ステップ 1：**
 
-ターミナルで実行
-```diff
-sudo defaults read com.apple.loginwindow LogoutHook
-```
-出力が
-```diff
-The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
-```
-LogoutHookが残っていないことを意味します。
+    ターミナルで実行
+    ```diff
+    sudo defaults read com.apple.loginwindow LogoutHook
+    ```
+    出力が
+    ```diff
+    The domain/default pair of (com.apple.loginwindow, LogoutHook) does     not exist
+    ```
+    LogoutHookが残っていないことを意味します。
 </br>
 
-**ステップ 2：** 
+- **ステップ 2：** 
 
- ```LogoutHook.command``` ファイルを削除する，ターミナルで実行
-```diff
-sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
-```
+     ```LogoutHook.command``` ファイルを削除する，ターミナルで実行
+    ```diff
+    sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
+    ```
 </br>
 
-**ステップ 3：** 
+- **ステップ 3：** 
 
-```LogoutHook``` トリガー設定をクリーンアップし、ターミナルで実行します
-```diff
-sudo defaults delete com.apple.loginwindow LogoutHook
-```
+    ```LogoutHook``` トリガー設定をクリーンアップし、ターミナルで実行します
+    ```diff
+    sudo defaults delete com.apple.loginwindow LogoutHook
+    ```
 </br>
 
 #### 4.5.2. ファイルの削除（ある場合）
