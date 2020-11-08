@@ -202,32 +202,32 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 ### <span id="nvram">4.5. 清理模拟 NVRAM（可选）<span>
 如果你之前曾经使用过模拟 NVRAM，需要清理残留以正常使用原生 NVRAM。如果你之前没有使用过，或将进行全新安装，可略过此部分。
 #### 4.5.1. 清理 LogoutHook
-**步骤一：**
+- **步骤一：**
 
-在终端执行
-```diff
-sudo defaults read com.apple.loginwindow LogoutHook
-```
-如果输出为
-```diff
-The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
-```
-代表没有 LogoutHook 残留。
+    在终端执行
+    ```diff
+    sudo defaults read com.apple.loginwindow LogoutHook
+    ```
+    如果输出为
+    ```diff
+    The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
+    ```
+    代表没有 LogoutHook 残留。
 </br>
 
-**步骤二：** 
+- **步骤二：** 
 
-移除 ```LogoutHook.command``` 文件，终端执行
-```diff
-sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
-```
+    移除 ```LogoutHook.command``` 文件，终端执行
+    ```diff
+    sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
+    ```
 
-**步骤三：** 
+- **步骤三：** 
 
-清空 ```LogoutHook``` 触发设置 ，终端执行
-```diff
-sudo defaults delete com.apple.loginwindow LogoutHook
-```
+    清空 ```LogoutHook``` 触发设置 ，终端执行
+    ```diff
+    sudo defaults delete com.apple.loginwindow LogoutHook
+    ```
 </br>
 
 #### 4.5.2. 删除文件（如果存在删除即可，没有可忽略）
