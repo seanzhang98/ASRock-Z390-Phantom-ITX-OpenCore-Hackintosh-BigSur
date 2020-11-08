@@ -188,8 +188,8 @@ Generate ```SystemUUID``` by using [Online UUID Generator](https://www.uuidgener
 
 **Step 4：**
 Edit ```config.plist```
-- Replace```PlatformInfo下Generic -> SystemSerialNumber``` with ```SerialNumber``` form step 2.
-- Replace```PlatformInfo```下```Generic -> MLB``` with ```BoardSerialNumber``` form step 2.
+- Replace```PlatformInfo``` under ```Generic -> SystemSerialNumber``` with ```SerialNumber``` form step 2.
+- Replace```PlatformInfo``` under ```Generic -> MLB``` with ```BoardSerialNumber``` form step 2.
 - Replace```PlatformInfo``` under ```Generic -> SystemUUID``` with ```SystemUUID``` form step 3.
 Save the config file.
 </br>
