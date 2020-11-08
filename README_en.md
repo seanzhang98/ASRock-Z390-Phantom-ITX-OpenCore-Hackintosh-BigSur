@@ -159,75 +159,75 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
 ### <span id="smbios">4.4. SMBIOS <span>
 
 #### **Method A：OpenCore Configurator**
-**Step 1：**
-Use the latest OpenCore Configuratortor open ```config.plist```.
+- **Step 1：**
+    - Use the latest OpenCore Configuratortor open ```config.plist```.
 </br>
 
-**Step 2：**
-Choose ```PlatformInfo``` then choose on the top ```DataHub - Generic — PlatfromNVRAM```, click the "up and down arrow" button on the right side on the ```Check Coverage``` button located at the bottom of the interface.
+- **Step 2：**
+    - Choose ```PlatformInfo``` then choose on the top ```DataHub - Generic — PlatfromNVRAM```, click the "up and down arrow" button on the right side on the ```Check Coverage``` button located at the bottom of the interface.
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/occ_smbios.png)
 </br>
 
-**Step 3：**
-Choose the model ```iMac19,1```.
+- **Step 3：**
+    - Choose the model ```iMac19,1```.
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/model.png)
 
 #### **Method B：MacInfoPkg**
-**Step 1：**
-Download MacInfoPkg from [MacInfoPkg release page](https://github.com/acidanthera/MacInfoPkg/releases).
+- **Step 1：**
+    - Download MacInfoPkg from [MacInfoPkg release page](https://github.com/acidanthera/MacInfoPkg/releases).
 </br>
 
-**Step 2：**
-Execute ```macserial -m iMac19,1``` and choose the output format as ```SerialNumber | BoardSerialNumber```.
+- **Step 2：**
+    - Execute ```macserial -m iMac19,1``` and choose the output format as ```SerialNumber | BoardSerialNumber```.
 </br>
 
-**Step 3：**
-Generate ```SystemUUID``` by using [Online UUID Generator](https://www.uuidgenerator.net/version4).
+- **Step 3：**
+    - Generate ```SystemUUID``` by using [Online UUID Generator](https://www.uuidgenerator.net/version4).
 </br>
 
-**Step 4：**
-Edit ```config.plist```
-- Replace```PlatformInfo``` under ```Generic -> SystemSerialNumber``` with ```SerialNumber``` form step 2.
-- Replace```PlatformInfo``` under ```Generic -> MLB``` with ```BoardSerialNumber``` form step 2.
-- Replace```PlatformInfo``` under ```Generic -> SystemUUID``` with ```SystemUUID``` form step 3.
-Save the config file.
+- **Step 4：**
+    - Edit ```config.plist```
+        - Replace```PlatformInfo``` under ```Generic -> SystemSerialNumber``` with ```SerialNumber``` form step 2.
+        - Replace```PlatformInfo``` under ```Generic -> MLB``` with ```BoardSerialNumber``` form step 2.
+        - Replace```PlatformInfo``` under ```Generic -> SystemUUID``` with ```SystemUUID``` form step 3.
+    - Save the config file.
 </br>
 
 ### <span id="nvram">4.5. Clean up emulated NVRAM（Optional）<span>
 If you used emulated NVRAM before, you need to clean up the emulated NVRAM to get the native NVRAM works. If you never used emulated NVRAM or you are doing a fresh install, you can skip this part.
 #### 4.5.1. Clean up LogoutHook
-**Step 1：**
+- **Step 1：**
 
-Execute in terminal
-```diff
-sudo defaults read com.apple.loginwindow LogoutHook
-```
+    Execute in terminal
+    ```diff
+    sudo defaults read com.apple.loginwindow LogoutHook
+    ```
 </br>
 
-If the output is
-```diff
-The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
-```
+    If the output is
+    ```diff
+    The domain/default pair of (com.apple.loginwindow, LogoutHook) does     not exist
+    ```
 </br>
 
-Means no LogoutHook left.
+    Means no LogoutHook left.
 </br>
 
-**Step 2：** 
+- **Step 2：** 
 
-Remove ```LogoutHook.command``` file，execute in terminal
-```diff
-sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
-```
+    Remove ```LogoutHook.command``` file，execute in terminal
+    ```diff
+    sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
+    ```
 </br>
 
-**Step 3：** 
+- **Step 3：** 
 
-Clean up ```LogoutHook``` trigger setting, execute in terminal
-```diff
-sudo defaults delete com.apple.loginwindow LogoutHook
-```
+    Clean up ```LogoutHook``` trigger setting, execute in terminal
+    ```diff
+    sudo defaults delete com.apple.loginwindow LogoutHook
+    ```
 </br>
 
 #### 4.5.2. Remove Files（If there are any）
@@ -267,7 +267,7 @@ If ```myvar test``` is included in your return line, then the NVRAM is working p
 * **The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC**
   
   Solution: disable the TB3 Function or boot Windows with BIOS interface.
-  </br>
+</br>
   
 * **<span id="drm">The current model of "iMac (2019, 5K)" is not support Apple TV + because of the DRM. But Apple Music (tested), Amazon Prime (tested) and Netflix should be working with Chrome (not working with Safari).</span>**
   
