@@ -164,77 +164,78 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 ### <span id="smbios">4.4. SMBIOS 补全（必做）<span>
 
 #### **方法一：OpenCore Configurator**
-**步骤一：**
-用对应版本的 OpenCore Configurator（⚠️重要：OCC 支持的版本需跟 OC 版本对应）打开 ```config.plist```。
+- **步骤一：**
+    - 用对应版本的 OpenCore Configurator（⚠️重要：OCC 支持的版本需跟 OC 版本对应）打开 ```config.plist```。
 </br>
 
-**步骤二：**
-选择 ```PlatformInfo```，并选择 ```DataHub - Generic — PlatfromNVRAM```，点击页面下侧 ```Check Coverage``` 右边的上下箭头按钮。
+- **步骤二：**
+    - 选择 ```PlatformInfo```，并选择 ```DataHub - Generic — PlatfromNVRAM```，点击页面下侧 ```Check Coverage``` 右边的上下箭头按钮。
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/occ_smbios.png)
 </br>
 
-**步骤三：**
-选择型号 ```iMac19,1```，检查序列号是否被使用过。没有问题保存即可。
+- **步骤三：**
+    - 选择型号 ```iMac19,1```，检查序列号是否被使用过。没有问题保存即可。
+    
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/model.png)
 
 #### **方法二：MacInfoPkg**
-**步骤一：**
-从 [MacInfoPkg 项目发布页](https://github.com/acidanthera/MacInfoPkg/releases) 下载对应平台的 MacInfoPkg。
+- **步骤一：**
+    - 从 [MacInfoPkg 项目发布页](https://github.com/acidanthera/MacInfoPkg/releases) 下载对应平台的 MacInfoPkg。
 </br>
 
-**步骤二：**
-执行```macserial -m iMac19,1```，输出的格式选择```SerialNumber | BoardSerialNumber```。
+- **步骤二：**
+    - 执行```macserial -m iMac19,1```，输出的格式选择```SerialNumber | BoardSerialNumber```。
 </br>
 
-**步骤三：**
-在 [Online UUID Generator](https://www.uuidgenerator.net/version4) 生成 ```SystemUUID```。
+- **步骤三：**
+    - 在 [Online UUID Generator](https://www.uuidgenerator.net/version4) 生成 ```SystemUUID```。
 </br>
 
-**步骤四：**
-编辑```config.plist```
-- 替换```PlatformInfo```下```Generic -> SystemSerialNumber```为步骤二中生成的```SerialNumber```。
-- 替换```PlatformInfo```下```Generic -> MLB```为步骤二中生成的```BoardSerialNumber```。
-- 替换```PlatformInfo```下```Generic -> SystemUUID```为步骤三中生成的```SystemUUID```。
-保存。
+- **步骤四：**
+    - 编辑```config.plist```
+        - 替换```PlatformInfo```下```Generic -> SystemSerialNumber```为步骤二中生成的```SerialNumber```。
+        - 替换```PlatformInfo```下```Generic -> MLB```为步骤二中生成的```BoardSerialNumber```。
+        - 替换```PlatformInfo```下```Generic -> SystemUUID```为步骤三中生成的```SystemUUID```。
+    - 保存。
 </br>
 
 ### <span id="nvram">4.5. 清理模拟 NVRAM（可选）<span>
 如果你之前曾经使用过模拟 NVRAM，需要清理残留以正常使用原生 NVRAM。如果你之前没有使用过，或将进行全新安装，可略过此部分。
 #### 4.5.1. 清理 LogoutHook
-**步骤一：**
+- **步骤一：**
 
-在终端执行
-```diff
+    - 在终端执行</br>
+    ```
 sudo defaults read com.apple.loginwindow LogoutHook
+    ```
+    - 如果输出为</br>
 ```
-如果输出为
-```diff
 The domain/default pair of (com.apple.loginwindow, LogoutHook) does not exist
 ```
-代表没有 LogoutHook 残留。
+    - 代表没有 LogoutHook 残留。
 </br>
 
-**步骤二：** 
+- **步骤二：** 
 
-移除 ```LogoutHook.command``` 文件，终端执行
-```diff
+    - 移除 ```LogoutHook.command``` 文件，终端执行</br>
+    ```
 sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
 ```
 </br>
 
-**步骤三：** 
+- **步骤三：** 
 
-清空 ```LogoutHook``` 触发设置 ，终端执行
-```diff
+    - 清空 ```LogoutHook``` 触发设置 ，终端执行</br>
+```
 sudo defaults delete com.apple.loginwindow LogoutHook
 ```
 </br>
 
 #### 4.5.2. 删除文件（如果存在删除即可，没有可忽略）
-```EFI``` 分区中的 ```nvram.plist```
+- ```EFI``` 分区中的 ```nvram.plist```
 
-```/EFI/OC/Drivers``` 目录中的 ```VariableRuntimeDxe.efi``` 与 ```EmuVariableRuntimeDxe.efi```
+- ```/EFI/OC/Drivers``` 目录中的 ```VariableRuntimeDxe.efi``` 与 ```EmuVariableRuntimeDxe.efi```
 </br>
 
 #### 4.5.3. 验证 NVRAM 是否正常工作
