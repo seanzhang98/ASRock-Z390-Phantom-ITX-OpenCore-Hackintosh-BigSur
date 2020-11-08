@@ -160,6 +160,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset.BMP)
 </br>
 
+
 ### <span id="smbios">4.4. SMBIOS 补全（必做）<span>
 
 #### **方法一：OpenCore Configurator**
