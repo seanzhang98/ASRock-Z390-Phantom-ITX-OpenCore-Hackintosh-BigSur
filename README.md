@@ -193,7 +193,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 
 **步骤四：**
 编辑```config.plist```
-- 替换```PlatformInfo下Generic -> SystemSerialNumber```为步骤二中生成的```SerialNumber```。
+- 替换```PlatformInfo```下```Generic -> SystemSerialNumber```为步骤二中生成的```SerialNumber```。
 - 替换```PlatformInfo```下```Generic -> MLB```为步骤二中生成的```BoardSerialNumber```。
 - 替换```PlatformInfo```下```Generic -> SystemUUID```为步骤三中生成的```SystemUUID```。
 保存。
