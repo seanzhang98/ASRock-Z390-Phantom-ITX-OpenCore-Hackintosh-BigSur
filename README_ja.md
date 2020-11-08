@@ -252,8 +252,10 @@ exit
 ```diff
 vram -p | grep -i myvar
 ```
+</br>
+
  ```myvar test``` がリターンラインに含まれている場合、NVRAMは正しく機能しています。
- </br>
+</br>
  
 ## <span id="iss">5. 既知の問題</span>
 
