@@ -260,7 +260,7 @@ vram -p | grep -i myvar
 * **パッチ変更_E2CをXE2Cに有効にすると、OCでWindowsを起動しているときにAPICエラーが発生します**
   
   解決策：TB3機能を無効にするか、BIOSインターフェイスを使用してWindowsを起動します。
-  </br>
+</br>
   
 * **<span id="drm">「iMac（2019、5K）」のモデルは、DRMのため、Apple TV +をサポートしていません。 ただし、Apple Music（テスト済み）、Amazon Prime（テスト済み）、NetflixはChromeを使用して動作するはずです（Safariでは動作しません）。</span>**
   
