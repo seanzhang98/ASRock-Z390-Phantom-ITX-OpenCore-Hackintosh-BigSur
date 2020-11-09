@@ -17,7 +17,7 @@
       <a href="https://developer.apple.com/documentation/macos-release-notes">
       <img alt="macOS 版本" src="https://img.shields.io/badge/版本号-11.0.1 Beta (20B5022a)-ff69b4" />
       <a href="https://github.com/williambj1/OpenCore-Factory/releases">
-      <img alt="OC Ver" src="https://img.shields.io/badge/OpenCore 版本-0.6.4%20(2020--11--04)-191970" />
+      <img alt="OC Ver" src="https://img.shields.io/badge/OpenCore 版本-0.6.4%20(2020--11--09)-191970" />
       </br>
     </p>
 <p align="center">
@@ -298,6 +298,11 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 </br>
 
 ## <span id="logs">6. 更新日志</span>
+
+**0.6.4.2 (2020年11月9日):** 
+
+- 更新 OC 版本至 0.6.4 (2020-11-09)
+</br>
 
 **0.6.4.1 (2020年11月6日):** 
 
