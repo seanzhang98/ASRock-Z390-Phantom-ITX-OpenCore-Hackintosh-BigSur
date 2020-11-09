@@ -307,6 +307,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 图标可以通过这个 [macosicons](https://macosicons.com) 进行下载。
 本人也有在提交一些自己制作的图标（迅雷、115网盘、MWeb、QQ等），有能力的朋友也可以制作相关软件的图标上传到该项目的网站或者 Github 项目页。
+</br>
 
 ## <span id="logs">7. 更新日志</span>
 
