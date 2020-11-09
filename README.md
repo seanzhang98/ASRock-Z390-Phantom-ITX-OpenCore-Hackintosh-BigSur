@@ -262,6 +262,17 @@ vram -p | grep -i myvar
 如果返回包含```myvar test```，则 NVRAM 工作正常。
 </br>
 
+## <span id="more">5. 完善</span>
+### <span id="nvram">5.1. Big Sur 风格的图标<span>
+
+目前还有很多软件并未针对 Big Sur 进行图标示配，我们可以通过手动替换图标的方式得到更好的视觉效果。下图为我现在替换后的效果：
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/lunchpad.png)
+
+图标可以通过 [macosicons](https://macosicons.com) 进行下载。
+本人也有在提交一些自己制作的图标（迅雷、115网盘、MWeb、QQ等），有能力的朋友也可以制作相关软件的图标上传到该项目的网站或者 Github 项目页。
+</br>
+
 ## <span id="iss">6. 已知问题<span>
 
 * **补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。**
@@ -298,16 +309,6 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ```
 </br>
 
-## <span id="more">6. 完善</span>
-### <span id="nvram">6.1. Big Sur 风格的图标<span>
-
-目前还有很多软件并未针对 Big Sur 进行图标示配，我们可以通过手动替换图标的方式得到更好的视觉效果。下图为我现在替换后的效果：
-
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/lunchpad.png)
-
-图标可以通过这个 [macosicons](https://macosicons.com) 进行下载。
-本人也有在提交一些自己制作的图标（迅雷、115网盘、MWeb、QQ等），有能力的朋友也可以制作相关软件的图标上传到该项目的网站或者 Github 项目页。
-</br>
 
 ## <span id="logs">7. 更新日志</span>
 
