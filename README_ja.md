@@ -17,7 +17,7 @@
       <a href="https://developer.apple.com/documentation/macos-release-notes">
       <img alt="OS version" src="https://img.shields.io/badge/Version-11.0.1 Beta (20B5022a)-ff69b4" />
       <a href="https://github.com/williambj1/OpenCore-Factory/releases">
-      <img alt="OC Ver" src="https://img.shields.io/badge/OC%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3-0.6.4%20(2020--11--04)-191970" />
+      <img alt="OC Ver" src="https://img.shields.io/badge/OC%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3-0.6.4%20(2020--11--09)-191970" />
       </br>
     </p>
 <p align="center">
@@ -282,6 +282,11 @@ vram -p | grep -i myvar
 </br>
 
 ## <span id="logs">6. 更新ログ</span>
+
+**0.6.4.2 (2020-11-9):** 
+
+- Update OpenCore to 0.6.4 (2020-11-09)
+</br>
 
 **0.6.4.1 (2020-11-6):** 
 
