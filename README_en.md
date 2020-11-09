@@ -38,11 +38,12 @@
      - <font size=4>[4.3. BIOS Setting](#bios)</font>
      - <font size=4>[4.4. SMBIOS](#smbios)</font>
      - <font size=4>[4.5. Clean up emulated NVRAM（Optional）](#nvram)</font>
-- <font size=4>[5. Known Issues](#iss)</font>
-- <font size=4>[6. Update Logs](#logs)</font>
-- <font size=4>[7. Benchmark](#bench)</font>
-- <font size=4>[8. References](#ref)</font>
-- <font size=4>[9. Special Thanks](#thanks)</font>
+- <font size=4>[5. More](#more)</font>
+- <font size=4>[6. Known Issues](#iss)</font>
+- <font size=4>[7. Update Logs](#logs)</font>
+- <font size=4>[8. Benchmark](#bench)</font>
+- <font size=4>[9. References](#ref)</font>
+- <font size=4>[10. Special Thanks](#thanks)</font>
 </br>
 
 ## <span id="warm">1. Warning</span>
@@ -258,7 +259,18 @@ vram -p | grep -i myvar
 If ```myvar test``` is included in your return line, then the NVRAM is working properly.
 </br>
 
-## <span id="iss">5. Known Issues</span>
+## <span id="more">5. More</span>
+### <span id="nvram">5.1. Big Sur Style Icons<span>
+
+There are many applications are not optimized for Big Sur with the new icon style, we can replace these icons for a unify UI. Image below is how the lunchpad looks like in my case ：
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/lunchpad.png)
+
+You can download these icons form [macosicons](https://macosicons.com). 
+I personally also make some of the icons and uploaded them to this website (this is an open-sourced project). If you are capable to make icons for the application you are using, please feel free to make contribution to this project.
+</br>
+
+## <span id="iss">6. Known Issues</span>
 
 * **The enable of the patch change _E2C to XE2C will cause APIC Error while booting Windows with OC**
   
@@ -290,7 +302,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ```
 </br>
 
-## <span id="logs">6. Update Logs</span>
+## <span id="logs">7. Update Logs</span>
 
 **0.6.4.2 (2020-11-9):** 
 
@@ -329,7 +341,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 - First release
 </br>
 
-## <span id="bench">7. Benchmark</span>
+## <span id="bench">8. Benchmark</span>
 ### CPU:
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_benchmark.png)
@@ -344,7 +356,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ### Cinebench R15 CPU & GPU
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/GPU_CPU_CINER15.png)
 
-## <span id="ref">8. References</span>
+## <span id="ref">9. References</span>
 📖 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -362,7 +374,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 </br>
 
-## <span id="thanks">9. Special Thanks</span>
+## <span id="thanks">10. Special Thanks</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
@@ -378,7 +390,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 **[Bat.bat](https://github.com/williambj1)**
 </br>
 
-## 10. Traffic statistics
+## 11. Traffic statistics
 <p align="left">
 <a href="http://antzuhl.cn:4000/get/@
 ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.readme_en">
