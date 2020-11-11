@@ -15,7 +15,7 @@
     <a href="https://www.apple.com/macos/big-sur-preview/">
       <img alt="Supported OS" src="https://img.shields.io/badge/Supported OS-macOS%20Big%20Sur-blueviolet" />
       <a href="https://developer.apple.com/documentation/macos-release-notes">
-      <img alt="OS version" src="https://img.shields.io/badge/Version-11.0.1 Beta (20B5022a)-ff69b4" />
+      <img alt="OS version" src="https://img.shields.io/badge/Version-11.0.1 (20B28)-ff69b4" />
       <a href="https://github.com/williambj1/OpenCore-Factory/releases">
       <img alt="OC Ver" src="https://img.shields.io/badge/OpenCore Ver.-0.6.4%20(2020--11--09)-191970" />
       </br>
