@@ -80,10 +80,9 @@
 | 电源   | 益恒 7660b                                             |    600W 1U 电源     |
 | 显卡   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor 日本市场特供，你可以通过 [Amazon.co.jp](https://www.amazon.co.jp/RX5700搭載ショート基板ITXグラフィックボード-AXRX-5700-ITX-8GBD6-2DH/dp/B082W236T1/ref=sr_1_1?__mk_ja_JP=カタカナ&dchild=1&keywords=5700+itx&qid=1604464670&sr=8-1) 购买 |
 | 主 M.2 散热 | 猫头鹰 A4x10 风扇x2 | 移除原装散热马甲 |
-<br/>
+</br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
-</br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_macpro.png)
 </br>
@@ -108,6 +107,7 @@
 | DRM      | ⭕️｜❌  | iMac19,1 在 Big Sur 不支持 Apple TV + 的 DRM，Mac Pro7,1 则完全支持 DRM|
 | 硬件加速     | ⭕️  | 支持 H264 以及 HEVC 硬件加速                                                                                                                        |
 | 内存 | ⭕️   |  正常识别内存，Mac Pro7,1 下无内存报错                                                                                                                                           |
+</br>
 
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar.png)
@@ -122,7 +122,6 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ram.png)
 
-</br>
 
 ## <span id="ready">4. 准备工作</span>
 ### <span id="wirecard">4.1. 网卡替换</span>
@@ -131,6 +130,7 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.png)
 
 Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
+</br>
 </br>
 
 ### <span id="tb3">4.2. 刷写定制版 BIOS</span>
@@ -145,6 +145,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 -⚠️本教程不对任何硬件损伤承担任何责任！
 ```
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios.BMP)
+</br>
 </br>
 
 ### <span id="bios">4.3. BIOS 设定 (4.40c)<span>
@@ -184,10 +185,10 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
         - Thunderbolt Usb Support → 开启
         - GPIO3 Force Pwr → 开启
 </br>
-</br>
 
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset.BMP)
+</br>
 </br>
 
 
@@ -240,9 +241,9 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 </br>
 
 #### 4.5.2. 删除文件（如果存在删除即可，没有可忽略）
-```EFI``` 分区中的 ```nvram.plist```
+- ```EFI``` 分区中的 ```nvram.plist```
 
-```/EFI/OC/Drivers``` 目录中的 ```VariableRuntimeDxe.efi``` 与 ```EmuVariableRuntimeDxe.efi```
+- ```/EFI/OC/Drivers``` 目录中的 ```VariableRuntimeDxe.efi``` 与 ```EmuVariableRuntimeDxe.efi```
 </br>
 
 #### 4.5.3. 验证 NVRAM 是否正常工作
