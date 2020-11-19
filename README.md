@@ -292,7 +292,7 @@ vram -p | grep -i myvar
   - 解决方案: 禁用该补丁或者用 bios 来引导 Windows。
   </br>
   
-* <span id="drm">我的设备不支持随航 / Apple TV DRM ？</span>
+* **<span id="drm">我的设备不支持随航 / Apple TV DRM ？</span>**
   
   - 解决方案: iMac19,1 可以完美支持随航，但是由于 Big Sur 做出了改动，所以 Apple TV + 所需要的 DRM 目前还是破损的，需要等待 WEG 更新。Mac Pro7,1 则能完整的支持所有的 DRM，但是由于缺少 Apple T2 芯片，随航无法正常使用。
   
