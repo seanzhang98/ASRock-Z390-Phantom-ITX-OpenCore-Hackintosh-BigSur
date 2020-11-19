@@ -309,7 +309,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ## <span id="logs">7. Update Logs</span>
 
-**0.6.3.3 (2020-11-19):** 
+**0.6.3.4 (2020-11-19):** 
 
 - Added EFI for Configuration without iGPU
 </br>
