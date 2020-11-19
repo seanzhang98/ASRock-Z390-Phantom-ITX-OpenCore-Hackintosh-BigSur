@@ -57,7 +57,6 @@
 
 ### ⚠️Warning C⚠️：This EFI does not contain any platform information (SN, UUID etc.). You can generate these information by using OpenCore Configurator.
 #### **📖 [OpenCore Configurator official site](https://mackie100projects.altervista.org)**
-</br>
 
 ### ⚠️Warning D⚠️：This project contains two EFI (iMac19,1 for configuration with iGPU and Mac Pro7,1 for configuration without iGPU) .
 </br>
@@ -75,7 +74,7 @@
 | Power Source  | Enhance 7660b                                             |    600W 1U Power     |
 | GPU   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | PowerColor Only for Japan market, you can get it from [Amazon.co.jp](https://www.amazon.co.jp/RX5700搭載ショート基板ITXグラフィックボード-AXRX-5700-ITX-8GBD6-2DH/dp/B082W236T1/ref=sr_1_1?__mk_ja_JP=カタカナ&dchild=1&keywords=5700+itx&qid=1604464670&sr=8-1) |
 | Main M.2 Cooler | Noctua A4x10 Fan x 2 | Required to remove the offical M.2 armor |
-<br/>
+</br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_eng.png)
 
@@ -102,7 +101,7 @@
 | DRM                  | ⭕️｜❌  | This EFI using the model “iMac 19,1”, with DRM support while using Chrome to play video on Amazon Prime and Netflix. However, Apple TV + is not supported <br/>You can play music in “Music.app” with Apple Muisc. <br/> [Unperfect Solution](#drm) |
 | Hardware acceleration | ⭕️                 | Support H264 and HEVC                                                                                                                                                                                                                    |
 | RAM | ⭕️   |  Mac Pro7,1 without error                                                                                                                                          |
-<br/>
+</br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar_eng.png)
 
@@ -115,7 +114,6 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha_eng.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ram_en.png)
-</br>
 
 ## <span id="ready">4. Getting Ready</span>
 ### <span id="wirecard">4.1. Wi-Fi & Bluetooth module replacement
@@ -124,6 +122,7 @@ The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.png)
 
 In Windows 10 you might need to install drivers manually in order to use Wi-Fi and Bluetooth.
+</br>
 </br>
 
 ### <span id="tb3">4.2. Flashing Special BIOS</span>
@@ -137,6 +136,7 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
 - ⚠️This instruction dose not responsible for any hardware damage.
 ```
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios_eng.BMP)
+</br>
 </br>
 
 ### <span id="bios">4.3. BIOS Setting (4.40c)</span>
@@ -179,6 +179,7 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
 </br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset_eng.BMP)
+</br>
 </br>
 
 ### <span id="smbios">4.4. SMBIOS <span>
@@ -230,35 +231,33 @@ If you used emulated NVRAM before, you need to clean up the emulated NVRAM to ge
 </br>
 
 #### 4.5.2. Remove Files（If there are any）
-```nvram.plist``` in ```EFI```  prartition.
-</br>
-
-```VariableRuntimeDxe.efi``` and ```EmuVariableRuntimeDxe.efi``` in ```/EFI/OC/Drivers```
+- ```nvram.plist``` in ```EFI```  prartition.
+- ```VariableRuntimeDxe.efi``` and ```EmuVariableRuntimeDxe.efi``` in ```/EFI/OC/Drivers```
 </br>
 
 #### 4.5.3. Examination NVRAM function
-Execute in terminal each line at a time,
-```diff
-sudo -s
-```
-```diff
-sudo nvram -c 
-```
-```diff
-sudo nvram myvar=test
-```
-```diff
-exit
-```
+- Execute in terminal each line at a time,
+    ```diff
+    sudo -s
+    ```
+    ```diff
+    sudo nvram -c 
+    ```
+    ```diff
+    sudo nvram myvar=test
+    ```
+    ```diff
+    exit
+    ```
 </br>
 
-Reboot your device, then execute in terminal
-```diff
-vram -p | grep -i myvar
-```
+- Reboot your device, then execute in terminal
+    ```diff
+    vram -p | grep -i myvar
+    ```
 </br>
 
-If ```myvar test``` is included in your return line, then the NVRAM is working properly.
+- If ```myvar test``` is included in your return line, then the NVRAM is working properly.
 </br>
 </br>
 
