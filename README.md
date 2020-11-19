@@ -322,6 +322,11 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ## <span id="logs">7. 更新日志</span>
 
+**0.6.3.3 (2020-11-19):** 
+
+- 新增无核显设备的 EFI
+</br>
+
 **0.6.3.3 (2020-11-11):** 
 
 - 使用 OC 0.6.3 (release) 版本

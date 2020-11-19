@@ -61,6 +61,9 @@
 #### **📖 [OpenCore Configurator official site](https://mackie100projects.altervista.org)**
 </br>
 
+### ⚠️Warning D⚠️：This project contains two EFI (iMac19,1 for configuration with iGPU and Mac Pro7,1 for configuration without iGPU) .
+</br>
+
 ## <span id="config">2. Component List</span></span></span></span></span>
 
 | Parts | Model                                           | Notes                |
@@ -77,28 +80,30 @@
 <br/>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_eng.png)
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_macpro_en.png)
 </br>
 
 ## <span id="driver">3. Functionalities Checklist</span>
 
 | Function Name        | Normal or not     | Notes                                                                                                                                                                                                                                    |
 |:--------------------:|:-----------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| CPU                  | ☑️                | CPU frequency scaling is working                                                                                                                                                                                                         |
-| GPU                  | ☑️                |                                                                                                                                                                                                                                          |
-| Sound card           | ☑️                | The green audio port on the rear of motherboard is the “internal speaker”, support adjust in volume by pressing the function shortcuts in MacOS                                                                                          |
-| LAN port             | ☑️                |                                                                                                                                                                                                                                          |
-| Wi-Fi                | ☑️                |                                                                                                                                                                                                                                          |
-| Bluetooth            | ☑️                |                                                                                                                                                                                                                                          |
-| Hand-off             | ☑️                |                                                                                                                                                                                                                                          |
-| Sidecar              | ☑️                | This EFI using model “iMac 19,1” supports Sidecar                                                                                                                                                                                        |
-| Sleep and wake       | ☑️                |                                                                                                                                                                                                                                          |
-| Location Service     | ☑️                |                                                                                                                                                                                                                                          |
-| NVRAM                | ☑️                |                                                                                                                                                                                                                                          |
-| USB                  | ☑️                |                                                                                                                                                                                                                                          |
-| Thunderbolt 3        | ☑️                | [Thunderbolt 3](#tb3)                                                                                                                                                                                                                    |
-| DRM                  | Partially working | This EFI using the model “iMac 19,1”, with DRM support while using Chrome to play video on Amazon Prime and Netflix. However, Apple TV + is not supported <br/>You can play music in “Music.app” with Apple Muisc. <br/> [Unperfect Solution](#drm) |
-| Hardware acceleration | ☑️                | Support H264 and HEVC                                                                                                                                                                                                                    |
-
+| CPU                  | ⭕️                 | CPU frequency scaling is working                                                                                                                                                                                                         |
+| GPU                  | ⭕️                 |                                                                                                                                                                                                                                          |
+| Sound card           | ⭕️                 | The green audio port on the rear of motherboard is the “internal speaker”, support adjust in volume by pressing the function shortcuts in MacOS                                                                                          |
+| LAN port             | ⭕️                 |                                                                                                                                                                                                                                          |
+| Wi-Fi                | ⭕️                 |                                                                                                                                                                                                                                          |
+| Bluetooth            | ⭕️                 |                                                                                                                                                                                                                                          |
+| Hand-off             | ⭕️                 |                                                                                                                                                                                                                                          |
+| Sidecar              | ⭕️｜❌                  | iMac19,1 supports Sidecar，Mac Pro7,1 will not be supported since the REAL Mac have T2 chip（iPad black screen）                                                                                                                                                                                       |
+| Sleep and wake       | ⭕️                 |                                                                                                                                                                                                                                          |
+| Location Service     | ⭕️                 |                                                                                                                                                                                                                                          |
+| NVRAM                | ⭕️                 |                                                                                                                                                                                                                                          |
+| USB                  | ⭕️                 |                                                                                                                                                                                                                                          |
+| Thunderbolt 3        | ⭕️                 | [Thunderbolt 3](#tb3)                                                                                                                                                                                                                    |
+| DRM                  | ⭕️｜❌  | This EFI using the model “iMac 19,1”, with DRM support while using Chrome to play video on Amazon Prime and Netflix. However, Apple TV + is not supported <br/>You can play music in “Music.app” with Apple Muisc. <br/> [Unperfect Solution](#drm) |
+| Hardware acceleration | ⭕️                 | Support H264 and HEVC                                                                                                                                                                                                                    |
+| RAM | ⭕️   |  Mac Pro7,1 without error                                                                                                                                          |
 <br/>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar_eng.png)
@@ -110,6 +115,8 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha_eng.png)
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ram_en.png)
 </br>
 
 ## <span id="ready">4. Getting Ready</span>
@@ -136,6 +143,7 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
 
 ### <span id="bios">4.3. BIOS Setting (4.40c)</span>
 
+#### - With iGPU
 - **Advanced**
     - **Chipset Configuration** 
         - Vt-d → Disable
@@ -154,12 +162,28 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
         - GPIO3 Force Pwr → Enable
 </br>
 
+#### - Without iGPU
+- **Advanced**
+    - **Chipset Configuration** 
+        - Vt-d → Disable
+        - IGPU Multi-Monitor → Disable
+
+    - **Super IO Configuration** 
+        - Serial Port → Disable
+
+    - **USB Configuration** 
+        - XHCI Hand-off → Enable
+
+    - **Intel (R) Thunderbolt**
+        - Thunderbolt (TM) Support → Enable
+        - Thunderbolt Usb Support → Enable
+        - GPIO3 Force Pwr → Enable
+
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset_eng.BMP)
 </br>
 
 ### <span id="smbios">4.4. SMBIOS <span>
 
-#### **Method A：OpenCore Configurator**
 - **Step 1：**
     - Use the latest OpenCore Configuratortor open ```config.plist```.
 </br>
@@ -171,29 +195,8 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
 </br>
 
 - **Step 3：**
-    - Choose the model ```iMac19,1```.
+    - Choose model ```iMac19,1``` if your CPU comes with iGPU, otherwise choose ```Mac Pro7,1```.
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/model.png)
-
-#### **Method B：MacInfoPkg**
-- **Step 1：**
-    - Download MacInfoPkg from [MacInfoPkg release page](https://github.com/acidanthera/MacInfoPkg/releases).
-</br>
-
-- **Step 2：**
-    - Execute ```macserial -m iMac19,1``` and choose the output format as ```SerialNumber | BoardSerialNumber```.
-</br>
-
-- **Step 3：**
-    - Generate ```SystemUUID``` by using [Online UUID Generator](https://www.uuidgenerator.net/version4).
-</br>
-
-- **Step 4：**
-    - Edit ```config.plist```
-        - Replace```PlatformInfo``` under ```Generic -> SystemSerialNumber``` with ```SerialNumber``` form step 2.
-        - Replace```PlatformInfo``` under ```Generic -> MLB``` with ```BoardSerialNumber``` form step 2.
-        - Replace```PlatformInfo``` under ```Generic -> SystemUUID``` with ```SystemUUID``` form step 3.
-    - Save the config file.
-</br>
 
 ### <span id="nvram">4.5. Clean up emulated NVRAM（Optional）<span>
 If you used emulated NVRAM before, you need to clean up the emulated NVRAM to get the native NVRAM works. If you never used emulated NVRAM or you are doing a fresh install, you can skip this part.
@@ -277,9 +280,9 @@ I personally also make some of the icons and uploaded them to this website (this
   Solution: disable the TB3 Function or boot Windows with BIOS interface.
 </br>
   
-* **<span id="drm">The current model of "iMac (2019, 5K)" is not support Apple TV + because of the DRM. But Apple Music (tested), Amazon Prime (tested) and Netflix should be working with Chrome (not working with Safari).</span>**
+* **<span id="drm">My device dose not support Sidecar / Apple TV + ?</span>**
   
-  Solution: change the model into iMac Pro. However, you will lose the Sidecar function (lack of the T-series chip).
+  Solution: iMac19,1 can support Sidecar perfectly but Big Sur made some changes, which breaks the DRM required by Apple TV +. Wait for the WEG update to fix this. Mac Pro7,1 can support ALL DRM. However, the real Mac required Apple T2 chip to support Sidecar.
   
   
 | System definition              | iMacPro1,1                                                              | iMac19,1                        |
@@ -303,6 +306,11 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 </br>
 
 ## <span id="logs">7. Update Logs</span>
+
+**0.6.3.3 (2020-11-19):** 
+
+- Added EFI for Configuration without iGPU
+</br>
 
 **0.6.3.3 (2020-11-11):** 
 
