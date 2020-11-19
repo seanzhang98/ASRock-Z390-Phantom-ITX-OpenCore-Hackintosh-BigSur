@@ -37,7 +37,7 @@
 </br>
 
 <p align="center">
-<font size=6><b>主要部件列表</b></font></br>
+<font size=5><b>主要部件列表</b></font></br>
 </p>
 
 | 部件名称 | 型号                                           | 备注                |
