@@ -261,6 +261,7 @@ vram -p | grep -i myvar
 
 If ```myvar test``` is included in your return line, then the NVRAM is working properly.
 </br>
+</br>
 
 ## <span id="more">5. More</span>
 ### <span id="nvram">5.1. Big Sur Style Icons<span>
@@ -271,6 +272,7 @@ There are many applications are not optimized for Big Sur with the new icon styl
 
 You can download these icons form [macosicons](https://macosicons.com). 
 I personally also make some of the icons and uploaded them to this website (this is an open-sourced project). If you are capable to make icons for the application you are using, please feel free to make contribution to this project.
+</br>
 </br>
 
 ## <span id="iss">6. Known Issues</span>
