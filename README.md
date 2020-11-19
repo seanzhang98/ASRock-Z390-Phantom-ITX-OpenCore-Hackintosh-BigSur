@@ -300,7 +300,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 | 核显 (与 QuickSync)           | 因为白苹果设备使用志强处理器，所以无法使用 | 兼容                      |
 | 随航                        | 不支持，需要核显                                               | 有核显的情况下支持 |
 |Safari 中使用 DRM          | 原生支持                                                                | 不支持                              |
-| Apple TV 或 iTunes 中使用 DRM | 原生支持                                                                |通过 WEG 支持 <br/>（本人尝试并不能正常工作）                |
+| Apple TV 或 iTunes 中使用 DRM | 原生支持                                                                |Big Sur 下不支持，由 WEG 提供的 DRM 支持在 Big Sur 下无法正常使用               |
 | 性能表现                    | 有独显性能更佳                                                         | 有核显性能更佳                |
 | Vega 以及 Polaris 支持           | 通过 WEG 支持                                                | 原生支持                |
 | Coffeelake 电源管理    | 通过插件支持                                                 | 原生支持                        |

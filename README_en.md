@@ -290,7 +290,7 @@ I personally also make some of the icons and uploaded them to this website (this
 | iGPU (and QuickSync)           | Cannot be configured because these originally ship with Xeon processors | Compatible                      |
 | Sidecar                        | not possible without iGPU                                               | Compatible with (headless) iGPU |
 | DRM support in Safari          | Yes, OOB                                                                | No                              |
-| DRM support in Apple TV/iTunes | Yes, OOB                                                                | Yes, through WEG                |
+| DRM support in Apple TV/iTunes | Yes, OOB                                                                | No for now, Big Sur breaks the DRM support provided by WEG                |
 | Performance                    | Better with GPU                                                         | Better with iGPU                |
 | Vega/Polaris Support           | Compatible (through WEG)                                                | Compatible (OOB)                |
 | Coffeelake Power Management    | Yes, through Extensions                                                 | Yes, OOB                        |
