@@ -405,6 +405,8 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 </br>
 
 ## <span id="thanks">10. 特别感谢</span>
+**[acidanthera](https://github.com/acidanthera/OpenCorePkg)**
+
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
 
 **[RehabMan](https://bitbucket.org/RehabMan/)**
@@ -413,11 +415,11 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 **[ZeRo° Xu](https://github.com/xzhih)（冰水加劲Q）**
 
-**[acidanthera](https://github.com/acidanthera/OpenCorePkg)**
-
 **[fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh)**
 
 **[Bat.bat](https://github.com/williambj1)**
+
+**[lovestfhd](https://github.com/lovestfhd)**
 </br>
 </br>
 
