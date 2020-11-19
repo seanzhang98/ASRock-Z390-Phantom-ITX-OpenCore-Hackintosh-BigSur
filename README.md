@@ -24,8 +24,6 @@
     <a href="README.md"><font size=4><b>简体中文</b></font></a>
     <font size=4><b>·</b></font>
     <a href="README_en.md"><font size=4><b>English</b></font></a>
-    <font size=4><b>·</b></font>
-    <a href="README_ja.md"><font size=4><b>日本語</b></font></a>
 </p>
 
 
@@ -403,6 +401,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 📖 [Sidecar and SMBIOS : iMac19,1 vs. iMacPro1,1](https://www.reddit.com/r/hackintosh/comments/dwbncg/sidecar_and_smbios_imac191_vs_imacpro11/)
 </br>
+</br>
 
 ## <span id="thanks">10. 特别感谢</span>
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
@@ -418,6 +417,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 **[fangf2018](https://github.com/fangf2018/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh)**
 
 **[Bat.bat](https://github.com/williambj1)**
+</br>
 </br>
 
 ## 11. 阅读统计
