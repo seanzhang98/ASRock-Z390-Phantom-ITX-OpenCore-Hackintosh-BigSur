@@ -34,10 +34,9 @@
 <a href="EFI/Mac_Pro7,1/README.md"><font size=4><b>不带核显设备看这里</b></font></a>
 </p>
 </br>
-</br>
 
 <p align="center">
-<font size=5><b>主要部件列表</b></font></br>
+<font size=6><b>主要部件列表</b></font></br>
 </p>
 
 | 部件名称 | 型号                                           | 备注                |
@@ -46,6 +45,7 @@
 | CPU  | Intel 第九代 i9-9900k                           | 本 EFI 理论上适用于同代带核显或者不带核显的 CPU|
 | 显卡   | Powercolor RX5700 8G [AXRX 5700 ITX 8GBD6-2DH]                          | 本 EFI 理论上适用于 RX5000 系显卡 |
 
+<br/>
 <br/>
 
 
