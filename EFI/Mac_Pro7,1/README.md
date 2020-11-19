@@ -2,32 +2,13 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/intro.png)
 
 <p align="center">
-     <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
-      <img alt="GitHub release" src="https://img.shields.io/github/v/release/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?label=EFI%20%E7%89%88%E6%9C%AC" />
-    </a>
-    <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur/releases">
-      <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur?label=%E5%8F%91%E5%B8%83%E6%97%A5%E6%9C%9F" />
-    </a>
-    <a href="https://github.com/seanzhang98">
-      <img alt="维护者" src="https://img.shields.io/badge/%E7%BB%B4%E6%8A%A4%E8%80%85-%40seanzhang98-yellowgreen" />
-      </a>
-    </br>
-    <a href="https://www.apple.com.cn/macos/big-sur-preview/">
-      <img alt="支持版本" src="https://img.shields.io/badge/支持版本-macOS%20Big%20Sur-blueviolet" />
-      <a href="https://developer.apple.com/documentation/macos-release-notes">
-      <img alt="macOS 版本" src="https://img.shields.io/badge/版本号-11.1 Beta (20C5048k)-ff69b4" />
-      <a href="https://github.com/acidanthera/OpenCorePkg/releases/">
-      <img alt="OC Ver" src="https://img.shields.io/badge/OpenCore 版本-0.6.3%20(release)-191970" />
-      </br>
-    </p>
-<p align="center">
+    <font size=6><b>不带核显配置文档</b></font></br>
     <a href="README.md"><font size=4><b>简体中文</b></font></a>
     <font size=4><b>·</b></font>
     <a href="README_en.md"><font size=4><b>English</b></font></a>
     <font size=4><b>·</b></font>
     <a href="README_ja.md"><font size=4><b>日本語</b></font></a>
 </p>
-
 
    
 ## 目录
@@ -71,7 +52,7 @@
 | 部件名称 | 型号                                           | 备注                |
 |:------:|:----------------------------------------------:|:-------------------:|
 | 主板   | ASRock Z390 phantom gaming-itx/ac            |                   |
-| CPU  | Intel 第九代 i9-9900k                           | 设置主频至4.5Ghz，满载温度稳定在90度左右 |
+| CPU  | Intel 第九代 i9-9900k（屏蔽核显）                           | 设置主频至4.5Ghz，满载温度稳定在90度左右 |
 | 无线网卡 |  BCM94360CS2                                            | 需要 NGFF M.2 转接卡 |
 | 散热器  | 利民 AXP90                         |  猫头鹰 A9x14 风扇    |
 | 内存   | TEAM DDR4 3200Mhz PC4-25600 32GBx2枚（64GBkit） | Elite Plus 系列     |
@@ -88,21 +69,21 @@
 
 | 功能名称     | 是否正常 | 备注                                                                                                                                          |
 |:--------:|:----:|:-------------------------------------------------------------------------------------------------------------------------------------------:|
-| CPU      | ☑️   | 支持变频                                                                                                                                        |
-| 显卡       | ☑️   | 能够正确识别并且性能正常                                                                                                                                |
-| 声卡       | ☑️   | 主板绿色接口为 “内置扬声器” ，支持原生功能键调节音量                                                                                                                |
-| 有线网卡     | ☑️   |                                                                                                                                             |
-| Wi-Fi    | ☑️   |                                                                                                                                             |
-| 蓝牙       | ☑️   |                                                                                                                                             |
-| 接力       | ☑️   |                                                                                                                                             |
-| 随航       | ☑️   | 本 EFI 默认机型 “iMac 19,1” 支持随航                                                                                                                 |
-| 睡眠与唤醒    | ☑️   |                                                                                                                                             |
-| 定位服务     | ☑️   |                                                                                                                                             |
-| 原生 NVRAM | ☑️   |                                                                                                                                             |
-| USB      | ☑️   |                                                                                                                                             |
-| 雷霹 3     | ☑️   | [雷霹 3 驱动教程](#tb3)                                                                                                                           |
-| DRM      | 部分正常 | 本 EFI 默认机型 “iMac 19,1” 只支持 Chrome 中 Amazon Prime 和 Netflix 的 DRM，Apple TV + 无法通过“视频.app”正常播放 <br/>“音乐.app”中，Apple Muisc 可以正常播放音乐 <br/> [不完美解决方案](#drm)|
-| 硬件加速     | ☑️   | 支持 H264 以及 HEVC 硬件加速                                                                                                                        |
+| CPU      | ✔️   | 支持变频                                                                                                                                        |
+| 显卡       | ✔️   | 能够正确识别并且性能正常                                                                                                                                |
+| 声卡       | ✔️   | 主板绿色接口为 “内置扬声器” ，支持原生功能键调节音量                                                                                                                |
+| 有线网卡     | ✔️   |                                                                                                                                             |
+| Wi-Fi    | ✔️  |                                                                                                                                             |
+| 蓝牙       | ✔️  |                                                                                                                                             |
+| 接力       | ✔️   |                                                                                                                                             |
+| 随航       | ✖️  | 本 EFI 默认机型 “iMac 19,1” 支持随航                                                                                                                 |
+| 睡眠与唤醒    | ✔️   |                                                                                                                                             |
+| 定位服务     | ✔️  |                                                                                                                                             |
+| 原生 NVRAM | ✔️  |                                                                                                                                             |
+| USB      | ✔️   |                                                                                                                                             |
+| 雷霹 3     | ✔️   | [雷霹 3 驱动教程](#tb3)                                                                                                                           |
+| DRM      | ✔️ |  |
+| 硬件加速     | ✔️  | 支持 H264 以及 HEVC 硬件加速                                                                                                                        |
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sidecar.png)
 
@@ -143,8 +124,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 - **Advanced**
     - **Chipset Configuration** 
         - Vt-d → 关闭
-        - Share Memory → 128MB
-        - IGPU Multi-Monitor → 开启
+        - IGPU Multi-Monitor → 关闭
 
     - **Super IO Configuration** 
         - Serial Port → 关闭
@@ -164,7 +144,6 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 
 ### <span id="smbios">4.4. SMBIOS 补全（必做）<span>
 
-#### **方法一：OpenCore Configurator**
 - **步骤一：**
     - 用对应版本的 OpenCore Configurator（⚠️重要：OCC 支持的版本需跟 OC 版本对应）打开 ```config.plist```。
 </br>
@@ -176,29 +155,9 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 </br>
 
 - **步骤三：**
-    - 选择型号 ```iMac19,1```，检查序列号是否被使用过。没有问题保存即可。
+    - 选择型号 ```Mac Pro7,1```，检查序列号是否被使用过。没有问题保存即可。
     
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/model.png)
-
-#### **方法二：MacInfoPkg**
-- **步骤一：**
-    - 从 [MacInfoPkg 项目发布页](https://github.com/acidanthera/MacInfoPkg/releases) 下载对应平台的 MacInfoPkg。
-</br>
-
-- **步骤二：**
-    - 执行```macserial -m iMac19,1```，输出的格式选择```SerialNumber | BoardSerialNumber```。
-</br>
-
-- **步骤三：**
-    - 在 [Online UUID Generator](https://www.uuidgenerator.net/version4) 生成 ```SystemUUID```。
-</br>
-
-- **步骤四：**
-    - 编辑```config.plist```
-        - 替换```PlatformInfo```下```Generic -> SystemSerialNumber```为步骤二中生成的```SerialNumber```。
-        - 替换```PlatformInfo```下```Generic -> MLB```为步骤二中生成的```BoardSerialNumber```。
-        - 替换```PlatformInfo```下```Generic -> SystemUUID```为步骤三中生成的```SystemUUID```。
-    - 保存。
 
 ### <span id="nvram">4.5. 清理模拟 NVRAM（可选）<span>
 如果你之前曾经使用过模拟 NVRAM，需要清理残留以正常使用原生 NVRAM。如果你之前没有使用过，或将进行全新安装，可略过此部分。
@@ -280,9 +239,9 @@ vram -p | grep -i myvar
   - 解决方案: 禁用该补丁或者用 bios 来引导 Windows。
   </br>
   
-* <span id="drm">**引导默认的 "iMac (2019, 5K)" 型号因为 DRM 问题不支持 Apple TV + 播放（该问题在 Catalina 下不存在）。 但是 Apple Music (已测试), Amazon Prime (已测试) 和 Netflix 在 Chrome 中可以正常播放 (Safari 不支持播放).**</span>
+* <span id="drm">**我的设备无法使用随航（sidecar）？**</span>
   
-  - 解决方案: 将型号改为 iMac Pro， 但是，随航功能将无法使用（2019年之后的 Mac 都需要苹果的 T 系列芯片来完成某些功能）。
+  - 解决方案: 本 EFI 使用的 Mac Pro7,1 机型支持完整的 DRM，但是由于缺少 T2 芯片，故无法正常使用随航。你可以选择启用核显，替换机型为 iMac19,1，但是 DRM 将无法继续支持 Apple TV + 的播放。
   
 | 系统定义              | iMacPro1,1                                                              | iMac19,1                        |
 |:------------------------------:|:-----------------------------------------------------------------------:|:-------------------------------:|
@@ -407,5 +366,5 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 <p align="left">
 <a href="http://antzuhl.cn:4000/get/@
 ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.readme">
-      <img alt="" src="http://antzuhl.cn:4000/get/@ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.readme" />
+      <img alt="" src="http://antzuhl.cn:4000/get/@ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.EFI.Mac_Pro7,1.readme" />
 </p>
