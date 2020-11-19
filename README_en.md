@@ -160,7 +160,6 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
         - Thunderbolt (TM) Support → Enable
         - Thunderbolt Usb Support → Enable
         - GPIO3 Force Pwr → Enable
-</br>
 
 #### - Without iGPU
 - **Advanced**
@@ -178,6 +177,8 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
         - Thunderbolt (TM) Support → Enable
         - Thunderbolt Usb Support → Enable
         - GPIO3 Force Pwr → Enable
+</br>
+</br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset_eng.BMP)
 </br>

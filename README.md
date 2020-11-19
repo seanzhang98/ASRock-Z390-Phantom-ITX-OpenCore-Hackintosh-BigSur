@@ -168,7 +168,6 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
         - Thunderbolt (TM) Support → 开启
         - Thunderbolt Usb Support → 开启
         - GPIO3 Force Pwr → 开启
-</br>
 
 #### - 不带核显
 - **Advanced**
@@ -186,6 +185,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
         - Thunderbolt (TM) Support → 开启
         - Thunderbolt Usb Support → 开启
         - GPIO3 Force Pwr → 开启
+</br>
 </br>
 
 
