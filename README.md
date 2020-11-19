@@ -27,6 +27,7 @@
     <font size=4><b>·</b></font>
     <a href="README_ja.md"><font size=4><b>日本語</b></font></a>
 </p>
+ </br>
 
 <p align="center">
 <a href="EFI/iMac19,1/README.md"><font size=4><b>带核显设备看这里</b></font></a>
