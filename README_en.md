@@ -98,7 +98,7 @@
 | NVRAM                | ⭕️                 |                                                                                                                                                                                                                                          |
 | USB                  | ⭕️                 |                                                                                                                                                                                                                                          |
 | Thunderbolt 3        | ⭕️                 | [Thunderbolt 3](#tb3)                                                                                                                                                                                                                    |
-| DRM                  | ⭕️｜❌  | This EFI using the model “iMac 19,1”, with DRM support while using Chrome to play video on Amazon Prime and Netflix. However, Apple TV + is not supported <br/>You can play music in “Music.app” with Apple Muisc. <br/> [Unperfect Solution](#drm) |
+| DRM                  | ⭕️｜❌  | The DRM required by Apple TV + with iMac19,1 under Big Sur is broken for now, Mac Pro7,1 is fully support ALL DRM. [For more info](#drm)|
 | Hardware acceleration | ⭕️                 | Support H264 and HEVC                                                                                                                                                                                                                    |
 | RAM | ⭕️   |  Mac Pro7,1 without error                                                                                                                                          |
 </br>
