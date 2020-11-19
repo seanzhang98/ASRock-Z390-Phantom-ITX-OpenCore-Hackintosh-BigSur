@@ -247,28 +247,28 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 </br>
 
 #### 4.5.3. 验证 NVRAM 是否正常工作
-在终端逐次执行
-```diff
-sudo -s
-```
-```diff
-sudo nvram -c 
-```
-```diff
-sudo nvram myvar=test
-```
-```diff
-exit
-```
+- 在终端逐次执行
+    ```diff
+    sudo -s
+    ```
+    ```diff
+    sudo nvram -c 
+    ```
+    ```diff
+    sudo nvram myvar=test
+    ```
+    ```diff
+    exit
+    ```
 </br>
 
-重启设备，然后在终端执行
-```diff
-vram -p | grep -i myvar
-```
+- 重启设备，然后在终端执行
+    ```diff
+    vram -p | grep -i myvar
+    ```
 </br>
 
-如果返回包含```myvar test```，则 NVRAM 工作正常。
+- 如果返回包含```myvar test```，则 NVRAM 工作正常。
 </br>
 </br>
 
