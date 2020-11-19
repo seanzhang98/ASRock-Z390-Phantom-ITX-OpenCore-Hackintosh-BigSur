@@ -271,6 +271,7 @@ vram -p | grep -i myvar
 
 如果返回包含```myvar test```，则 NVRAM 工作正常。
 </br>
+</br>
 
 ## <span id="more">5. 完善</span>
 ### <span id="nvram">5.1. Big Sur 风格的图标<span>
@@ -281,6 +282,7 @@ vram -p | grep -i myvar
 
 图标可以通过 [macosicons](https://macosicons.com) 进行下载。
 本人也有在提交一些自己制作的图标（迅雷、115网盘、MWeb、QQ等），有能力的朋友也可以制作相关软件的图标上传到该项目的网站或者 Github 项目页。
+</br>
 </br>
 
 ## <span id="iss">6. 已知问题<span>
