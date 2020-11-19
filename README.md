@@ -104,7 +104,7 @@
 | 原生 NVRAM | ⭕️   |                                                                                                                                             |
 | USB      | ⭕️   |                                                                                                                                             |
 | 雷霹 3     | ⭕️  | [雷霹 3 驱动教程](#tb3)                                                                                                                           |
-| DRM      | ⭕️｜❌  | iMac19,1 在 Big Sur 不支持 Apple TV + 的 DRM，Mac Pro7,1 则完全支持 DRM。[详情](#drm)|
+| DRM      | ⭕️｜❌  | iMac19,1 在 Big Sur 环境下不支持 Apple TV + 的 DRM，Mac Pro7,1 则完全支持 DRM。[详情](#drm)|
 | 硬件加速     | ⭕️  | 支持 H264 以及 HEVC 硬件加速                                                                                                                        |
 | 内存 | ⭕️   |  正常识别内存，Mac Pro7,1 下无内存报错                                                                                                                                           |
 </br>
