@@ -424,9 +424,9 @@ GPRW to XPRW</string>
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
-			<true/>
+			<false/>
 			<key>AppleXcpmCfgLock</key>
-			<true/>
+			<false/>
 			<key>AppleXcpmExtraMsrs</key>
 			<false/>
 			<key>AppleXcpmForceBoost</key>
@@ -802,242 +802,6 @@ GPRW to XPRW</string>
 	</dict>
 	<key>PlatformInfo</key>
 	<dict>
-		<key>Memory</key>
-		<dict>
-			<key>DataWidth</key>
-			<integer>64</integer>
-			<key>ErrorCorrection</key>
-			<integer>5</integer>
-			<key>FormFactor</key>
-			<integer>9</integer>
-			<key>MaxCapacity</key>
-			<integer>4831838208</integer>
-			<key>TotalWidth</key>
-			<integer>72</integer>
-			<key>Type</key>
-			<integer>26</integer>
-			<key>TypeDetail</key>
-			<integer>128</integer>
-			<key>Devices</key>
-			<array>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 8 (Channel A / DIMM 1)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>36360F8E</string>
-					<key>Size</key>
-					<integer>8192</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 7 (Channel A / DIMM 2)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>36360F7A</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 10 (Channel B / DIMM 1)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>3691F24A</string>
-					<key>Size</key>
-					<integer>8192</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 9 (Channel B / DIMM 2)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>36360F7B</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 12 (Channel C / DIMM 1)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>36360F7C</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 11 (Channel C / DIMM 2)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>36360F7D</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 5 (Channel D / DIMM 1)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43CB2-CTD</string>
-					<key>SerialNumber</key>
-					<string>24E2AB92</string>
-					<key>Size</key>
-					<integer>8192</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 6 (Channel D / DIMM 2)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>36360F7E</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 3 (Channel E / DIMM 1)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43CB2-CTD</string>
-					<key>SerialNumber</key>
-					<string>2477C1C8</string>
-					<key>Size</key>
-					<integer>8192</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 4 (Channel E / DIMM 2)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>36360F7F</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 1 (Channel F / DIMM 1)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>36360F6A</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string></string>
-					<key>DeviceLocator</key>
-					<string>Slot 2 (Channel F / DIMM 2)</string>
-					<key>Manufacturer</key>
-					<string>Samsung</string>
-					<key>PartNumber</key>
-					<string>M393A2K43BB1-CTD</string>
-					<key>SerialNumber</key>
-					<string>36360F6B</string>
-					<key>Size</key>
-					<integer>4096</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-			</array>
-		</dict>
 		<key>Automatic</key>
 		<true/>
 		<key>CustomMemory</key>
@@ -1093,6 +857,23 @@ GPRW to XPRW</string>
 			<string>YOUR OWN SN</string>
 			<key>SystemUUID</key>
 			<string>YOUR OWN UUID</string>
+		</dict>
+		<key>Memory</key>
+		<dict>
+			<key>DataWidth</key>
+			<integer>64</integer>
+			<key>ErrorCorrection</key>
+			<integer>5</integer>
+			<key>FormFactor</key>
+			<integer>9</integer>
+			<key>MaxCapacity</key>
+			<integer>4831838208</integer>
+			<key>TotalWidth</key>
+			<integer>72</integer>
+			<key>Type</key>
+			<integer>26</integer>
+			<key>TypeDetail</key>
+			<integer>128</integer>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
