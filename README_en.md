@@ -92,6 +92,7 @@
 | Wi-Fi                | ⭕️                 |                                                                                                                                                                                                                                          |
 | Bluetooth            | ⭕️                 |                                                                                                                                                                                                                                          |
 | Hand-off             | ⭕️                 |                                                                                                                                                                                                                                          |
+| Unlock with Apple Watch            | ⭕️                 |                                                                                                                                                                                                                                          |
 | Sidecar              | ⭕️｜❌                  | iMac19,1 supports Sidecar，Mac Pro7,1 will not be supported since the REAL Mac have T2 chip（iPad black screen）                                                                                                                                                                                       |
 | Sleep and wake       | ⭕️                 |                                                                                                                                                                                                                                          |
 | Location Service     | ⭕️                 |                                                                                                                                                                                                                                          |
@@ -360,6 +361,8 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_benchmark.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_cine.png)
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/r23.png)
 
 ### GPU:
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/gra_open.png)
