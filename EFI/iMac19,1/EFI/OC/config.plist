@@ -169,6 +169,8 @@ GPRW to XPRW</string>
 		<array/>
 		<key>Quirks</key>
 		<dict>
+			<key>AllowRelocationBlock</key>
+			<false/>
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
 			<key>DevirtualiseMmio</key>
@@ -238,6 +240,8 @@ GPRW to XPRW</string>
 				<string>onboard-2</string>
 				<key>model</key>
 				<string>Intel UHD Graphics 630</string>
+				<key>igfxfw</key>
+				<data>AgAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -549,6 +553,8 @@ GPRW to XPRW</string>
 			<integer>0</integer>
 			<key>AuthRestart</key>
 			<false/>
+			<key>BlacklistAppleUpdate</key>
+			<false/>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
 			<key>DmgLoading</key>
@@ -585,6 +591,10 @@ GPRW to XPRW</string>
 				<string>BootKicker</string>
 				<key>Path</key>
 				<string>BootKicker.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -599,6 +609,10 @@ GPRW to XPRW</string>
 				<string>ChipTune</string>
 				<key>Path</key>
 				<string>ChipTune.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -613,6 +627,10 @@ GPRW to XPRW</string>
 				<string>CleanNvram</string>
 				<key>Path</key>
 				<string>CleanNvram.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -627,6 +645,10 @@ GPRW to XPRW</string>
 				<string>GopStop</string>
 				<key>Path</key>
 				<string>GopStop.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -641,6 +663,10 @@ GPRW to XPRW</string>
 				<string>HdaCodecDump</string>
 				<key>Path</key>
 				<string>HdaCodecDump.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -655,6 +681,10 @@ GPRW to XPRW</string>
 				<string>KeyTester</string>
 				<key>Path</key>
 				<string>KeyTester.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -669,6 +699,10 @@ GPRW to XPRW</string>
 				<string>MmapDump</string>
 				<key>Path</key>
 				<string>MmapDump.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -683,6 +717,10 @@ GPRW to XPRW</string>
 				<string>OpenControl</string>
 				<key>Path</key>
 				<string>OpenControl.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -697,6 +735,10 @@ GPRW to XPRW</string>
 				<string>OpenShell</string>
 				<key>Path</key>
 				<string>OpenShell.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -711,6 +753,10 @@ GPRW to XPRW</string>
 				<string>ResetSystem</string>
 				<key>Path</key>
 				<string>ResetSystem.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -725,6 +771,10 @@ GPRW to XPRW</string>
 				<string>RtcRw</string>
 				<key>Path</key>
 				<string>RtcRw.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -739,6 +789,10 @@ GPRW to XPRW</string>
 				<string>VerifyMsrE2</string>
 				<key>Path</key>
 				<string>VerifyMsrE2.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -912,7 +966,7 @@ GPRW to XPRW</string>
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
-			<true/>
+			<false/>
 			<key>MinDate</key>
 			<integer>0</integer>
 			<key>MinVersion</key>
