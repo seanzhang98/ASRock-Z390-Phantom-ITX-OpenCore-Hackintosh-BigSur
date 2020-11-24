@@ -38,7 +38,7 @@
      - <font size=4>[4.5. Clean up emulated NVRAM（Optional）](#nvram)</font>
 - <font size=4>[5. More](#more)</font>
 - <font size=4>[6. Known Issues](#iss)</font>
-- <font size=4>[7. Update Logs](#logs)</font>
+- <font size=4>[7. Change Logs](#logs)</font>
 - <font size=4>[8. Benchmark](#bench)</font>
 - <font size=4>[9. References](#ref)</font>
 - <font size=4>[10. Special Thanks](#thanks)</font>
@@ -311,9 +311,8 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ## <span id="logs">7. Change Logs</span>
 
 <p align="left">
-    <a href="CHANGELOG.md"><font size=5><b>Check Change logs</b></font></a>
+    <a href="CHANGELOG.md"><font size=6åå><b>Check Change logs</b></font></a>
 </p>
-</br>
 
 ## <span id="bench">8. Benchmark</span>
 ### CPU:
