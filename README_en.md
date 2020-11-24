@@ -308,9 +308,11 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ```
 </br>
 
-## <span id="logs">7. Update Logs</span>
+## <span id="logs">7. Change Logs</span>
 
-[Check Change logs](./CHANGELOG.md) 
+<p align="left">
+    <a href="CHANGELOG.md"><font size=5><b>Check Change logs</b></font></a>
+</p>
 </br>
 
 ## <span id="bench">8. Benchmark</span>
