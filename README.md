@@ -326,7 +326,9 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ## <span id="logs">7. 更新日志</span>
 
-[查看更新日志](./CHANGELOG.md)
+<p align="left">
+    <a href="CHANGELOG.md"><font size=5><b>查看更新日志</b></font></a>
+</p>
 </br>
 
 ## <span id="bench">8. 性能跑分</span>
