@@ -1,3 +1,11 @@
+**0.6.3.5 (2020-11-24):** 
+
+- 带核显机型 EFI (iMac19,1) 核显工作频率设置为 1.2 Ghz
+- 修正不带核显机型 EFI (Mac Pro7,1) 的内存欺骗
+- Fixed iGPU frequency for EFI iMac19,1
+- Fixed memory information for EFI Mac Pro7,1
+</br>
+
 **0.6.3.4 (2020-11-19):** 
 
 - 新增无核显设备的 EFI
