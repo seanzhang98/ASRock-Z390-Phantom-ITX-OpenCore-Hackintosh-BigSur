@@ -123,6 +123,8 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ram.png)
 
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/itpg.png)
+
 
 ## <span id="ready">4. 准备工作</span>
 ### <span id="wirecard">4.1. 网卡替换</span>

@@ -116,6 +116,8 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ram_en.png)
 
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/itpg.png)
+
 ## <span id="ready">4. Getting Ready</span>
 ### <span id="wirecard">4.1. Wi-Fi & Bluetooth module replacement
 The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and Bluetooth 5.0 with 2x2 802.11ac 2.4/5Ghz Wi-Fi. We need to remove this module and replace it with BCM94360CS2 module，BCM94360CS2 module required an NGFF to M.2 adapter. Steps shown below（By icyleaf）：
