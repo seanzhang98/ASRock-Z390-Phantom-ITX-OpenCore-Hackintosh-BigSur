@@ -310,9 +310,8 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ## <span id="logs">7. Change Logs</span>
 
-<p align="left">
-    <a href="CHANGELOG.md"><font size=6åå><b>Check Change logs</b></font></a>
-</p>
+- <font size=6><b>[Click to View Change Logs](CHANGELOG.md)</b></font>
+</br>
 
 ## <span id="bench">8. Benchmark</span>
 ### CPU:
