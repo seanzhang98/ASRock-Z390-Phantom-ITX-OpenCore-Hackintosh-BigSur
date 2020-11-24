@@ -310,51 +310,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ## <span id="logs">7. Update Logs</span>
 
-**0.6.3.4 (2020-11-19):** 
-
-- Added EFI for Configuration without iGPU
-</br>
-
-**0.6.3.3 (2020-11-11):** 
-
-- Update OpenCore to 0.6.3 (release)
-</br>
-
-**0.6.4.2 (2020-11-9):** 
-
-- Update OpenCore to 0.6.4 (2020-11-09)
-</br>
-
-**0.6.4.1 (2020-11-6):** 
-
-- Modified contents in config.plist
-</br>
-
-**0.6.4 (2020-11-4):** 
-
-- Update OpenCore to 0.6.4
-</br>
-
-**0.6.3.2 (2020-10-29):** 
-
-- Re-builded the EFI
-- Removed FakeSMC 
-- Tested in 11.0.1 Beta(20B5012d)
-</br>
-
-**0.6.3.1 (2020-10-22):** 
-
-- Fix mirror errors.
-</br>
-
-**0.6.3 (2020-10-18):** 
-
-- Update OpenCore to 0.6.3
-</br>
-
-**0.6.2 (2020-10-6):** 
-
-- First release
+[Check Change logs](./CHANGELOG.md) 
 </br>
 
 ## <span id="bench">8. Benchmark</span>
