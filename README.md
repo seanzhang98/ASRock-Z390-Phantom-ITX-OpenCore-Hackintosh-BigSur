@@ -312,7 +312,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
   
 * **部分电脑关机后开机可能会提示 “电脑关机是因为发生了问题”。**
 
-  - 解决方案： 清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除kernel panic 文件。
+  - 解决方案： 清除 CMOS 和 nvram，并运行 "sudo nvram -d aapl,panic-info" 清除 kernel panic 文件。
  </br>
  
 * **Windows 10 时间与 macOS 不同步 。** 
@@ -327,9 +327,8 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ## <span id="logs">7. 更新日志</span>
 
 <p align="left">
-    <a href="CHANGELOG.md"><font size=5><b>查看更新日志</b></font></a>
+    <a href="CHANGELOG.md"><font size=6><b>点击查åå看更新日志</b></font></a>
 </p>
-</br>
 
 ## <span id="bench">8. 性能跑分</span>
 ### CPU:
