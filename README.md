@@ -151,6 +151,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 ```
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios.BMP)
 </br>
+</br>
 
 你还需要通过 IORegistryExplorer 来查看你的 ```rp21``` 的 ```reg```信息来选用合适的 SSDT 文件。
 
