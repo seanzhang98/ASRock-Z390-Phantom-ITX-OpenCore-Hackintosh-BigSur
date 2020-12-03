@@ -144,6 +144,16 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
 </br>
 </br>
 
+You also need to check your ```rp21```'s ```reg``` value to choose the proper SSDT file by using IORegistryExplorer.
+
+Download IORegistryExplorer ， search for ```rp21``` and check the value under ```reg```.
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/reg.png)
+</br>
+
+If it includes ```dc```, you don't need to do anything. However if it includes ```d8``` then you need to download the ```SSDT-TbtOnPch_PINI_D8.aml``` file under ```Tools```, then put it under ```OC``` -> ```ACPI``` and remove ```SSDT-TbtOnPch_PINI.aml```. You need to made modification to your config file as well.
+</br>
+
 ### <span id="bios">4.3. BIOS Setting (4.40c)</span>
 
 #### - With iGPU
