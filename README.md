@@ -34,7 +34,7 @@
 - <font size=4>[3. 驱动情况](#driver)</font>
 - <font size=4>[4. 准备工作](#ready)</font>
      - <font size=4>[4.1. 网卡替换](#wirecard)</font>
-     - <font size=4>[4.2. 刷写定制版 BIOS](#tb3)</font>
+     - <font size=4>[4.2. 刷写定制版 BIOS 启用雷霹 3](#tb3)</font>
      - <font size=4>[4.3. BIOS 设定](#bios)</font>
      - <font size=4>[4.4. SMBIOS 补全（必做）](#smbios)</font>
      - <font size=4>[4.5. 清理模拟 NVRAM（可选）](#nvram)</font>
@@ -138,7 +138,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 </br>
 </br>
 
-### <span id="tb3">4.2. 刷写定制版 BIOS</span>
+### <span id="tb3">4.2. 刷写定制版 BIOS 启用雷霹 3</span>
 下载好 bios 文件夹中的 [Z39PGIX4.40C](bios/Z39PGIX4.40C), 放入 U 盘 并在 BIOS 中执行 Instant Flash。
 具体步骤可参考华擎官网 📖[BIOS 刷新程序](http://www.asrockchina.com.cn/support/BIOSIG.cn.asp?cat=BIOS9)。
 
@@ -151,6 +151,15 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 ```
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/bios.BMP)
 </br>
+
+你还需要通过 IORegistryExplorer 来查看你的 ```rp21``` 的 ```reg```信息来选用合适的 SSDT 文件。
+
+下载 IORegistryExplorer ，搜索 ```rp21``` 并查看 ```reg``` 内的信息。
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/reg.png)
+</br>
+
+如果是 ```dc```，你将不许要做额外的操作，如果是 ```d8```，请下载 ```Tools``` 目录的下的 ```SSDT-TbtOnPch_PINI_D8.aml``` 放到 ```OC``` 目录下的 ```ACPI``` 文件夹中，并移除 ```SSDT-TbtOnPch_PINI.aml```，同时修改 config 文件。
 </br>
 
 ### <span id="bios">4.3. BIOS 设定 (4.40c)<span>
