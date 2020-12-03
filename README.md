@@ -158,9 +158,9 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 下载 IORegistryExplorer ，搜索 ```rp21``` 并查看 ```reg``` 内的信息。
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/reg.png)
-</br>
 
 如果是 ```dc```，你将不许要做额外的操作，如果是 ```d8```，请下载 ```Tools``` 目录的下的 ```SSDT-TbtOnPch_PINI_D8.aml``` 放到 ```OC``` 目录下的 ```ACPI``` 文件夹中，并移除 ```SSDT-TbtOnPch_PINI.aml```，同时修改 config 文件。
+</br>
 </br>
 
 ### <span id="bios">4.3. BIOS 设定 (4.40c)<span>
