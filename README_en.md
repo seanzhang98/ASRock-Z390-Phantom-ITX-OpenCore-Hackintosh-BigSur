@@ -32,7 +32,7 @@
 - <font size=4>[3. Functionalities Checklist](#driver)</font>
 - <font size=4>[4. Getting Ready](#ready)</font>
      - <font size=4>[4.1 Wi-Fi & Bluetooth module replacement](#wirecard)</font>
-     - <font size=4>[4.2. Flashing Special BIOS](#tb3)</font>
+     - <font size=4>[4.2. Flashing Special BIOS to enable TB 3](#tb3)</font>
      - <font size=4>[4.3. BIOS Setting](#bios)</font>
      - <font size=4>[4.4. SMBIOS](#smbios)</font>
      - <font size=4>[4.5. Clean up emulated NVRAM（Optional）](#nvram)</font>
@@ -95,7 +95,7 @@
 | Bluetooth            | ⭕️                 |                                                                                                                                                                                                                                          |
 | Hand-off             | ⭕️                 |                                                                                                                                                                                                                                          |
 | Unlock with Apple Watch            | ⭕️                 |                                                                                                                                                                                                                                          |
-| Sidecar              | ⭕️｜❌                  | iMac19,1 supports Sidecar，Mac Pro7,1 will not be supported since the REAL Mac have T2 chip（iPad black screen）                                                                                                                                                                                       |
+| Sidecar              | ⭕️｜❌                  | iMac19,1 supports Sidecar,Mac Pro7,1 will not be supported since the REAL Mac have T2 chip（iPad black screen）                                                                                                                                                                                       |
 | Sleep and wake       | ⭕️                 |                                                                                                                                                                                                                                          |
 | Location Service     | ⭕️                 |                                                                                                                                                                                                                                          |
 | NVRAM                | ⭕️                 |                                                                                                                                                                                                                                          |
@@ -122,7 +122,7 @@
 
 ## <span id="ready">4. Getting Ready</span>
 ### <span id="wirecard">4.1. Wi-Fi & Bluetooth module replacement
-The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and Bluetooth 5.0 with 2x2 802.11ac 2.4/5Ghz Wi-Fi. We need to remove this module and replace it with BCM94360CS2 module，BCM94360CS2 module required an NGFF to M.2 adapter. Steps shown below（By icyleaf）：
+The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and Bluetooth 5.0 with 2x2 802.11ac 2.4/5Ghz Wi-Fi. We need to remove this module and replace it with BCM94360CS2 module,BCM94360CS2 module required an NGFF to M.2 adapter. Steps shown below（By icyleaf）：
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/install-boardcom-module-to-motherboard.png)
 
@@ -130,7 +130,7 @@ In Windows 10 you might need to install drivers manually in order to use Wi-Fi a
 </br>
 </br>
 
-### <span id="tb3">4.2. Flashing Special BIOS</span>
+### <span id="tb3">4.2. Flashing Special BIOS to enable TB 3</span>
 Download [Z39PGIX4.40C](bios/Z39PGIX4.40C), store in a thumb drive and flash the BIOS by executing Instant Flash.
 Steps of how to flash BIOS can be found on Asrock Official site 📖[ASRock BIOS Upgrade Instruction](http://www.asrock.com/support/BIOSIG.asp?cat=BIOS9).
 
@@ -146,12 +146,12 @@ If you do not use Thunderbolt 3 port, you can skip this step. You can flash back
 
 You also need to check your ```rp21```'s ```reg``` value to choose the proper SSDT file by using IORegistryExplorer.
 
-Download IORegistryExplorer ， search for ```rp21``` and check the value under ```reg```.
+Download IORegistryExplorer , search for ```rp21``` and check the value under ```reg```.
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/reg.png)
-</br>
 
 If it includes ```dc```, you don't need to do anything. However if it includes ```d8``` then you need to download the ```SSDT-TbtOnPch_PINI_D8.aml``` file under ```Tools```, then put it under ```OC``` -> ```ACPI``` and remove ```SSDT-TbtOnPch_PINI.aml```. You need to made modification to your config file as well.
+</br>
 </br>
 
 ### <span id="bios">4.3. BIOS Setting (4.40c)</span>
@@ -231,7 +231,7 @@ If you used emulated NVRAM before, you need to clean up the emulated NVRAM to ge
 
 - **Step 2：** 
 
-    Remove ```LogoutHook.command``` file，execute in terminal
+    Remove ```LogoutHook.command``` file,execute in terminal
     ```diff
     sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)
     ```
