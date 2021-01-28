@@ -395,10 +395,3 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 **[lovestfhd](https://github.com/lovestfhd)**
 </br>
 </br>
-
-## 11. 阅读统计
-<p align="left">
-<a href="http://antzuhl.cn:4000/get/@
-ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.readme">
-      <img alt="" src="http://antzuhl.cn:4000/get/@ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-BigSur.readme" />
-</p>
