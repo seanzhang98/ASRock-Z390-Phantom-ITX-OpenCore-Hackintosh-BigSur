@@ -1,3 +1,13 @@
+**0.6.6 (2021-02-10):** 
+
+- 更新 OC 版本至 0.6.6 (release)
+- 根据最新的 OpenCanopy 添加了最新的图形化选择器（默认现代化界面）
+- 苹果标志性 “duang” 开机音回来啦！（跟上官方脚步）
+- Update OpenCore to 0.6.6 (release)
+- Added GUI BootPicker with the latest OpenCanopy (default to modern GUI)
+- The boot Chime now is back!
+</br>
+
 **0.6.5 (2021-01-28):** 
 
 - 更新 OC 版本至 0.6.5 (release)
