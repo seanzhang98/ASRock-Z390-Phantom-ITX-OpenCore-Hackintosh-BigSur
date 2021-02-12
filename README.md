@@ -296,7 +296,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 
 - 选中不需要的端口，点击 ```-（减号）``` 删除。
 - 剩下需要的端口（不包含 ```SSP1``` 端口）不能超出 15 个，然后选择正确的设备类型（```USB2```，```USB3```，```TypeC+SW```，```TypeC```以及```Internal```）
-- 注意：```HS14``` 需要设置为 ```Internal```
+- ⚠️注意：```HS14``` 需要设置为 ```Internal```
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/hackintool_usb_mo.png)
 
