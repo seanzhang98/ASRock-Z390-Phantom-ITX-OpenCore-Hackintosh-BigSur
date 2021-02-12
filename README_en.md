@@ -36,6 +36,7 @@
      - <font size=4>[4.3. BIOS Setting](#bios)</font>
      - <font size=4>[4.4. SMBIOS](#smbios)</font>
      - <font size=4>[4.5. Clean up emulated NVRAM（Optional）](#nvram)</font>
+     - - <font size=4>[4.6. Mapping USB (Recommended)](#usb)</font>
 - <font size=4>[5. More](#more)</font>
 - <font size=4>[6. Known Issues](#iss)</font>
 - <font size=4>[7. Change Logs](#logs)</font>
@@ -275,6 +276,27 @@ If you used emulated NVRAM before, you need to clean up the emulated NVRAM to ge
 - If ```myvar test``` is included in your return line, then the NVRAM is working properly.
 </br>
 </br>
+
+### <span id="usb">4.6. Mapping USB（Recommanded）<span>
+- Downlaod [Hackintool](https://github.com/headkaze/Hackintool) 
+- Launch ```Hackintool``` then choose ```USB```
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/hackintool_usb.png)
+
+- Select the ports you don't need then click ```-``` to delete them.
+- The number of ports（```SSP1``` is not included）should below 15, you need to choose the type of device for them as well（```USB2```，```USB3```，```TypeC+SW```，```TypeC``` and ```Internal```）
+- ⚠️ Noticed：```HS14``` should be set as  ```Internal```
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/hackintool_usb_mo.png)
+
+- Port distribution shown as below（```HS``` stands for ```USB2``` and ```SS``` stands for ```USB3```）
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ASRock-z390-PG-itx-ONBOARD.png)
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ASRock-z390-PG-itx-REAR.png)
+
+- Export the kext file, which usually would save to your desktop as ```USBPort.kext```, put it in ```EFI``` -> ```OC``` -> ```Kext```.
+- Reboot your system.
 
 ## <span id="more">5. More</span>
 ### <span id="nvram">5.1. Big Sur Style Icons<span>
