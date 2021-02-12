@@ -38,6 +38,7 @@
      - <font size=4>[4.3. BIOS 设定](#bios)</font>
      - <font size=4>[4.4. SMBIOS 补全（必做）](#smbios)</font>
      - <font size=4>[4.5. 清理模拟 NVRAM（可选）](#nvram)</font>
+     - <font size=4>[4.6. 定制 USB（推荐）](#usb)</font>
 - <font size=4>[5. 完善](#more)</font>
 - <font size=4>[6. 已知问题](#iss)</font>
 - <font size=4>[7. 更新日志](#logs)</font>
@@ -286,6 +287,27 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 - 如果返回包含```myvar test```，则 NVRAM 工作正常。
 </br>
 </br>
+
+### <span id="usb">4.6. 定制 USB（推荐）<span>
+- 下载工具 [Hackintool](https://github.com/headkaze/Hackintool) 
+- 进入 ```Hackintool```，选择 ```USB```
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/hackintool_usb.png)
+
+- 选中不需要的端口，点击 ```-（减号）``` 删除。
+- 剩下需要的端口（不包含 ```SSP1``` 端口）不能超出 15 个，然后选择正确的设备类型（```USB2```，```USB3```，```TypeC+SW```，```TypeC```以及```Internal```）
+- 注意：```HS14``` 需要设置为 ```Internal```
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/hackintool_usb_mo.png)
+
+- 设备端口分布可参考以下图片（```HS``` 为 ```USB2```，```SS``` 为 ```USB3```）
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ASRock-z390-PG-itx-ONBOARD.png)
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ASRock-z390-PG-itx-REAR.png)
+
+- 定制完成后选择导出，将桌面新生成的 ```USBPort.kext``` 放入 ```EFI``` -> ```OC``` -> ```Kext``` 中替换文件夹内的同名文件。
+- 重启
 
 ## <span id="more">5. 完善</span>
 ### <span id="nvram">5.1. Big Sur 风格的图标<span>
