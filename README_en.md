@@ -36,7 +36,7 @@
      - <font size=4>[4.3. BIOS Setting](#bios)</font>
      - <font size=4>[4.4. SMBIOS](#smbios)</font>
      - <font size=4>[4.5. Clean up emulated NVRAM（Optional）](#nvram)</font>
-     - - <font size=4>[4.6. Mapping USB (Recommended)](#usb)</font>
+     - <font size=4>[4.6. Mapping USB (Recommended)](#usb)</font>
 - <font size=4>[5. More](#more)</font>
 - <font size=4>[6. Known Issues](#iss)</font>
 - <font size=4>[7. Change Logs](#logs)</font>
