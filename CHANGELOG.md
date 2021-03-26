@@ -1,3 +1,9 @@
+**0.6.7 (2021-03-26):** 
+
+- 更新 OC 版本至 0.6.7 (release)
+- Update OpenCore to 0.6.7 (release)
+</br>
+
 **0.6.6 (2021-02-10):** 
 
 - 更新 OC 版本至 0.6.6 (release)
