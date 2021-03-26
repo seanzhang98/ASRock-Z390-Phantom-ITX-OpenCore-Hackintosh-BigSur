@@ -15,9 +15,9 @@
     <a href="https://www.apple.com/macos/big-sur-preview/">
       <img alt="Supported OS" src="https://img.shields.io/badge/Supported OS-macOS%20Big%20Sur-blueviolet" />
       <a href="https://developer.apple.com/documentation/macos-release-notes">
-      <img alt="OS version" src="https://img.shields.io/badge/Version-11.3 Beta (20E5196f)-ff69b4" />
+      <img alt="OS version" src="https://img.shields.io/badge/Version-11.3 Beta (20E5217a)-ff69b4" />
       <a href="https://github.com/acidanthera/OpenCorePkg/releases/">
-      <img alt="OC Ver" src="https://img.shields.io/badge/OpenCore Ver.-0.6.6%20(release)-191970" />
+      <img alt="OC Ver" src="https://img.shields.io/badge/OpenCore Ver.-0.6.7%20(release)-191970" />
       </br>
     </p>
 <p align="center">
