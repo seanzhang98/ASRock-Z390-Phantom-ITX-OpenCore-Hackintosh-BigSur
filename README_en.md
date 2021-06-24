@@ -17,7 +17,7 @@
       <a href="https://developer.apple.com/documentation/macos-release-notes">
       <img alt="OS version" src="https://img.shields.io/badge/Version-11.5 Beta (20G5033c)-ff69b4" />
       <a href="https://github.com/acidanthera/OpenCorePkg/releases/">
-      <img alt="OC Ver" src="https://img.shields.io/badge/OpenCore Ver.-0.6.7%20(release)-191970" />
+      <img alt="OC Ver" src="https://img.shields.io/badge/OpenCore Ver.-0.7.0%20(release)-191970" />
       </br>
     </p>
 <p align="center">

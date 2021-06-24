@@ -1,3 +1,13 @@
+**0.7.0 (2021-06-24):** 
+
+- 更新 OC 版本至 0.7.0 (release)
+- 重新 Map USB
+- 移除 Mac Pro EFI
+- Update OpenCore to 0.7.0 (release)
+- Re-Mapped USB Ports 
+- Removed EFI Mac Pro
+</br>
+
 **0.6.7 (2021-03-26):** 
 
 - 更新 OC 版本至 0.6.7 (release)
