@@ -65,9 +65,6 @@
 #### **📖 [OpenCore Configurator 官网（英文版）](https://mackie100projects.altervista.org)**
 </br>
 
-### 1.4. ⚠️注意四⚠️：本教程同时包括两份 EFI 文件（带核显的 iMac19,1 型号 以及不带核显的 Mac Pro7,1 型号），请根据实际情况使用。
-</br>
-
 ## <span id="config">2. 硬件配置</span>
 
 | 部件名称 | 型号                                           | 备注                |
@@ -87,7 +84,6 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about.png)
 
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_macpro.png)
 </br>
 
 ## <span id="driver">3. 驱动情况</span>
@@ -123,8 +119,6 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha.png)
-
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ram.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/itpg.png)
 
@@ -184,22 +178,6 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
         - Thunderbolt Usb Support → 开启
         - GPIO3 Force Pwr → 开启
 
-#### - 不带核显
-- **Advanced**
-    - **Chipset Configuration** 
-        - Vt-d → 关闭
-        - IGPU Multi-Monitor → 关闭
-
-    - **Super IO Configuration** 
-        - Serial Port → 关闭
-
-    - **USB Configuration** 
-        - XHCI Hand-off → 开启
-
-    - **Intel (R) Thunderbolt**
-        - Thunderbolt (TM) Support → 开启
-        - Thunderbolt Usb Support → 开启
-        - GPIO3 Force Pwr → 开启
 </br>
 
 
