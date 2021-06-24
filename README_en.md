@@ -59,7 +59,6 @@
 ### ⚠️Warning C⚠️：This EFI does not contain any platform information (SN, UUID etc.). You can generate these information by using OpenCore Configurator.
 #### **📖 [OpenCore Configurator official site](https://mackie100projects.altervista.org)**
 
-### ⚠️Warning D⚠️：This project contains two EFI (iMac19,1 for configuration with iGPU and Mac Pro7,1 for configuration without iGPU) .
 </br>
 
 ## <span id="config">2. Component List</span></span></span></span></span>
@@ -81,7 +80,6 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_eng.png)
 
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/about_macpro_en.png)
 </br>
 
 ## <span id="driver">3. Functionalities Checklist</span>
@@ -116,8 +114,6 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/usb.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha_eng.png)
-
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ram_en.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/itpg.png)
 
@@ -175,23 +171,6 @@ If it includes ```dc```, you don't need to do anything. However if it includes `
         - Thunderbolt Usb Support → Enable
         - GPIO3 Force Pwr → Enable
 
-#### - Without iGPU
-- **Advanced**
-    - **Chipset Configuration** 
-        - Vt-d → Disable
-        - IGPU Multi-Monitor → Disable
-
-    - **Super IO Configuration** 
-        - Serial Port → Disable
-
-    - **USB Configuration** 
-        - XHCI Hand-off → Enable
-
-    - **Intel (R) Thunderbolt**
-        - Thunderbolt (TM) Support → Enable
-        - Thunderbolt Usb Support → Enable
-        - GPIO3 Force Pwr → Enable
-</br>
 </br>
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/tbset_eng.BMP)
