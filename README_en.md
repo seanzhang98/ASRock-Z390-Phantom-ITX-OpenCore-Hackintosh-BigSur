@@ -119,8 +119,6 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/itpg.png)
 
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
-
 ## <span id="ready">4. Getting Ready</span>
 ### <span id="wirecard">4.1. Wi-Fi & Bluetooth module replacement
 The motherboard comes with Intel® Wireless-AC 9560 module, support 802.11ac and Bluetooth 5.0 with 2x2 802.11ac 2.4/5Ghz Wi-Fi. We need to remove this module and replace it with BCM94360CS2 module,BCM94360CS2 module required an NGFF to M.2 adapter. Steps shown below（By icyleaf）：
@@ -283,6 +281,8 @@ If you used emulated NVRAM before, you need to clean up the emulated NVRAM to ge
 
 ### <span id="sensors">4.7. Sensors<span>
 The latest release of this EIF is using the `FakeSMC` by `CloverHackyColor` which supports AMD's RX5000 Series and RX6000 Series GPU Die temperature sensor.
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
 
 ## <span id="more">5. More</span>
 ### <span id="nvram">5.1. Big Sur Style Icons<span>
