@@ -96,6 +96,7 @@
 | 有线网卡     | ⭕️  |                                                                                                                                             |
 | Wi-Fi    | ⭕️   |                                                                                                                                             |
 | 蓝牙       | ⭕️   |                                                                                                                                             |
+| 传感器       | ⭕️   | 支持显示主板传感器，风扇速度，GPU 核心温度                                                                                                                                             |
 | 接力       |⭕️   |                                                                                                                                             |
 | 使用 Apple Watch 解锁       |⭕️   |                                                                                                                                             |
 | 随航       | ⭕️｜❌   | iMac19,1 支持 随航，Mac Pro7,1 则因为缺少 T2 芯片无法正常使用随航（iPad 端黑屏）                                                                                                                 |
@@ -121,6 +122,8 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/itpg.png)
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/Sensors.png)
 
 
 ## <span id="ready">4. 准备工作</span>
