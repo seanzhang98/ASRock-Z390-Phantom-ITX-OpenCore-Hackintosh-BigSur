@@ -39,6 +39,7 @@
      - <font size=4>[4.4. SMBIOS 补全（必做）](#smbios)</font>
      - <font size=4>[4.5. 清理模拟 NVRAM（可选）](#nvram)</font>
      - <font size=4>[4.6. 定制 USB（推荐）](#usb)</font>
+     - <font size=4>[4.7. 传感器](#sensors)</font>
 - <font size=4>[5. 完善](#more)</font>
 - <font size=4>[6. 已知问题](#iss)</font>
 - <font size=4>[7. 更新日志](#logs)</font>
@@ -289,6 +290,9 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 
 - 定制完成后选择导出，将桌面新生成的 ```USBPort.kext``` 放入 ```EFI``` -> ```OC``` -> ```Kext``` 中替换文件夹内的同名文件。
 - 重启
+
+### <span id="sensors">4.7. 传感器<span>
+最新版本默认配置的 SMC 套件为 `CloverHackyColor` 的`FakeSMC`，支持显示 RX5000 系以及 RX6000 系显卡的温度。
 
 ## <span id="more">5. 完善</span>
 ### <span id="nvram">5.1. Big Sur 风格的图标<span>

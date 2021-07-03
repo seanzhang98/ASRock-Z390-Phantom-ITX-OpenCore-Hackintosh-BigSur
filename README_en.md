@@ -37,6 +37,7 @@
      - <font size=4>[4.4. SMBIOS](#smbios)</font>
      - <font size=4>[4.5. Clean up emulated NVRAM（Optional）](#nvram)</font>
      - <font size=4>[4.6. Mapping USB (Recommended)](#usb)</font>
+     - <font size=4>[4.7. Sensors](#sensors)</font>
 - <font size=4>[5. More](#more)</font>
 - <font size=4>[6. Known Issues](#iss)</font>
 - <font size=4>[7. Change Logs](#logs)</font>
@@ -279,6 +280,9 @@ If you used emulated NVRAM before, you need to clean up the emulated NVRAM to ge
 
 - Export the kext file, which usually would save to your desktop as ```USBPort.kext```, put it in ```EFI``` -> ```OC``` -> ```Kext```.
 - Reboot your system.
+
+### <span id="sensors">4.7. Sensors<span>
+The latest release of this EIF is using the `FakeSMC` by `CloverHackyColor` which supports AMD's RX5000 Series and RX6000 Series GPU Die temperature sensor.
 
 ## <span id="more">5. More</span>
 ### <span id="nvram">5.1. Big Sur Style Icons<span>
