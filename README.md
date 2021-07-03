@@ -124,9 +124,6 @@
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/itpg.png)
 
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
-
-
 ## <span id="ready">4. 准备工作</span>
 ### <span id="wirecard">4.1. 网卡替换</span>
 该主板自带的为 Intel® Wireless-AC 9560 模块，支持无线 802.11ac 方案并提供蓝牙 5.0 和 2x2 802.11ac 2.4/5Ghz Wi-Fi。需要拆下该模块并替换为白果拆机模块BCM94360CS2，该模块需要 BCM94360CS2 NGFF M.2 转接卡。操作步骤如图（icyleaf大佬的图）：
@@ -293,6 +290,8 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 
 ### <span id="sensors">4.7. 传感器<span>
 最新版本默认配置的 SMC 套件为 `CloverHackyColor` 的`FakeSMC`，支持显示 RX5000 系以及 RX6000 系显卡的温度。
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
 
 ## <span id="more">5. 完善</span>
 ### <span id="nvram">5.1. Big Sur 风格的图标<span>
