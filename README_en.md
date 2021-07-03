@@ -92,6 +92,7 @@
 | LAN port             | ⭕️                 |                                                                                                                                                                                                                                          |
 | Wi-Fi                | ⭕️                 |                                                                                                                                                                                                                                          |
 | Bluetooth            | ⭕️                 |                                                                                                                                                                                                                                          |
+| Sensors       | ⭕️   | Support Motherboard Sensors, Fans speed and GPU Die temperature                                                                                                                                              |
 | Hand-off             | ⭕️                 |                                                                                                                                                                                                                                          |
 | Unlock with Apple Watch            | ⭕️                 |                                                                                                                                                                                                                                          |
 | Sidecar              | ⭕️｜❌                  | iMac19,1 supports Sidecar,Mac Pro7,1 will not be supported since the REAL Mac have T2 chip（iPad black screen）                                                                                                                                                                                       |
@@ -116,6 +117,8 @@
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/ha_eng.png)
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/itpg.png)
+
+![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/Sensors.png)
 
 ## <span id="ready">4. Getting Ready</span>
 ### <span id="wirecard">4.1. Wi-Fi & Bluetooth module replacement
