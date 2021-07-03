@@ -1,3 +1,9 @@
+**0.7.0 (2021-07-03):** 
+
+- 替换 FakeSMC (CloverHackyColor) 以支持显示 RX5700 的显卡温度
+- Relpace VirtualSMC with FakeSMC (CloverHackyColor) to support RX5700 Die temperature 
+</br>
+
 **0.7.0 (2021-06-24):** 
 
 - 更新 OC 版本至 0.7.0 (release)
@@ -56,19 +62,19 @@
 - Update OpenCore to 0.6.3 (release)
 </br>
 
-**0.6.4.2 (2020-11-9):** 
+**0.6.4.2 (2020-11-09):** 
 
 - 更新 OC 版本至 0.6.4 (2020-11-09)
 - Update OpenCore to 0.6.4 (2020-11-09)
 </br>
 
-**0.6.4.1 (2020-11-6):** 
+**0.6.4.1 (2020-11-06):** 
 
 - 修改 config.plist 部分内容
 - Modified contents in config.plist
 </br>
 
-**0.6.4 (2020-11-4日):** 
+**0.6.4 (2020-11-04):** 
 
 - 更新 OC 版本至 0.6.4
 - Update OpenCore to 0.6.4
@@ -96,7 +102,7 @@
 - Update OpenCore to 0.6.3
 </br>
 
-**0.6.2 (2020-10-6):** 
+**0.6.2 (2020-10-06):** 
 
 - First release
 </br>
