@@ -96,13 +96,13 @@
 | Sensors       | ⭕️   | Support Motherboard Sensors, Fans speed and GPU Die temperature                                                                                                                                              |
 | Hand-off             | ⭕️                 |                                                                                                                                                                                                                                          |
 | Unlock with Apple Watch            | ⭕️                 |                                                                                                                                                                                                                                          |
-| Sidecar              | ⭕️｜❌                  | iMac19,1 supports Sidecar,Mac Pro7,1 will not be supported since the REAL Mac have T2 chip（iPad black screen）                                                                                                                                                                                       |
+| Sidecar              | ⭕️                 |                                                                                                                                                                                        |
 | Sleep and wake       | ⭕️                 |                                                                                                                                                                                                                                          |
 | Location Service     | ⭕️                 |                                                                                                                                                                                                                                          |
 | NVRAM                | ⭕️                 |                                                                                                                                                                                                                                          |
 | USB                  | ⭕️                 |                                                                                                                                                                                                                                          |
 | Thunderbolt 3        | ⭕️                 | [Thunderbolt 3](#tb3)                                                                                                                                                                                                                    |
-| DRM                  | ⭕️｜❌  | The DRM required by Apple TV + with iMac19,1 under Big Sur is broken for now, Mac Pro7,1 is fully support ALL DRM. [For more info](#drm)|
+| DRM                  | ⭕️  | The DRM required by Apple TV + can be force enable by running override codes [For more info](#drm)|
 | Hardware acceleration | ⭕️                 | Support H264 and HEVC                                                                                                                                                                                                                    |
 | RAM | ⭕️   |  Mac Pro7,1 without error                                                                                                                                          |
 </br>
@@ -303,22 +303,14 @@ I personally also make some of the icons and uploaded them to this website (this
   Solution: disable the TB3 Function or boot Windows with BIOS interface.
 </br>
   
-* **<span id="drm">My device dose not support Sidecar / Apple TV + ?</span>**
+* **<span id="drm">My device dose not support Apple TV + ?</span>**
   
-  Solution: iMac19,1 can support Sidecar perfectly but Big Sur made some changes, which breaks the DRM required by Apple TV +. Wait for the WEG update to fix this. Mac Pro7,1 can support ALL DRM. However, the real Mac required Apple T2 chip to support Sidecar.
-  
-  
-| System definition              | iMacPro1,1                                                              | iMac19,1                        |
-|:------------------------------:|:-----------------------------------------------------------------------:|:-------------------------------:|
-| iGPU (and QuickSync)           | Cannot be configured because these originally ship with Xeon processors | Compatible                      |
-| Sidecar                        | not possible without iGPU                                               | Compatible with (headless) iGPU |
-| DRM support in Safari          | Yes, OOB                                                                | No                              |
-| DRM support in Apple TV/iTunes | Yes, OOB                                                                | No for now, Big Sur breaks the DRM support provided by WEG                |
-| Performance                    | Better with GPU                                                         | Better with iGPU                |
-| Vega/Polaris Support           | Compatible (through WEG)                                                | Compatible (OOB)                |
-| Coffeelake Power Management    | Yes, through Extensions                                                 | Yes, OOB                        |
-| CPU frequency scaling          | Yes, through CPUFriend and iMac19,1 board.plist                         | Yes, OOB                        |
-</br>
+  Solution: Run
+  ```
+  defaults write com.apple.AppleGVA gvaForceAMDKE -boolean yes
+  ```
+  forces AMD DRM decoder for streaming services (like Apple TV and iTunes movie streaming)
+  </br>
 
 * **Time do not sync between Windows 10 and macOS.** 
 
