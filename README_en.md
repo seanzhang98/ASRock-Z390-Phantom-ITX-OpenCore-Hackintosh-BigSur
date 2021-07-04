@@ -315,9 +315,9 @@ I personally also make some of the icons and uploaded them to this website (this
 * **Time do not sync between Windows 10 and macOS.** 
 
   - Solution：In Windows 10, run following code in CMD </br>
-```
-Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
-```
+    ```
+    Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+    ```
 </br>
 
 ## <span id="logs">7. Change Logs</span>

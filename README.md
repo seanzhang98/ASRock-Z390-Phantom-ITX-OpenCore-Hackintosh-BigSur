@@ -100,13 +100,13 @@
 | 传感器       | ⭕️   | 支持显示主板传感器，风扇速度，GPU 核心温度                                                                                                                                             |
 | 接力       |⭕️   |                                                                                                                                             |
 | 使用 Apple Watch 解锁       |⭕️   |                                                                                                                                             |
-| 随航       | ⭕️｜❌   | iMac19,1 支持 随航，Mac Pro7,1 则因为缺少 T2 芯片无法正常使用随航（iPad 端黑屏）                                                                                                                 |
+| 随航       | ⭕️  |                                                                                                                  |
 | 睡眠与唤醒    | ⭕️  |                                                                                                                                             |
 | 定位服务     | ⭕️  |                                                                                                                                             |
 | 原生 NVRAM | ⭕️   |                                                                                                                                             |
 | USB      | ⭕️   |                                                                                                                                             |
 | 雷霹 3     | ⭕️  | [雷霹 3 驱动教程](#tb3)                                                                                                                           |
-| DRM      | ⭕️｜❌  | iMac19,1 在 Big Sur 环境下不支持 Apple TV + 的 DRM，Mac Pro7,1 则完全支持 DRM。[详情](#drm)|
+| DRM      | ⭕️  | iMac19,1 在 Big Sur 环境下需要运行代码以启用 Apple TV 串流。[详情](#drm)|
 | 硬件加速     | ⭕️  | 支持 H264 以及 HEVC 硬件加速                                                                                                                        |
 | 内存 | ⭕️   |  正常识别内存，Mac Pro7,1 下无内存报错                                                                                                                                           |
 </br>
@@ -312,20 +312,13 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
   - 解决方案: 禁用该补丁或者用 bios 来引导 Windows。
   </br>
   
-* **<span id="drm">我的设备不支持随航 / Apple TV DRM ？</span>**
+* **<span id="drm">我的设备不支持 Apple TV DRM ？</span>**
   
-  - 解决方案: iMac19,1 可以完美支持随航，但是由于 Big Sur 做出了改动，所以 Apple TV + 所需要的 DRM 目前还是破损的，需要等待 WEG 更新。Mac Pro7,1 则能完整的支持所有的 DRM，但是由于缺少 Apple T2 芯片，随航无法正常使用。
-  
-| 系统定义              | iMacPro1,1                                                              | iMac19,1                        |
-|:------------------------------:|:-----------------------------------------------------------------------:|:-------------------------------:|
-| 核显 (与 QuickSync)           | 因为白苹果设备使用志强处理器，所以无法使用 | 兼容                      |
-| 随航                        | 不支持，需要核显                                               | 有核显的情况下支持 |
-|Safari 中使用 DRM          | 原生支持                                                                | 不支持                              |
-| Apple TV 或 iTunes 中使用 DRM | 原生支持                                                                |Big Sur 下不支持，由 WEG 提供的 DRM 支持在 Big Sur 下无法正常使用               |
-| 性能表现                    | 有独显性能更佳                                                         | 有核显性能更佳                |
-| Vega 以及 Polaris 支持           | 通过 WEG 支持                                                | 原生支持                |
-| Coffeelake 电源管理    | 通过插件支持                                                 | 原生支持                        |
-| CPU 变频          | 通过 CPUFriend 和 iMac19,1 的 board.plist 支持                         | 原生支持                  |
+  - 解决方案: 运行
+  ```
+  defaults write com.apple.AppleGVA gvaForceAMDKE -boolean yes
+  ```
+  强制启用 AMD DRM 解码器以支持串流服务 (像 Apple TV 以及 iTunes 电影串流)
   </br>
   
 * **部分电脑关机后开机可能会提示 “电脑关机是因为发生了问题”。**
