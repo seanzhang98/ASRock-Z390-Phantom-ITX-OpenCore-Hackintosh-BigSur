@@ -315,9 +315,11 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 * **<span id="drm">我的设备不支持 Apple TV DRM ？</span>**
   
   - 解决方案: 运行
+  
   ```
   defaults write com.apple.AppleGVA gvaForceAMDKE -boolean yes
   ```
+  
   强制启用 AMD DRM 解码器以支持串流服务 (像 Apple TV 以及 iTunes 电影串流)
   </br>
   
