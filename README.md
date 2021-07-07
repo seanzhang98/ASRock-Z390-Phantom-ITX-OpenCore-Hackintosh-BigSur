@@ -13,7 +13,7 @@
       </a>
     </br>
     <a href="https://www.apple.com.cn/macos/big-sur-preview/">
-      <img alt="支持版本" src="https://img.shields.io/badge/支持版本-macOS%20Big%20Sur-blueviolet" />
+      <img alt="支持版本" src="https://img.shields.io/badge/支持版本-macOS%20Big%20Sur-blue" />
       <a href="https://developer.apple.com/documentation/macos-release-notes">
       <img alt="macOS 版本" src="https://img.shields.io/badge/版本号-11.5 Beta (20G5033c)-ff69b4" />
       <a href="https://github.com/acidanthera/OpenCorePkg/releases/">
@@ -40,12 +40,11 @@
      - <font size=4>[4.5. 清理模拟 NVRAM（可选）](#nvram)</font>
      - <font size=4>[4.6. 定制 USB（推荐）](#usb)</font>
      - <font size=4>[4.7. 传感器](#sensors)</font>
-- <font size=4>[5. 完善](#more)</font>
-- <font size=4>[6. 已知问题](#iss)</font>
-- <font size=4>[7. 更新日志](#logs)</font>
-- <font size=4>[8. 性能跑分](#bench)</font>
-- <font size=4>[9. 参考文档](#ref)</font>
-- <font size=4>[10. 特别感谢](#thanks)</font>
+- <font size=4>[5. 已知问题](#iss)</font>
+- <font size=4>[6. 更新日志](#logs)</font>
+- <font size=4>[7. 性能跑分](#bench)</font>
+- <font size=4>[8. 参考文档](#ref)</font>
+- <font size=4>[9. 特别感谢](#thanks)</font>
 </br>
 
 ## <span id="warm">1. 注意事项</span>
@@ -293,19 +292,7 @@ Windows 下可能需要手动安装驱动才能使用 Wi-Fi 和 蓝牙功能。
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/sensors.png)
 
-## <span id="more">5. 完善</span>
-### <span id="nvram">5.1. Big Sur 风格的图标<span>
-
-目前还有很多软件并未针对 Big Sur 进行图标示配，我们可以通过手动替换图标的方式得到更好的视觉效果。下图为我现在替换后的效果：
-
-![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/lunchpad.png)
-
-图标可以通过 [macosicons](https://macosicons.com) 进行下载。
-本人也有在提交一些自己制作的图标（迅雷、115网盘、MWeb、QQ等），有能力的朋友也可以制作相关软件的图标上传到该项目的网站或者 Github 项目页。
-</br>
-</br>
-
-## <span id="iss">6. 已知问题<span>
+## <span id="iss">5. 已知问题<span>
 
 * **补丁 change _E2C to XE2C 会导致使用 OC 引导 Windows 系统时报 APIC 错误。**
   
@@ -337,12 +324,12 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 </br>
 
 
-## <span id="logs">7. 更新日志</span>
+## <span id="logs">6. 更新日志</span>
 
 - <font size=6><b>[点击查看更新日志](CHANGELOG.md)</b></font>
 </br>
 
-## <span id="bench">8. 性能跑分</span>
+## <span id="bench">7. 性能跑分</span>
 ### CPU:
 
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/CPU_benchmark.png)
@@ -359,7 +346,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ### Cinebench R15 CPU & GPU
 ![image](https://raw.githubusercontent.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh/main/imgs/GPU_CPU_CINER15.png)
 
-## <span id="ref">9. 参考文档</span>
+## <span id="ref">8. 参考文档</span>
 📖 [OpenCore 官方指南](https://dortania.github.io/OpenCore-Install-Guide)
 
 📖 [精解OpenCore](https://blog.daliansky.net/OpenCore-BootLoader.html)
@@ -378,7 +365,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 </br>
 </br>
 
-## <span id="thanks">10. 特别感谢</span>
+## <span id="thanks">9. 特别感谢</span>
 **[acidanthera](https://github.com/acidanthera/OpenCorePkg)**
 
 **[daliansky](https://github.com/daliansky)（黑果小兵）**
