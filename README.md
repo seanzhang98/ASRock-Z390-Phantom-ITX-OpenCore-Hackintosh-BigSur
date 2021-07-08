@@ -25,6 +25,10 @@
     <font size=4><b>·</b></font>
     <a href="README_en.md"><font size=4><b>English</b></font></a>
 </p>
+<p align="center">
+    <a href="https://github.com/seanzhang98/ASRock-Z390-Phantom-ITX-OpenCore-Hackintosh-Monterey"><font size=4><b>支援 macOS Monterey 的版本</b></font></a>
+</p>
+
 
 
    
